@@ -1,0 +1,70 @@
+{
+  "tier_consent_boundaries": {
+    "tier_0": {
+      "available_scopes": ["basic_interaction", "essential_functions"],
+      "restricted_scopes": ["memory", "replay", "biometric", "location", "analytics"],
+      "consent_requirements": {
+        "basic_interaction": {"required": true, "revocable": false},
+        "essential_functions": {"required": true, "revocable": false}
+      }
+    },
+    "tier_1": {
+      "available_scopes": ["basic_interaction", "essential_functions", "audio", "trace"],
+      "restricted_scopes": ["memory", "replay", "biometric", "location", "integration"],
+      "consent_requirements": {
+        "audio": {"required": false, "revocable": true},
+        "trace": {"required": false, "revocable": true, "granular": true}
+      }
+    },
+    "tier_2": {
+      "available_scopes": ["basic_interaction", "essential_functions", "audio", "trace", "analytics", "location"],
+      "restricted_scopes": ["memory", "replay", "biometric", "integration"],
+      "consent_requirements": {
+        "analytics": {"required": false, "revocable": true, "granular": true},
+        "location": {"required": false, "revocable": true, "granular": true}
+      }
+    },
+    "tier_3": {
+      "available_scopes": ["basic_interaction", "essential_functions", "audio", "trace", "analytics", "location", "biometric"],
+      "restricted_scopes": ["memory", "replay", "integration"],
+      "consent_requirements": {
+        "biometric": {"required": false, "revocable": true, "enhanced_security": true}
+      }
+    },
+    "tier_4": {
+      "available_scopes": ["basic_interaction", "essential_functions", "audio", "trace", "analytics", "location", "biometric", "memory"],
+      "restricted_scopes": ["replay", "integration"],
+      "consent_requirements": {
+        "memory": {"required": false, "revocable": true, "enhanced_security": true, "symbolic_verification": true}
+      }
+    },
+    "tier_5": {
+      "available_scopes": ["basic_interaction", "essential_functions", "audio", "trace", "analytics", "location", "biometric", "memory", "replay", "integration"],
+      "restricted_scopes": [],
+      "consent_requirements": {
+        "replay": {"required": false, "revocable": true, "enhanced_security": true, "symbolic_verification": true, "chain_verification": true},
+        "integration": {"required": false, "revocable": true, "service_by_service": true}
+      }
+    }
+  },
+  "symbolic_consent_levels": {
+    "basic": "🟢",
+    "enhanced": "🟡", 
+    "premium": "🔶",
+    "maximum": "🔴"
+  },
+  "consent_validation_rules": {
+    "minimum_age": 13,
+    "parental_consent_under": 16,
+    "enhanced_verification_scopes": ["biometric", "memory", "replay"],
+    "immutable_scopes": ["basic_interaction", "essential_functions"],
+    "cooling_off_period_hours": 24,
+    "re_consent_period_days": 365
+  },
+  "zero_knowledge_proofs": {
+    "enabled": true,
+    "supported_scopes": ["memory", "replay", "biometric"],
+    "proof_generation": "on_demand",
+    "verification_chain": "verifold_integration"
+  }
+}

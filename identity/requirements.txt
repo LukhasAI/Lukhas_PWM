@@ -1,0 +1,108 @@
+# ═══════════════════════════════════════════════════════════════════════════════════════════════════════
+# LUKHAS ΛiD Unified System - Enhanced Dependencies
+# ═══════════════════════════════════════════════════════════════════════════════════════════════════════
+
+# Core API Framework (FastAPI + Flask Compatibility)
+fastapi>=0.104.1                    # Modern async web framework
+flask>=2.3.0                        # Flask compatibility layer
+pydantic>=2.5.0                     # Data validation and settings
+uvicorn[standard]>=0.24.0          # ASGI server implementation
+
+# Enhanced Security & Authentication
+cryptography>=41.0.0                # Cryptographic recipes and primitives
+passlib[bcrypt]>=1.7.4              # Password hashing library
+python-jose[cryptography]>=3.3.0    # JWT token handling
+python-multipart>=0.0.6             # Form data parsing
+flask-talisman>=1.1.0               # Security headers
+flask-limiter>=3.5.0                # Rate limiting
+
+# QRG & Image Processing (Enhanced)
+qrcode[pil]>=7.4.2                  # QR code generation
+Pillow>=10.1.0                      # Python Imaging Library
+numpy>=1.24.3                       # Numerical computing
+opencv-python>=4.8.1.78             # Computer vision library (optional)
+
+# Biometric Processing & AI
+face-recognition>=1.3.0             # Face recognition library (optional)
+speechrecognition>=3.10.0           # Speech recognition (optional)
+transformers>=4.35.2                # AI model support (optional)
+torch>=2.1.1                        # PyTorch for AI (optional)
+scikit-learn>=1.3.2                 # Machine learning library
+
+# Cultural & Language Support (Enhanced)
+langdetect>=1.0.9                   # Language detection
+emoji>=2.8.0                        # Emoji processing
+unicodedata2>=15.0.0                # Enhanced Unicode support
+
+# Database & Storage (Enhanced)
+sqlalchemy>=2.0.23                  # SQL toolkit and ORM
+alembic>=1.12.1                     # Database migration tool
+redis>=5.0.1                        # In-memory data store
+flask-sqlalchemy>=3.0.0             # Flask SQLAlchemy integration
+
+# Monitoring & Logging (Enhanced)
+structlog>=23.2.0                   # Structured logging
+prometheus-client>=0.19.0           # Prometheus metrics
+prometheus-flask-exporter>=0.23.0   # Flask metrics
+sentry-sdk[fastapi]>=1.38.0        # Error tracking
+
+# Data Processing & Analytics
+jsonschema>=4.19.0                  # JSON validation
+python-dateutil>=2.8.2              # Date utilities
+pandas>=2.1.3                       # Data analysis (optional)
+
+# Network & HTTP
+flask-cors>=4.0.0                   # CORS support
+requests>=2.31.0                    # HTTP library
+aiohttp>=3.9.0                      # Async HTTP client
+
+# Development & Testing (Enhanced)
+pytest>=7.4.3                       # Testing framework
+pytest-asyncio>=0.21.1             # Async testing support
+pytest-flask>=1.2.0                # Flask testing
+pytest-cov>=4.1.0                  # Coverage testing
+black>=23.11.0                      # Code formatter
+flake8>=6.1.0                       # Code linting
+mypy>=1.7.1                         # Static type checking
+
+# Environment & Configuration
+python-dotenv>=1.0.0                # Environment management
+pydantic-settings>=2.1.0            # Settings management
+
+# Production & Deployment (Enhanced)
+gunicorn>=21.2.0                    # WSGI HTTP server
+gevent>=23.7.0                      # Async server
+docker>=6.1.3                       # Docker SDK
+kubernetes>=28.1.0                  # Kubernetes client
+
+# Documentation & API Docs
+mkdocs>=1.5.3                       # Documentation generator
+mkdocs-material>=9.4.8             # Material theme for MkDocs
+
+# Optional Enterprise Features
+# datadog>=0.47.0                   # APM monitoring
+# newrelic>=8.10.0                  # Performance monitoring
+# vault-client>=0.10.0              # HashiCorp Vault integration
+# ldap3>=2.9.1                      # LDAP authentication
+# celery[redis]>=5.3.4              # Task queue
+
+# ═══════════════════════════════════════════════════════════════════════════════════════════════════════
+# Installation Commands:
+# 
+# Basic Installation:
+# pip install -r requirements.txt
+#
+# Development Installation:
+# pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
+#
+# Production Installation (minimal):
+# pip install fastapi uvicorn pydantic cryptography qrcode[pil] numpy redis
+#
+# Docker Installation:
+# FROM python:3.11-slim
+# COPY requirements.txt .
+# RUN pip install --no-cache-dir -r requirements.txt
+#
+# Enterprise Installation (all features):
+# pip install -r requirements.txt --upgrade
+# ═══════════════════════════════════════════════════════════════════════════════════════════════════════

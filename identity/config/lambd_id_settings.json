@@ -1,0 +1,30 @@
+{
+  "id_length": {
+    "minimum": 8,
+    "maximum": 32,
+    "default": 16
+  },
+  "reserved_combinations": [
+    "ADMIN",
+    "ROOT",
+    "SYSTEM",
+    "TEST",
+    "DEBUG"
+  ],
+  "entropy_requirements": {
+    "minimum_score": 0.7,
+    "preferred_score": 0.85
+  },
+  "collision_detection": {
+    "enabled": true,
+    "retry_limit": 5
+  },
+  "tier_mapping": {
+    "guest": 0,
+    "visitor": 1,
+    "friend": 2,
+    "trusted": 3,
+    "inner_circle": 4,
+    "root_dev": 5
+  }
+}

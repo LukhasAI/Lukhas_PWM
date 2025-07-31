@@ -1,0 +1,303 @@
+{
+  "tier_system": {
+    "version": "1.0.0",
+    "last_updated": "2025-07-05T00:00:00Z",
+    "total_tiers": 6
+  },
+  "tier_permissions": {
+    "0": {
+      "name": "Guest",
+      "symbol": "🟢",
+      "color": "#4CAF50",
+      "max_entropy": 2.0,
+      "symbols_allowed": 2,
+      "symbolic_chars": ["◊", "○", "□"],
+      "features": {
+        "basic_id_generation": true,
+        "symbolic_selection": false,
+        "entropy_display": false,
+        "collision_retry": 1,
+        "custom_prefix": false,
+        "commercial_branding": false,
+        "qr_g_backup": false,
+        "multi_device_sync": false,
+        "biometric_auth": false,
+        "api_access": "read_only"
+      },
+      "rate_limits": {
+        "generation_per_hour": 5,
+        "validation_per_hour": 50,
+        "api_calls_per_minute": 10
+      },
+      "upgrade_requirements": {
+        "min_activity_days": 0,
+        "verification_required": false,
+        "payment_required": false
+      }
+    },
+    "1": {
+      "name": "Visitor",
+      "symbol": "🔵",
+      "color": "#2196F3",
+      "max_entropy": 3.0,
+      "symbols_allowed": 3,
+      "symbolic_chars": ["◊", "○", "□", "△", "▽"],
+      "features": {
+        "basic_id_generation": true,
+        "symbolic_selection": true,
+        "entropy_display": false,
+        "collision_retry": 3,
+        "custom_prefix": false,
+        "commercial_branding": false,
+        "qr_g_backup": true,
+        "multi_device_sync": false,
+        "biometric_auth": false,
+        "api_access": "basic"
+      },
+      "rate_limits": {
+        "generation_per_hour": 10,
+        "validation_per_hour": 100,
+        "api_calls_per_minute": 20
+      },
+      "upgrade_requirements": {
+        "min_activity_days": 7,
+        "verification_required": true,
+        "payment_required": false,
+        "min_entropy_score": 2.5
+      }
+    },
+    "2": {
+      "name": "Friend",
+      "symbol": "🟡",
+      "color": "#FFC107",
+      "max_entropy": 4.0,
+      "symbols_allowed": 4,
+      "symbolic_chars": ["🌀", "✨", "🔮", "◊", "⟐"],
+      "features": {
+        "basic_id_generation": true,
+        "symbolic_selection": true,
+        "entropy_display": true,
+        "collision_retry": 5,
+        "custom_prefix": true,
+        "commercial_branding": false,
+        "qr_g_backup": true,
+        "multi_device_sync": true,
+        "biometric_auth": false,
+        "api_access": "standard"
+      },
+      "rate_limits": {
+        "generation_per_hour": 25,
+        "validation_per_hour": 250,
+        "api_calls_per_minute": 50
+      },
+      "upgrade_requirements": {
+        "min_activity_days": 30,
+        "verification_required": true,
+        "payment_required": false,
+        "min_entropy_score": 3.5,
+        "referrals_required": 2
+      }
+    },
+    "3": {
+      "name": "Trusted",
+      "symbol": "🟠",
+      "color": "#FF9800",
+      "max_entropy": 5.0,
+      "symbols_allowed": 5,
+      "symbolic_chars": ["🌀", "✨", "🔮", "⟐", "◈", "⬟"],
+      "features": {
+        "basic_id_generation": true,
+        "symbolic_selection": true,
+        "entropy_display": true,
+        "collision_retry": 10,
+        "custom_prefix": true,
+        "commercial_branding": true,
+        "qr_g_backup": true,
+        "multi_device_sync": true,
+        "biometric_auth": true,
+        "api_access": "advanced"
+      },
+      "rate_limits": {
+        "generation_per_hour": 50,
+        "validation_per_hour": 500,
+        "api_calls_per_minute": 100
+      },
+      "upgrade_requirements": {
+        "min_activity_days": 90,
+        "verification_required": true,
+        "payment_required": true,
+        "min_entropy_score": 4.5,
+        "referrals_required": 5,
+        "community_contribution": true
+      }
+    },
+    "4": {
+      "name": "Inner Circle",
+      "symbol": "🔴",
+      "color": "#F44336",
+      "max_entropy": 6.0,
+      "symbols_allowed": 6,
+      "symbolic_chars": ["⟐", "◈", "⬟", "⬢", "⟁", "◐"],
+      "features": {
+        "basic_id_generation": true,
+        "symbolic_selection": true,
+        "entropy_display": true,
+        "collision_retry": 20,
+        "custom_prefix": true,
+        "commercial_branding": true,
+        "qr_g_backup": true,
+        "multi_device_sync": true,
+        "biometric_auth": true,
+        "api_access": "premium"
+      },
+      "rate_limits": {
+        "generation_per_hour": 100,
+        "validation_per_hour": 1000,
+        "api_calls_per_minute": 200
+      },
+      "upgrade_requirements": {
+        "min_activity_days": 180,
+        "verification_required": true,
+        "payment_required": true,
+        "min_entropy_score": 5.5,
+        "referrals_required": 10,
+        "community_contribution": true,
+        "enterprise_sponsor": false
+      }
+    },
+    "5": {
+      "name": "Root/Dev",
+      "symbol": "💜",
+      "color": "#9C27B0",
+      "max_entropy": 7.0,
+      "symbols_allowed": 8,
+      "symbolic_chars": ["⟐", "◈", "⬟", "⬢", "⟁", "◐", "◑", "⬧"],
+      "features": {
+        "basic_id_generation": true,
+        "symbolic_selection": true,
+        "entropy_display": true,
+        "collision_retry": 50,
+        "custom_prefix": true,
+        "commercial_branding": true,
+        "qr_g_backup": true,
+        "multi_device_sync": true,
+        "biometric_auth": true,
+        "api_access": "enterprise"
+      },
+      "rate_limits": {
+        "generation_per_hour": 1000,
+        "validation_per_hour": 10000,
+        "api_calls_per_minute": 1000
+      },
+      "upgrade_requirements": {
+        "min_activity_days": 365,
+        "verification_required": true,
+        "payment_required": true,
+        "min_entropy_score": 6.5,
+        "referrals_required": 25,
+        "community_contribution": true,
+        "enterprise_sponsor": true,
+        "developer_certification": true
+      }
+    }
+  },
+  "commercial_tiers": {
+    "business_basic": {
+      "tier_equivalent": 3,
+      "custom_branding": true,
+      "bulk_generation": 1000,
+      "branded_prefix": true,
+      "dedicated_support": false,
+      "monthly_cost_usd": 99
+    },
+    "business_premium": {
+      "tier_equivalent": 4,
+      "custom_branding": true,
+      "bulk_generation": 10000,
+      "branded_prefix": true,
+      "dedicated_support": true,
+      "monthly_cost_usd": 299
+    },
+    "enterprise": {
+      "tier_equivalent": 5,
+      "custom_branding": true,
+      "bulk_generation": "unlimited",
+      "branded_prefix": true,
+      "dedicated_support": true,
+      "custom_deployment": true,
+      "monthly_cost_usd": 999
+    }
+  },
+  "entropy_thresholds": {
+    "minimum_per_tier": {
+      "0": 1.0,
+      "1": 1.5,
+      "2": 2.5,
+      "3": 3.5,
+      "4": 4.5,
+      "5": 5.5
+    },
+    "recommended_per_tier": {
+      "0": 1.5,
+      "1": 2.5,
+      "2": 3.5,
+      "3": 4.5,
+      "4": 5.5,
+      "5": 6.5
+    },
+    "calculation_method": "shannon",
+    "boost_factors": {
+      "unique_symbolic_chars": 1.2,
+      "mixed_case": 1.1,
+      "numbers_included": 1.1,
+      "special_chars": 1.3,
+      "length_bonus": 0.1
+    }
+  },
+  "validation_rules": {
+    "id_format": {
+      "pattern": "^LUKHAS[0-5]-[A-F0-9]{4}-[\\w\\p{So}]-[A-F0-9]{4}$",
+      "max_length": 20,
+      "min_length": 12
+    },
+    "symbolic_restrictions": {
+      "banned_chars": ["💀", "🔞", "⚠️"],
+      "tier_restricted": true,
+      "unicode_categories_allowed": ["So", "Sm", "Sk"]
+    },
+    "collision_prevention": {
+      "check_database": true,
+      "max_retry_attempts": 50,
+      "retry_delay_ms": 100
+    }
+  },
+  "upgrade_paths": {
+    "automatic_upgrades": {
+      "0_to_1": {
+        "trigger": "activity_days >= 7 AND verification_complete",
+        "requires_approval": false
+      },
+      "1_to_2": {
+        "trigger": "activity_days >= 30 AND entropy_score >= 3.0",
+        "requires_approval": false
+      }
+    },
+    "manual_upgrades": {
+      "2_to_3": {
+        "requirements": ["payment", "referrals", "min_entropy"],
+        "approval_required": true,
+        "review_time_hours": 24
+      },
+      "3_to_4": {
+        "requirements": ["payment", "referrals", "community_contribution"],
+        "approval_required": true,
+        "review_time_hours": 72
+      },
+      "4_to_5": {
+        "requirements": ["enterprise_sponsor", "developer_certification"],
+        "approval_required": true,
+        "review_time_hours": 168
+      }
+    }
+  }
+}

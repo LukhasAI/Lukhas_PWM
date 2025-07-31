@@ -1,0 +1,24 @@
+{
+  "qr_settings": {
+    "default_expiry_minutes": 5,
+    "max_expiry_minutes": 30,
+    "code_length": 32,
+    "encryption_enabled": true
+  },
+  "session_policies": {
+    "max_concurrent_sessions": 3,
+    "session_timeout_minutes": 120,
+    "cross_device_sync": true,
+    "replay_retention_days": 7
+  },
+  "security": {
+    "require_device_verification": true,
+    "max_pairing_attempts": 3,
+    "lockout_duration_minutes": 15
+  },
+  "replay_chain": {
+    "verifold_integration": true,
+    "chain_validation": true,
+    "backup_storage": true
+  }
+}

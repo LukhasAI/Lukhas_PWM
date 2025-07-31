@@ -1,0 +1,24 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "LukhasAI"
+    labels:
+      - "dependencies"
+      - "🔧 auto-fix"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "LukhasAI"
+    labels:
+      - "dependencies"
+      - "🔧 auto-fix"

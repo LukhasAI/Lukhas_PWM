@@ -1,0 +1,183 @@
+{
+  "archetypal_concepts": {},
+  "concept_relationships": {
+    "consciousness": [
+      "awareness",
+      "self-awareness",
+      "cognition",
+      "experience",
+      "qualia"
+    ],
+    "emotion": [
+      "feeling",
+      "affect",
+      "mood",
+      "sentiment",
+      "valence",
+      "arousal"
+    ],
+    "memory": [
+      "recall",
+      "recognition",
+      "encoding",
+      "storage",
+      "retrieval",
+      "forgetting"
+    ],
+    "reasoning": [
+      "logic",
+      "inference",
+      "deduction",
+      "induction",
+      "abduction",
+      "problem-solving"
+    ],
+    "learning": [
+      "education",
+      "training",
+      "adaptation",
+      "improvement",
+      "knowledge-acquisition"
+    ],
+    "attention": [
+      "focus",
+      "concentration",
+      "awareness",
+      "vigilance",
+      "selective-attention"
+    ],
+    "perception": [
+      "sensation",
+      "recognition",
+      "interpretation",
+      "sensory-processing",
+      "awareness"
+    ],
+    "creativity": [
+      "innovation",
+      "imagination",
+      "originality",
+      "divergent-thinking",
+      "inspiration"
+    ],
+    "intelligence": [
+      "cognition",
+      "reasoning",
+      "problem-solving",
+      "learning",
+      "adaptation"
+    ],
+    "language": [
+      "communication",
+      "linguistics",
+      "semantics",
+      "syntax",
+      "pragmatics"
+    ],
+    "empathy": [
+      "compassion",
+      "sympathy",
+      "understanding",
+      "emotional-intelligence",
+      "perspective-taking"
+    ],
+    "knowledge": [
+      "information",
+      "understanding",
+      "wisdom",
+      "expertise",
+      "learning"
+    ],
+    "belief": [
+      "faith",
+      "conviction",
+      "opinion",
+      "assumption",
+      "worldview"
+    ],
+    "decision": [
+      "choice",
+      "judgment",
+      "selection",
+      "determination",
+      "conclusion"
+    ],
+    "goal": [
+      "objective",
+      "target",
+      "purpose",
+      "aim",
+      "intention"
+    ],
+    "planning": [
+      "strategy",
+      "preparation",
+      "organization",
+      "scheduling",
+      "goal-setting"
+    ],
+    "problem": [
+      "challenge",
+      "issue",
+      "difficulty",
+      "obstacle",
+      "puzzle"
+    ],
+    "solution": [
+      "answer",
+      "resolution",
+      "remedy",
+      "fix",
+      "approach"
+    ],
+    "understanding": [
+      "comprehension",
+      "grasp",
+      "insight",
+      "knowledge",
+      "awareness"
+    ],
+    "experience": [
+      "knowledge",
+      "skill",
+      "expertise",
+      "practice",
+      "familiarity"
+    ],
+    "thought": [
+      "idea",
+      "notion",
+      "concept",
+      "reflection",
+      "cognition"
+    ],
+    "concept": [
+      "idea",
+      "notion",
+      "principle",
+      "theory",
+      "abstraction"
+    ],
+    "mind": [
+      "consciousness",
+      "psyche",
+      "intellect",
+      "cognition",
+      "brain"
+    ],
+    "brain": [
+      "mind",
+      "cognition",
+      "neurology",
+      "consciousness",
+      "intelligence"
+    ],
+    "self": [
+      "identity",
+      "ego",
+      "consciousness",
+      "personality",
+      "individual"
+    ]
+  }
+}

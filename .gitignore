@@ -1,0 +1,161 @@
+# Large binary files and assets
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.mp4
+*.avi
+*.mov
+*.webm
+*.zip
+*.tar.gz
+*.tar
+
+# Model files
+*.bin
+*.pkl
+*.pth
+*.pt
+*.h5
+*.ckpt
+
+# Large data files
+*.csv
+*.parquet
+*.feather
+data/
+datasets/
+models/
+
+# IDE and OS files
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Logs
+*.log
+logs/
+*.out
+
+# Backup files
+*.bak
+*.evalbak
+*.picklebak
+*~
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env/
+
+# Environment variables file
+.env
+
+# Environment files (now in config/)
+config/env/.env*
+config/.lambda_bot_token
+config/.trigger_lambda_bot
+
+# Node modules if any
+node_modules/
+
+# Third-party video models (excluded)
+*HunyuanVideo*
+HunyuanVideo-main/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+.pytest_cache/
+temp/
+setup_report.json
+
+# Collaboration results
+codex_jules_collaboration_*.json
+
+# Archive files (moved to temp folder)
+*.tar.gz
+*.zip
+*.tar
+*.7z
+*.rar
+
+# Working/backup files
+*_working.py
+*_backup.py
+*_old.py
+
+# Log files (now in logs/)
+logs/*.log
+logs/*.jsonl
+*.log
+
+# Archive and temporary directories
+archived_*/
+pre-analyzer/
+temporary*/
+
+# External archive directory
+/Users/agi_dev/lukhas-archive/
+data/temp/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Secrets
+*.pem
+*.key
+secrets/
+
+# Agent temporary files and outputs
+agent_outputs/temp/*
+agent_outputs/*/temp_*
+*_temp_*
+agent_temp_*
+jules_temp_*
+codex_temp_*
+claude_temp_*
+
+# Agent duplicate detection
+agent_outputs/file_index.json
+
+# One-time reports and analyses (keep organized versions only)
+*_one_time_*
+temp_report_*
+quick_analysis_*
+scratch_*
+
+# Post-modularization cleanup
+archive/test_results/
+test_output/
+
+# Rust build artifacts
+/rust/event_bus/target/
+/rust/event_bus/Cargo.lock
+
+# Documentation system backups
+docs/backups/
+# Memory-mapped files
+*.mmap
+persistence/memories.mmap
+
+# Large generated analysis files (performance killers)
+module-connectivity-analysis/
+visualizations/
+persistence/

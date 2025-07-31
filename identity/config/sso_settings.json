@@ -1,0 +1,25 @@
+{
+  "sso_settings": {
+    "token_expiry_hours": 24,
+    "refresh_token_days": 30,
+    "max_concurrent_tokens": 5,
+    "cross_device_enabled": true
+  },
+  "device_management": {
+    "max_registered_devices": 10,
+    "device_trust_duration_days": 90,
+    "require_device_approval": true,
+    "auto_sync_preferences": true
+  },
+  "service_integration": {
+    "auto_discovery": true,
+    "trust_delegation": false,
+    "scope_validation": "strict"
+  },
+  "security": {
+    "token_encryption": true,
+    "device_fingerprinting": true,
+    "suspicious_activity_detection": true,
+    "automatic_revocation": true
+  }
+}

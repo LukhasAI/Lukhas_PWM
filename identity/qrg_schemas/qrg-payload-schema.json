@@ -1,0 +1,334 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lukhas.io/schemas/qrg-payload/v2.0",
+  "title": "LUKHAS QRG Authentication Payload Schema",
+  "description": "Quantum-resistant symbolic authentication with Lambda identity management",
+  "type": "object",
+  "required": [
+    "meta",
+    "lambda_identity", 
+    "authentication",
+    "expiration",
+    "symbolic_tier"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["version", "type", "created_at", "qrg_session_id"],
+      "properties": {
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+$",
+          "description": "Schema version following semantic versioning"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["qrg_auth", "lambda_verification", "tier_validation", "quantum_sign"],
+          "description": "Authentication operation type"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp of payload creation"
+        },
+        "qrg_session_id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "description": "UUID v4 session identifier"
+        },
+        "correlation_id": {
+          "type": "string",
+          "description": "Optional correlation ID for tracking across services"
+        }
+      }
+    },
+    "lambda_identity": {
+      "type": "object",
+      "required": ["lambda_id", "encrypted_token_reference", "cryptographic_signature"],
+      "properties": {
+        "lambda_id": {
+          "type": "string",
+          "pattern": "^LUKHAS[A-Z0-9]{8}-[A-Z0-9]{4}$",
+          "description": "Lambda Identity with symbolic LUKHAS prefix"
+        },
+        "encrypted_token_reference": {
+          "type": "string",
+          "minLength": 44,
+          "description": "AES-256-GCM encrypted token reference, base64 encoded"
+        },
+        "cryptographic_signature": {
+          "type": "string",
+          "description": "Post-quantum ML-DSA (Dilithium) signature for payload integrity"
+        },
+        "key_derivation_salt": {
+          "type": "string",
+          "description": "Salt for key derivation functions"
+        },
+        "quantum_signature": {
+          "type": "object",
+          "properties": {
+            "algorithm": {
+              "type": "string",
+              "enum": ["ML-DSA", "Falcon", "SPHINCS+"],
+              "description": "Post-quantum signature algorithm"
+            },
+            "public_key_hash": {
+              "type": "string",
+              "description": "SHA3-256 hash of public key"
+            }
+          }
+        }
+      }
+    },
+    "authentication": {
+      "type": "object",
+      "required": ["service_action_tags"],
+      "properties": {
+        "service_action_tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "wallet_access",
+              "tier_elevation", 
+              "biometric_verify",
+              "nft_transfer",
+              "quantum_sign",
+              "memory_vault_access",
+              "trauma_repair",
+              "ethical_override",
+              "multiverse_sync"
+            ]
+          },
+          "minItems": 1,
+          "description": "Required service actions for this authentication"
+        },
+        "biometric_requirements": {
+          "type": "object",
+          "properties": {
+            "required": {
+              "type": "boolean",
+              "description": "Whether biometric authentication is mandatory"
+            },
+            "modalities": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["face_id", "touch_id", "iris_scan", "voice_print", "palm_vein"]
+              },
+              "description": "Accepted biometric authentication methods"
+            },
+            "fallback_methods": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["pin", "pattern", "voice_challenge", "security_questions"]
+              }
+            },
+            "liveness_detection": {
+              "type": "boolean",
+              "description": "Require liveness detection for biometric methods"
+            }
+          }
+        }
+      }
+    },
+    "expiration": {
+      "type": "object",
+      "required": ["expires_at", "window_minutes"],
+      "properties": {
+        "expires_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 expiration timestamp"
+        },
+        "window_minutes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 60,
+          "description": "Validity window in minutes"
+        },
+        "refresh_threshold": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Minutes before expiration to allow refresh"
+        },
+        "max_refresh_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5,
+          "description": "Maximum number of allowed refreshes"
+        }
+      }
+    },
+    "symbolic_tier": {
+      "type": "object",
+      "required": ["tier_level", "access_permissions"],
+      "properties": {
+        "tier_level": {
+          "type": "string",
+          "enum": ["Λ1", "Λ2", "Λ3", "Λ4"],
+          "description": "Symbolic tier with Lambda prefix (Λ1=Basic, Λ2=Elevated, Λ3=Privileged, Λ4=Critical)"
+        },
+        "access_permissions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "basic_wallet",
+              "view_balance", 
+              "send_tokens",
+              "receive_tokens",
+              "trauma_vault_access",
+              "memory_resequencing",
+              "ethical_override",
+              "quantum_operations",
+              "multiverse_access"
+            ]
+          },
+          "description": "Specific permissions granted by this tier"
+        },
+        "tier_signature": {
+          "type": "string",
+          "description": "Cryptographic proof of tier authorization"
+        }
+      }
+    },
+    "multi_device_verification": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "description": "Whether multi-device verification is required"
+        },
+        "primary_device_id": {
+          "type": "string",
+          "pattern": "^device_(ios|android|web)_[a-zA-Z0-9]+$",
+          "description": "Primary device identifier"
+        },
+        "confirmation_devices": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["device_id", "verification_method"],
+            "properties": {
+              "device_id": {
+                "type": "string",
+                "pattern": "^device_(ios|android|web)_[a-zA-Z0-9]+$"
+              },
+              "verification_method": {
+                "type": "string",
+                "enum": ["qr_scan", "bluetooth_proximity", "nfc_tap", "push_notification"],
+                "description": "Method for device verification"
+              },
+              "trust_score": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "Device trust score (0-1)"
+              }
+            }
+          },
+          "maxItems": 5,
+          "description": "Secondary devices for confirmation"
+        },
+        "timeout_seconds": {
+          "type": "integer",
+          "minimum": 30,
+          "maximum": 300,
+          "description": "Timeout for multi-device confirmation"
+        }
+      }
+    },
+    "apple_wallet_integration": {
+      "type": "object",
+      "properties": {
+        "pkpass_enabled": {
+          "type": "boolean",
+          "description": "Whether Apple Wallet integration is enabled"
+        },
+        "pass_serial_number": {
+          "type": "string",
+          "description": "Apple Wallet pass serial number"
+        },
+        "barcode_message": {
+          "type": "string",
+          "description": "Message encoded in pass barcode"
+        },
+        "background_color": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$",
+          "description": "Pass background color (hex)"
+        }
+      }
+    },
+    "nft_integration": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "description": "Whether NFT-based authentication is enabled"
+        },
+        "contract_address": {
+          "type": "string",
+          "pattern": "^0x[a-fA-F0-9]{40}$",
+          "description": "Ethereum contract address"
+        },
+        "token_id": {
+          "type": "string",
+          "description": "NFT token identifier"
+        },
+        "snark_proof": {
+          "type": "string",
+          "description": "Zero-knowledge proof of ownership"
+        }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "examples": [
+    {
+      "meta": {
+        "version": "2.0",
+        "type": "qrg_auth",
+        "created_at": "2025-06-24T07:15:32.127Z",
+        "qrg_session_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+      },
+      "lambda_identity": {
+        "lambda_id": "ΛB8F2E4A9-C7D1",
+        "encrypted_token_reference": "U2FsdGVkX1+vupppZksvRf5pq5g5XjFRIipRkwB0K1Y96Qsv2Lm+31cmzaAILwyt",
+        "cryptographic_signature": "MEQCIAyK9X7nVZqzRjwvMpZqKqQgQqQyJ1eRqQzQyRqKqQgQAiBqKqQgQqQyJ1eR"
+      },
+      "authentication": {
+        "service_action_tags": ["wallet_access", "biometric_verify"],
+        "biometric_requirements": {
+          "required": true,
+          "modalities": ["face_id", "touch_id"],
+          "liveness_detection": true
+        }
+      },
+      "expiration": {
+        "expires_at": "2025-06-24T07:30:32.127Z",
+        "window_minutes": 15,
+        "refresh_threshold": 5
+      },
+      "symbolic_tier": {
+        "tier_level": "Λ3",
+        "access_permissions": ["trauma_vault_access", "memory_resequencing"],
+        "tier_signature": "MEQCIBqKqQgQqQyJ1eRqQzQyRqKqQgQAiBqKqQgQqQyJ1eRqQ"
+      },
+      "multi_device_verification": {
+        "enabled": true,
+        "primary_device_id": "device_ios_A9B8C7D6",
+        "confirmation_devices": [
+          {
+            "device_id": "device_android_E5F4G3H2",
+            "verification_method": "bluetooth_proximity",
+            "trust_score": 0.95
+          }
+        ],
+        "timeout_seconds": 120
+      }
+    }
+  ]
+}

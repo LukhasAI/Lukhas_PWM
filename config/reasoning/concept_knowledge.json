@@ -1,0 +1,361 @@
+{
+  "concept_graph": {
+    "consciousness": [
+      "awareness",
+      "self-awareness",
+      "cognition",
+      "experience",
+      "qualia"
+    ],
+    "emotion": [
+      "feeling",
+      "affect",
+      "mood",
+      "sentiment",
+      "valence",
+      "arousal"
+    ],
+    "memory": [
+      "recall",
+      "recognition",
+      "encoding",
+      "storage",
+      "retrieval",
+      "forgetting"
+    ],
+    "reasoning": [
+      "logic",
+      "inference",
+      "deduction",
+      "induction",
+      "abduction",
+      "problem-solving"
+    ],
+    "learning": [
+      "education",
+      "training",
+      "adaptation",
+      "improvement",
+      "knowledge-acquisition"
+    ],
+    "attention": [
+      "focus",
+      "concentration",
+      "awareness",
+      "vigilance",
+      "selective-attention"
+    ],
+    "perception": [
+      "sensation",
+      "recognition",
+      "interpretation",
+      "sensory-processing",
+      "awareness"
+    ],
+    "creativity": [
+      "innovation",
+      "imagination",
+      "originality",
+      "divergent-thinking",
+      "inspiration"
+    ],
+    "intelligence": [
+      "cognition",
+      "reasoning",
+      "problem-solving",
+      "learning",
+      "adaptation"
+    ],
+    "language": [
+      "communication",
+      "linguistics",
+      "semantics",
+      "syntax",
+      "pragmatics"
+    ],
+    "empathy": [
+      "compassion",
+      "sympathy",
+      "understanding",
+      "emotional-intelligence",
+      "perspective-taking"
+    ],
+    "knowledge": [
+      "information",
+      "understanding",
+      "wisdom",
+      "expertise",
+      "learning"
+    ],
+    "belief": [
+      "faith",
+      "conviction",
+      "opinion",
+      "assumption",
+      "worldview"
+    ],
+    "decision": [
+      "choice",
+      "judgment",
+      "selection",
+      "determination",
+      "conclusion"
+    ],
+    "goal": [
+      "objective",
+      "target",
+      "purpose",
+      "aim",
+      "intention"
+    ],
+    "planning": [
+      "strategy",
+      "preparation",
+      "organization",
+      "scheduling",
+      "goal-setting"
+    ],
+    "problem": [
+      "challenge",
+      "issue",
+      "difficulty",
+      "obstacle",
+      "puzzle"
+    ],
+    "solution": [
+      "answer",
+      "resolution",
+      "remedy",
+      "fix",
+      "approach"
+    ],
+    "understanding": [
+      "comprehension",
+      "grasp",
+      "insight",
+      "knowledge",
+      "awareness"
+    ],
+    "experience": [
+      "knowledge",
+      "skill",
+      "expertise",
+      "practice",
+      "familiarity"
+    ],
+    "thought": [
+      "idea",
+      "notion",
+      "concept",
+      "reflection",
+      "cognition"
+    ],
+    "concept": [
+      "idea",
+      "notion",
+      "principle",
+      "theory",
+      "abstraction"
+    ],
+    "mind": [
+      "consciousness",
+      "psyche",
+      "intellect",
+      "cognition",
+      "brain"
+    ],
+    "brain": [
+      "mind",
+      "cognition",
+      "neurology",
+      "consciousness",
+      "intelligence"
+    ],
+    "self": [
+      "identity",
+      "ego",
+      "consciousness",
+      "personality",
+      "individual"
+    ]
+  },
+  "concept_definitions": {
+    "consciousness": {
+      "definition": "The state of being aware of and able to think about one's existence, sensations, thoughts, and surroundings",
+      "importance": 5.0,
+      "affect": "wonder",
+      "symbolic_hash": "concept_1799"
+    },
+    "emotion": {
+      "definition": "A complex psychological state involving subjective experience, physiological response, and behavioral expression",
+      "importance": 5.0,
+      "affect": "resonance",
+      "symbolic_hash": "concept_2060"
+    },
+    "memory": {
+      "definition": "The faculty by which information is encoded, stored, and retrieved",
+      "importance": 5.0,
+      "affect": "nostalgia",
+      "symbolic_hash": "concept_7596"
+    },
+    "reasoning": {
+      "definition": "The process of thinking about something in a logical way to form a conclusion or judgment",
+      "importance": 5.0,
+      "affect": "neutral",
+      "symbolic_hash": "concept_0708"
+    },
+    "learning": {
+      "definition": "The acquisition of knowledge or skills through experience, study, or being taught",
+      "importance": 5.0,
+      "affect": "curiosity",
+      "symbolic_hash": "concept_1455"
+    },
+    "attention": {
+      "definition": "The behavioral and cognitive process of selectively concentrating on information while ignoring other perceivable information",
+      "importance": 5.0,
+      "affect": "neutral",
+      "symbolic_hash": "concept_4311"
+    },
+    "perception": {
+      "definition": "The organization, identification, and interpretation of sensory information",
+      "importance": 5.0,
+      "affect": "neutral",
+      "symbolic_hash": "concept_2670"
+    },
+    "creativity": {
+      "definition": "The use of imagination or original ideas to create something new or valuable",
+      "importance": 5.0,
+      "affect": "inspiration",
+      "symbolic_hash": "concept_2991"
+    },
+    "intelligence": {
+      "definition": "The ability to acquire and apply knowledge and skills",
+      "importance": 5.0,
+      "affect": "neutral",
+      "symbolic_hash": "concept_3347"
+    },
+    "language": {
+      "definition": "A structured system of communication using words, sounds, gestures, or symbols",
+      "importance": 5.0,
+      "affect": "neutral",
+      "symbolic_hash": "concept_4363"
+    },
+    "empathy": {
+      "definition": "The ability to understand and share the feelings of another",
+      "importance": 5.0,
+      "affect": "warmth",
+      "symbolic_hash": "concept_5940"
+    },
+    "knowledge": {
+      "definition": "Facts, information, and skills acquired through experience or education",
+      "importance": 5.0,
+      "affect": "neutral",
+      "symbolic_hash": "concept_7859"
+    },
+    "belief": {
+      "definition": "An acceptance that something exists or is true, especially without proof",
+      "importance": 5.0,
+      "affect": "neutral",
+      "symbolic_hash": "concept_2721"
+    },
+    "decision": {
+      "definition": "A conclusion or resolution reached after consideration",
+      "importance": 5.0,
+      "affect": "neutral",
+      "symbolic_hash": "concept_8338"
+    },
+    "goal": {
+      "definition": "An aim or desired result that a person or system envisions, plans, and commits to achieve",
+      "importance": 5.0,
+      "affect": "neutral",
+      "symbolic_hash": "concept_8349"
+    },
+    "planning": {
+      "definition": "The process of making plans for something; deciding on actions in advance",
+      "importance": 5.0,
+      "affect": "neutral",
+      "symbolic_hash": "concept_1221"
+    },
+    "problem": {
+      "definition": "A matter or situation regarded as unwelcome or harmful and needing to be dealt with",
+      "importance": 5.0,
+      "affect": "tension",
+      "symbolic_hash": "concept_4839"
+    },
+    "solution": {
+      "definition": "A means of solving a problem or dealing with a difficult situation",
+      "importance": 5.0,
+      "affect": "relief",
+      "symbolic_hash": "concept_4346"
+    },
+    "understanding": {
+      "definition": "The ability to comprehend; sympathetic awareness or tolerance",
+      "importance": 5.0,
+      "affect": "clarity",
+      "symbolic_hash": "concept_4682"
+    },
+    "experience": {
+      "definition": "Practical contact with and observation of facts or events",
+      "importance": 5.0,
+      "affect": "neutral",
+      "symbolic_hash": "concept_5962"
+    },
+    "thought": {
+      "definition": "An idea or opinion produced by thinking or occurring suddenly in the mind",
+      "importance": 5.0,
+      "affect": "neutral",
+      "symbolic_hash": "concept_0202"
+    },
+    "concept": {
+      "definition": "An abstract idea or general notion",
+      "importance": 5.0,
+      "affect": "neutral",
+      "symbolic_hash": "concept_4524"
+    },
+    "mind": {
+      "definition": "The element of a person that enables them to be aware of the world and their experiences",
+      "importance": 5.0,
+      "affect": "neutral",
+      "symbolic_hash": "concept_4478"
+    },
+    "brain": {
+      "definition": "The organ inside the head that controls thought, memory, feelings, and activity",
+      "importance": 5.0,
+      "affect": "neutral",
+      "symbolic_hash": "concept_4621"
+    },
+    "self": {
+      "definition": "A person's essential being that distinguishes them from others",
+      "importance": 5.0,
+      "affect": "neutral",
+      "symbolic_hash": "concept_1956"
+    }
+  },
+  "reasoning_weights": {
+    "consciousness": 0.5,
+    "emotion": 0.5,
+    "memory": 0.5,
+    "reasoning": 0.5,
+    "learning": 0.5,
+    "attention": 0.5,
+    "perception": 0.5,
+    "creativity": 0.5,
+    "intelligence": 0.5,
+    "language": 0.5,
+    "empathy": 0.5,
+    "knowledge": 0.5,
+    "belief": 0.5,
+    "decision": 0.5,
+    "goal": 0.5,
+    "planning": 0.5,
+    "problem": 0.5,
+    "solution": 0.5,
+    "understanding": 0.5,
+    "experience": 0.5,
+    "thought": 0.5,
+    "concept": 0.5,
+    "mind": 0.5,
+    "brain": 0.5,
+    "self": 0.5
+  }
+}

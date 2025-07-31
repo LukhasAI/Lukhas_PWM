@@ -1,0 +1,78 @@
+# LUKHAS Module Brief - Affect Stagnation Detector
+# Generated: 2025-07-24
+# Format Version: 1.0
+
+module:
+  name: affect_stagnation_detector
+  path: lukhas/emotion/affect_stagnation_detector.py
+  version: 1.0.0
+  type: monitor
+  subsystem: emotion
+
+metadata:
+  description: "Monitors emotional states for stagnation patterns and triggers recovery"
+  authors:
+    - "LUKHAS AI Emotion Team"
+    - "Claude Code (compatibility fixes)"
+  created: "2025-01-20"
+  modified: "2025-07-24"
+  status: "active"
+
+symbolic:
+  tags:
+    - "AIM"
+    - "ΛDRIFT"
+    - "ΛTRACE"
+  purpose: "emotional_health_monitoring"
+  integration_points:
+    - "emotional_memory"
+    - "mood_regulator"
+    - "recovery_systems"
+
+technical:
+  dependencies:
+    internal:
+      - "lukhas.emotion.emotional_memory"
+      - "lukhas.memory.core_memory.emotional_memory"
+    external:
+      - "logging"
+      - "datetime"
+      - "typing"
+  interfaces:
+    classes:
+      - name: "AffectStagnationDetector"
+        type: "monitor"
+        methods:
+          - "check_for_stagnation"
+  configuration:
+    stagnation_threshold_hours: 24
+
+validation:
+  tests:
+    path: "tests/emotion/affect/test_affect_stagnation.py"
+    coverage: 85
+  linting:
+    tool: "pylint"
+    score: 9.2
+
+monitoring:
+  metrics:
+    - "stagnation_events"
+    - "recovery_triggers"
+    - "affect_velocity"
+  log_level: "WARNING"
+  alerts:
+    - "emotional_stagnation_detected"
+
+compliance:
+  standards:
+    - "ISO 25010"
+  ethics:
+    - "emotional_well_being_monitoring"
+  safety:
+    - "feedback_loop_prevention"
+
+notes:
+  - "Contains #ΛDVNT tag for test compatibility"
+  - "Symbol mismatch fixed: ⏳ → 🧊"
+  - "Dual import path for transition period"

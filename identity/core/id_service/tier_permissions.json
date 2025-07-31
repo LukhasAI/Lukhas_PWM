@@ -1,0 +1,418 @@
+{
+  "tier_system": {
+    "description": "LUKHAS ΛiD Tier-based Access Control System",
+    "version": "1.0.0",
+    "last_updated": "2025-07-05"
+  },
+  "tier_definitions": {
+    "tier_0": {
+      "name": "Guest",
+      "description": "Basic access for anonymous users and visitors",
+      "permissions": {
+        "system_access": ["public_content", "basic_search", "guest_demos"],
+        "data_access": ["public_datasets", "sample_data"],
+        "compute_access": ["minimal_compute", "basic_queries"],
+        "features": ["content_viewing", "basic_interaction", "public_apis"],
+        "storage_limit": "10MB",
+        "session_duration": "1 hour",
+        "rate_limits": {
+          "api_calls_per_minute": 10,
+          "concurrent_sessions": 1
+        }
+      },
+      "restrictions": [
+        "no_persistent_storage",
+        "no_custom_configurations",
+        "limited_functionality",
+        "public_content_only"
+      ],
+      "symbolic_characters": ["◊", "○", "□"],
+      "entropy_requirements": {
+        "minimum_entropy": 0.3,
+        "pattern_tolerance": "medium",
+        "randomness_threshold": 0.4
+      }
+    },
+    "tier_1": {
+      "name": "Registered",
+      "description": "Registered users with basic personal accounts",
+      "permissions": {
+        "system_access": ["user_dashboard", "basic_tools", "community_features"],
+        "data_access": ["personal_data", "shared_content", "collaborative_spaces"],
+        "compute_access": ["standard_compute", "basic_ai_features"],
+        "features": ["profile_creation", "content_saving", "basic_sharing"],
+        "storage_limit": "100MB",
+        "session_duration": "8 hours",
+        "rate_limits": {
+          "api_calls_per_minute": 50,
+          "concurrent_sessions": 3
+        }
+      },
+      "restrictions": [
+        "limited_ai_access",
+        "basic_customization_only",
+        "community_moderation"
+      ],
+      "symbolic_characters": ["◊", "○", "□", "△", "▽"],
+      "entropy_requirements": {
+        "minimum_entropy": 0.4,
+        "pattern_tolerance": "medium",
+        "randomness_threshold": 0.5
+      }
+    },
+    "tier_2": {
+      "name": "Premium",
+      "description": "Premium subscribers with enhanced capabilities",
+      "permissions": {
+        "system_access": ["premium_tools", "advanced_analytics", "priority_support"],
+        "data_access": ["extended_datasets", "premium_content", "advanced_search"],
+        "compute_access": ["enhanced_ai", "custom_models", "batch_processing"],
+        "features": ["advanced_customization", "automation", "integrations"],
+        "storage_limit": "1GB",
+        "session_duration": "24 hours",
+        "rate_limits": {
+          "api_calls_per_minute": 200,
+          "concurrent_sessions": 10
+        }
+      },
+      "restrictions": [
+        "subscription_required",
+        "usage_monitoring"
+      ],
+      "symbolic_characters": ["🌀", "✨", "🔮", "◊", "⟐"],
+      "entropy_requirements": {
+        "minimum_entropy": 0.5,
+        "pattern_tolerance": "low",
+        "randomness_threshold": 0.6
+      }
+    },
+    "tier_3": {
+      "name": "Professional",
+      "description": "Professional users with business-grade access",
+      "permissions": {
+        "system_access": ["business_tools", "team_management", "enterprise_features"],
+        "data_access": ["business_datasets", "secure_storage", "compliance_tools"],
+        "compute_access": ["high_performance", "dedicated_resources", "custom_deployments"],
+        "features": ["team_collaboration", "advanced_security", "audit_logs"],
+        "storage_limit": "10GB",
+        "session_duration": "72 hours",
+        "rate_limits": {
+          "api_calls_per_minute": 1000,
+          "concurrent_sessions": 25
+        }
+      },
+      "restrictions": [
+        "business_verification_required",
+        "compliance_obligations"
+      ],
+      "symbolic_characters": ["🌀", "✨", "🔮", "⟐", "◈", "⬟"],
+      "entropy_requirements": {
+        "minimum_entropy": 0.6,
+        "pattern_tolerance": "low",
+        "randomness_threshold": 0.7
+      }
+    },
+    "tier_4": {
+      "name": "Enterprise",
+      "description": "Enterprise clients with maximum business capabilities",
+      "permissions": {
+        "system_access": ["enterprise_suite", "custom_solutions", "dedicated_support"],
+        "data_access": ["enterprise_data", "secure_vaults", "regulatory_compliance"],
+        "compute_access": ["unlimited_compute", "custom_infrastructure", "ai_training"],
+        "features": ["white_labeling", "custom_integrations", "sla_guarantees"],
+        "storage_limit": "100GB",
+        "session_duration": "unlimited",
+        "rate_limits": {
+          "api_calls_per_minute": 10000,
+          "concurrent_sessions": 100
+        }
+      },
+      "restrictions": [
+        "enterprise_contract_required",
+        "security_audits_mandatory"
+      ],
+      "symbolic_characters": ["⟐", "◈", "⬟", "⬢", "⟁", "◐"],
+      "entropy_requirements": {
+        "minimum_entropy": 0.7,
+        "pattern_tolerance": "very_low",
+        "randomness_threshold": 0.8
+      }
+    },
+    "tier_5": {
+      "name": "Root/Developer",
+      "description": "System administrators and core developers with full access",
+      "permissions": {
+        "system_access": ["system_administration", "code_deployment", "infrastructure_management"],
+        "data_access": ["all_system_data", "user_management", "security_configs"],
+        "compute_access": ["system_resources", "kernel_access", "hardware_control"],
+        "features": ["system_modification", "user_tier_management", "emergency_overrides"],
+        "storage_limit": "unlimited",
+        "session_duration": "unlimited",
+        "rate_limits": {
+          "api_calls_per_minute": "unlimited",
+          "concurrent_sessions": "unlimited"
+        }
+      },
+      "restrictions": [
+        "internal_personnel_only",
+        "multi_factor_authentication_required",
+        "audit_trail_mandatory",
+        "security_clearance_required"
+      ],
+      "symbolic_characters": ["⟐", "◈", "⬟", "⬢", "⟁", "◐", "◑", "⬧"],
+      "entropy_requirements": {
+        "minimum_entropy": 0.8,
+        "pattern_tolerance": "none",
+        "randomness_threshold": 0.9
+      }
+    }
+  },
+  "permission_categories": {
+    "system_access": {
+      "description": "Core system functionality access levels",
+      "hierarchy": ["public_content", "user_dashboard", "premium_tools", "business_tools", "enterprise_suite", "system_administration"]
+    },
+    "data_access": {
+      "description": "Data access and management permissions",
+      "hierarchy": ["public_datasets", "personal_data", "extended_datasets", "business_datasets", "enterprise_data", "all_system_data"]
+    },
+    "compute_access": {
+      "description": "Computational resource allocation",
+      "hierarchy": ["minimal_compute", "standard_compute", "enhanced_ai", "high_performance", "unlimited_compute", "system_resources"]
+    },
+    "features": {
+      "description": "Feature set availability by tier",
+      "hierarchy": ["content_viewing", "profile_creation", "advanced_customization", "team_collaboration", "white_labeling", "system_modification"]
+    }
+  },
+  "tier_progression": {
+    "upgrade_paths": {
+      "tier_0_to_1": {
+        "requirements": ["email_verification", "account_creation"],
+        "process": "automatic_upon_registration",
+        "timeline": "immediate"
+      },
+      "tier_1_to_2": {
+        "requirements": ["subscription_payment", "terms_acceptance"],
+        "process": "payment_verification",
+        "timeline": "within_24_hours"
+      },
+      "tier_2_to_3": {
+        "requirements": ["business_verification", "use_case_validation"],
+        "process": "manual_review",
+        "timeline": "3-5_business_days"
+      },
+      "tier_3_to_4": {
+        "requirements": ["enterprise_contract", "security_assessment"],
+        "process": "enterprise_sales_process",
+        "timeline": "2-4_weeks"
+      },
+      "tier_4_to_5": {
+        "requirements": ["internal_approval", "security_clearance"],
+        "process": "internal_promotion_only",
+        "timeline": "varies"
+      }
+    },
+    "downgrade_policies": {
+      "automatic_downgrades": ["payment_failure", "policy_violation", "security_breach"],
+      "grace_periods": {
+        "tier_2": "7_days",
+        "tier_3": "14_days",
+        "tier_4": "30_days"
+      },
+      "data_retention": {
+        "tier_0": "30_days",
+        "tier_1": "90_days",
+        "tier_2": "1_year",
+        "tier_3": "3_years",
+        "tier_4": "indefinite"
+      }
+    }
+  },
+  "security_policies": {
+    "authentication_requirements": {
+      "tier_0": ["none"],
+      "tier_1": ["password", "email_verification"],
+      "tier_2": ["password", "2fa_optional"],
+      "tier_3": ["password", "2fa_required", "device_verification"],
+      "tier_4": ["password", "2fa_required", "biometric_optional", "device_verification"],
+      "tier_5": ["password", "2fa_required", "biometric_required", "hardware_token", "admin_approval"]
+    },
+    "session_management": {
+      "concurrent_session_limits": {
+        "tier_0": 1,
+        "tier_1": 3,
+        "tier_2": 10,
+        "tier_3": 25,
+        "tier_4": 100,
+        "tier_5": "unlimited"
+      },
+      "session_timeouts": {
+        "tier_0": "1_hour",
+        "tier_1": "8_hours",
+        "tier_2": "24_hours",
+        "tier_3": "72_hours",
+        "tier_4": "unlimited",
+        "tier_5": "unlimited"
+      },
+      "idle_timeouts": {
+        "tier_0": "15_minutes",
+        "tier_1": "30_minutes",
+        "tier_2": "2_hours",
+        "tier_3": "4_hours",
+        "tier_4": "8_hours",
+        "tier_5": "disabled"
+      }
+    },
+    "audit_requirements": {
+      "tier_0": "basic_logging",
+      "tier_1": "user_activity_logging",
+      "tier_2": "enhanced_logging",
+      "tier_3": "compliance_logging",
+      "tier_4": "full_audit_trail",
+      "tier_5": "security_audit_trail"
+    }
+  },
+  "compliance_framework": {
+    "gdpr_compliance": {
+      "data_portability": {
+        "tier_0": "limited",
+        "tier_1": "basic",
+        "tier_2": "standard",
+        "tier_3": "enhanced",
+        "tier_4": "full",
+        "tier_5": "administrative"
+      },
+      "data_deletion": {
+        "request_processing_time": "30_days",
+        "retention_periods": {
+          "tier_0": "immediate",
+          "tier_1": "90_days",
+          "tier_2": "1_year",
+          "tier_3": "3_years",
+          "tier_4": "7_years",
+          "tier_5": "indefinite_with_approval"
+        }
+      }
+    },
+    "eu_ai_act_compliance": {
+      "risk_categories": {
+        "tier_0": "minimal_risk",
+        "tier_1": "limited_risk",
+        "tier_2": "limited_risk",
+        "tier_3": "high_risk",
+        "tier_4": "high_risk",
+        "tier_5": "unacceptable_risk_exceptions"
+      },
+      "transparency_requirements": {
+        "tier_0": "basic_disclosure",
+        "tier_1": "standard_disclosure",
+        "tier_2": "enhanced_disclosure",
+        "tier_3": "full_transparency",
+        "tier_4": "regulatory_transparency",
+        "tier_5": "administrative_transparency"
+      }
+    }
+  },
+  "monitoring_and_analytics": {
+    "usage_tracking": {
+      "tier_0": ["page_views", "session_duration"],
+      "tier_1": ["feature_usage", "api_calls", "storage_usage"],
+      "tier_2": ["performance_metrics", "error_rates", "custom_events"],
+      "tier_3": ["business_metrics", "team_analytics", "compliance_reports"],
+      "tier_4": ["enterprise_dashboards", "custom_reporting", "sla_monitoring"],
+      "tier_5": ["system_monitoring", "security_analytics", "admin_insights"]
+    },
+    "alert_systems": {
+      "tier_0": "none",
+      "tier_1": "basic_notifications",
+      "tier_2": "usage_alerts",
+      "tier_3": "business_alerts",
+      "tier_4": "enterprise_monitoring",
+      "tier_5": "security_alerts"
+    }
+  },
+  "lambda_id_integration": {
+    "tier_encoding": {
+      "position": "first_segment",
+      "format": "LUKHAS{tier_number}",
+      "validation": "required_for_all_operations"
+    },
+    "symbolic_character_mapping": {
+      "tier_0_symbols": ["◊", "○", "□"],
+      "tier_1_symbols": ["◊", "○", "□", "△", "▽"],
+      "tier_2_symbols": ["🌀", "✨", "🔮", "◊", "⟐"],
+      "tier_3_symbols": ["🌀", "✨", "🔮", "⟐", "◈", "⬟"],
+      "tier_4_symbols": ["⟐", "◈", "⬟", "⬢", "⟁", "◐"],
+      "tier_5_symbols": ["⟐", "◈", "⬟", "⬢", "⟁", "◐", "◑", "⬧"]
+    },
+    "entropy_validation": {
+      "tier_0": {"min_entropy": 0.3, "pattern_tolerance": 0.5},
+      "tier_1": {"min_entropy": 0.4, "pattern_tolerance": 0.6},
+      "tier_2": {"min_entropy": 0.5, "pattern_tolerance": 0.7},
+      "tier_3": {"min_entropy": 0.6, "pattern_tolerance": 0.8},
+      "tier_4": {"min_entropy": 0.7, "pattern_tolerance": 0.9},
+      "tier_5": {"min_entropy": 0.8, "pattern_tolerance": 1.0}
+    }
+  },
+  "api_configurations": {
+    "rate_limiting": {
+      "tier_0": {
+        "requests_per_minute": 10,
+        "requests_per_hour": 100,
+        "requests_per_day": 1000
+      },
+      "tier_1": {
+        "requests_per_minute": 50,
+        "requests_per_hour": 1000,
+        "requests_per_day": 10000
+      },
+      "tier_2": {
+        "requests_per_minute": 200,
+        "requests_per_hour": 5000,
+        "requests_per_day": 50000
+      },
+      "tier_3": {
+        "requests_per_minute": 1000,
+        "requests_per_hour": 20000,
+        "requests_per_day": 200000
+      },
+      "tier_4": {
+        "requests_per_minute": 10000,
+        "requests_per_hour": 100000,
+        "requests_per_day": 1000000
+      },
+      "tier_5": {
+        "requests_per_minute": "unlimited",
+        "requests_per_hour": "unlimited",
+        "requests_per_day": "unlimited"
+      }
+    },
+    "endpoint_access": {
+      "public_endpoints": ["tier_0", "tier_1", "tier_2", "tier_3", "tier_4", "tier_5"],
+      "authenticated_endpoints": ["tier_1", "tier_2", "tier_3", "tier_4", "tier_5"],
+      "premium_endpoints": ["tier_2", "tier_3", "tier_4", "tier_5"],
+      "business_endpoints": ["tier_3", "tier_4", "tier_5"],
+      "enterprise_endpoints": ["tier_4", "tier_5"],
+      "admin_endpoints": ["tier_5"]
+    }
+  },
+  "billing_integration": {
+    "pricing_tiers": {
+      "tier_0": {"cost": "free", "billing_cycle": "none"},
+      "tier_1": {"cost": "free", "billing_cycle": "none"},
+      "tier_2": {"cost": "$9.99", "billing_cycle": "monthly"},
+      "tier_3": {"cost": "$49.99", "billing_cycle": "monthly"},
+      "tier_4": {"cost": "custom", "billing_cycle": "enterprise"},
+      "tier_5": {"cost": "internal", "billing_cycle": "none"}
+    },
+    "usage_metering": {
+      "tier_0": "basic_tracking",
+      "tier_1": "usage_tracking",
+      "tier_2": "detailed_metering",
+      "tier_3": "business_metering",
+      "tier_4": "enterprise_metering",
+      "tier_5": "system_monitoring"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+[
+  {
+    "user_id": "SJ-GRDM-0001",
+    "tier": 5,
+    "voice": "NfUrCNRReUL9RXS9upG1",
+    "name": "Commander Gonzalo",
+    "override_tier": true
+  },
+  {
+    "id": "GPT-4O-SJ-0002",
+    "name": "Symbolic Guardian",
+    "tier": 5,
+    "symbolic_signature": "🧠🤖📜"
+  }
+]

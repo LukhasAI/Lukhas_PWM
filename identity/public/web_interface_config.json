@@ -1,0 +1,389 @@
+{
+  "web_interface": {
+    "title": "LUKHAS ΛiD Public Previewer",
+    "description": "Interactive tool for previewing, validating, and learning about ΛiD system",
+    "version": "2.0.0",
+    "base_url": "https://preview.lukhas.ai",
+    "cdn_assets": "https://cdn.lukhas.ai/previewer/v2",
+    "features": {
+      "real_time_preview": true,
+      "entropy_visualization": true,
+      "tier_comparison": true,
+      "format_guide": true,
+      "educational_content": true,
+      "demo_generation": true,
+      "accessibility": true,
+      "mobile_responsive": true,
+      "dark_mode": true,
+      "internationalization": false
+    }
+  },
+  "api_configuration": {
+    "base_path": "/api/public",
+    "version": "v1",
+    "rate_limiting": {
+      "enabled": true,
+      "default_limit": "100/hour",
+      "endpoints": {
+        "/preview": "100/hour",
+        "/demo": "50/hour",
+        "/tiers": "20/hour",
+        "/formats": "20/hour",
+        "/entropy/live": "200/hour"
+      },
+      "burst_limit": 10,
+      "rate_limit_by": "ip_address",
+      "rate_limit_headers": true
+    },
+    "cors": {
+      "enabled": true,
+      "allowed_origins": ["*"],
+      "allowed_methods": ["GET", "POST", "OPTIONS"],
+      "allowed_headers": ["Content-Type", "Authorization"],
+      "max_age": 3600
+    },
+    "security": {
+      "input_validation": true,
+      "output_sanitization": true,
+      "request_size_limit": "10KB",
+      "timeout_seconds": 30,
+      "ddos_protection": true
+    }
+  },
+  "user_interface": {
+    "layout": {
+      "header": {
+        "show_logo": true,
+        "show_navigation": true,
+        "show_theme_toggle": true
+      },
+      "main_sections": [
+        {
+          "id": "lambda_id_input",
+          "title": "ΛiD Preview & Analysis",
+          "description": "Enter a ΛiD to see detailed analysis, validation, and suggestions",
+          "features": ["real_time_validation", "entropy_analysis", "format_detection"]
+        },
+        {
+          "id": "tier_explorer",
+          "title": "Tier Explorer",
+          "description": "Compare different ΛiD tiers and their capabilities",
+          "features": ["tier_comparison", "feature_matrix", "upgrade_paths"]
+        },
+        {
+          "id": "format_guide",
+          "title": "Format Specifications",
+          "description": "Learn about ΛiD format rules and components",
+          "features": ["format_examples", "validation_rules", "component_breakdown"]
+        },
+        {
+          "id": "demo_generator",
+          "title": "Demo Generator",
+          "description": "Generate example ΛiDs for learning and testing",
+          "features": ["tier_demos", "commercial_demos", "custom_generation"]
+        },
+        {
+          "id": "entropy_analyzer",
+          "title": "Entropy Analyzer",
+          "description": "Understand entropy calculation and optimization",
+          "features": ["live_analysis", "optimization_tips", "boost_factors"]
+        },
+        {
+          "id": "educational_content",
+          "title": "Learn About ΛiD",
+          "description": "Comprehensive guides and tutorials",
+          "features": ["getting_started", "advanced_topics", "best_practices"]
+        }
+      ],
+      "footer": {
+        "show_links": true,
+        "show_api_info": true,
+        "show_contact": true
+      }
+    },
+    "styling": {
+      "theme": {
+        "primary_color": "#1e3a8a",
+        "secondary_color": "#3b82f6",
+        "accent_color": "#10b981",
+        "background_light": "#ffffff",
+        "background_dark": "#0f172a",
+        "text_light": "#1f2937",
+        "text_dark": "#f1f5f9",
+        "border_color": "#e5e7eb",
+        "error_color": "#ef4444",
+        "warning_color": "#f59e0b",
+        "success_color": "#10b981"
+      },
+      "fonts": {
+        "primary": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "monospace": "'JetBrains Mono', 'Fira Code', Consolas, 'Liberation Mono', Monaco, monospace"
+      },
+      "spacing": {
+        "base_unit": "0.25rem",
+        "container_max_width": "1200px",
+        "section_spacing": "2rem",
+        "component_spacing": "1rem"
+      }
+    },
+    "animations": {
+      "enabled": true,
+      "duration": "200ms",
+      "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "reduce_motion_support": true
+    },
+    "accessibility": {
+      "aria_labels": true,
+      "keyboard_navigation": true,
+      "screen_reader_support": true,
+      "focus_indicators": true,
+      "color_contrast_compliance": "WCAG AA",
+      "font_size_scaling": true
+    }
+  },
+  "interactive_features": {
+    "lambda_id_input": {
+      "placeholder": "Enter a ΛiD (e.g., Λ2-A1B2-🔮-C3D4)",
+      "validation": {
+        "real_time": true,
+        "debounce_ms": 300,
+        "show_format_hints": true,
+        "highlight_errors": true
+      },
+      "autocomplete": {
+        "enabled": true,
+        "suggestions": ["demo_ids", "format_templates"],
+        "max_suggestions": 5
+      }
+    },
+    "entropy_visualization": {
+      "type": "progress_bar",
+      "show_score": true,
+      "color_coding": true,
+      "breakdown": true,
+      "real_time_updates": true,
+      "boost_factor_display": true
+    },
+    "tier_comparison": {
+      "display_type": "interactive_table",
+      "features": ["sorting", "filtering", "expansion"],
+      "highlight_differences": true,
+      "upgrade_simulation": true
+    },
+    "demo_generation": {
+      "tier_selector": {
+        "type": "slider",
+        "range": [0, 5],
+        "default": 2,
+        "show_tier_names": true
+      },
+      "format_selector": {
+        "type": "radio_buttons",
+        "options": ["standard", "commercial"],
+        "default": "standard"
+      },
+      "instant_generation": true,
+      "copy_to_clipboard": true
+    }
+  },
+  "content_sections": {
+    "getting_started": {
+      "title": "Getting Started with ΛiD",
+      "sections": [
+        {
+          "title": "What is a ΛiD?",
+          "content": "ΛiD (Lambda Identity) is a next-generation identity system that provides secure, portable, and tier-based digital identities."
+        },
+        {
+          "title": "ΛiD Components",
+          "content": "Every ΛiD consists of five components: Lambda symbol (LUKHAS), tier designation, timestamp hash, symbolic character, and entropy hash."
+        },
+        {
+          "title": "Tier System",
+          "content": "ΛiD uses a 6-tier system (0-5) providing progressively enhanced features and capabilities."
+        },
+        {
+          "title": "Format Types",
+          "content": "Standard format for individuals, commercial format for businesses, and enterprise format for organizations."
+        }
+      ]
+    },
+    "format_guide": {
+      "title": "ΛiD Format Guide",
+      "sections": [
+        {
+          "title": "Standard Format",
+          "pattern": "LUKHAS{tier}-{timestamp}-{symbolic}-{entropy}",
+          "example": "Λ2-A1B2-🔮-C3D4",
+          "description": "Basic format for individual users"
+        },
+        {
+          "title": "Commercial Format",
+          "pattern": "LUKHAS©{brand}-{tier}-{timestamp}-{symbolic}-{entropy}",
+          "example": "LUKHAS©ACME-3-B5C6-⬢-D7E8",
+          "description": "Business format with branded prefixes"
+        },
+        {
+          "title": "Enterprise Format",
+          "pattern": "LUKHAS⬟{brand}-{division}-{tier}-{timestamp}-{symbolic}-{entropy}",
+          "example": "LUKHAS⬟CORP-DIV-4-F9G0-⟐-H1I2",
+          "description": "Enterprise format with division support"
+        }
+      ]
+    },
+    "entropy_guide": {
+      "title": "Understanding Entropy",
+      "sections": [
+        {
+          "title": "What is Entropy?",
+          "content": "Entropy measures randomness and unpredictability, contributing to ΛiD security and uniqueness."
+        },
+        {
+          "title": "Entropy Levels",
+          "levels": {
+            "very_low": {"range": "0.0-0.8", "color": "#ef4444", "description": "Poor entropy, predictable patterns"},
+            "low": {"range": "0.8-1.5", "color": "#f59e0b", "description": "Below recommended, some patterns"},
+            "medium": {"range": "1.5-2.5", "color": "#eab308", "description": "Good entropy, adequate security"},
+            "high": {"range": "2.5-3.5", "color": "#22c55e", "description": "Excellent entropy, strong security"},
+            "very_high": {"range": "3.5+", "color": "#10b981", "description": "Maximum entropy, optimal security"}
+          }
+        },
+        {
+          "title": "Boost Factors",
+          "factors": [
+            {"factor": "Unicode Symbols", "boost": "1.3x", "description": "Using Unicode symbolic characters"},
+            {"factor": "Pattern Complexity", "boost": "1.1x", "description": "Complex, non-repeating patterns"},
+            {"factor": "Character Diversity", "boost": "1.05x", "description": "Mixing different character types"}
+          ]
+        }
+      ]
+    },
+    "tier_benefits": {
+      "title": "Tier Benefits & Features",
+      "tiers": [
+        {
+          "tier": 0,
+          "name": "Invisible",
+          "color": "#6b7280",
+          "features": ["Anonymous access", "Basic format", "Limited symbols"],
+          "symbols": ["○", "◊", "△"],
+          "use_cases": ["Anonymous browsing", "Temporary access", "Privacy-focused"]
+        },
+        {
+          "tier": 1,
+          "name": "Individual",
+          "color": "#8b5cf6",
+          "features": ["Personal profiles", "Basic recovery", "Extended symbols"],
+          "symbols": ["○", "◊", "△", "□", "▽"],
+          "use_cases": ["Personal accounts", "Social interactions", "Basic commerce"]
+        },
+        {
+          "tier": 2,
+          "name": "Family",
+          "color": "#3b82f6",
+          "features": ["Emoji support", "QR-G recovery", "Cross-device sync"],
+          "symbols": ["🌀", "✨", "🔮", "◊", "⟐"],
+          "use_cases": ["Family accounts", "Shared devices", "Enhanced security"]
+        },
+        {
+          "tier": 3,
+          "name": "Community",
+          "color": "#10b981",
+          "features": ["Advanced entropy", "Community features", "Enhanced validation"],
+          "symbols": ["⟐", "◈", "⬟", "⬢", "⟡"],
+          "use_cases": ["Community leadership", "Advanced features", "Professional use"]
+        },
+        {
+          "tier": 4,
+          "name": "Creator",
+          "color": "#f59e0b",
+          "features": ["Live entropy feedback", "Professional tools", "Advanced analytics"],
+          "symbols": ["◈", "⬟", "⟢", "⟣", "⟤"],
+          "use_cases": ["Content creation", "Professional services", "Advanced features"]
+        },
+        {
+          "tier": 5,
+          "name": "Visionary",
+          "color": "#ef4444",
+          "features": ["All features", "Priority support", "Beta access"],
+          "symbols": ["✨", "🌟", "⭐", "💫", "🔥"],
+          "use_cases": ["Enterprise use", "Maximum capabilities", "Innovation access"]
+        }
+      ]
+    },
+    "commercial_info": {
+      "title": "Commercial ΛiD Features",
+      "sections": [
+        {
+          "title": "Branded Prefixes",
+          "description": "Custom brand codes for corporate identity",
+          "benefits": ["Brand recognition", "Professional appearance", "Corporate integration"]
+        },
+        {
+          "title": "Enhanced Capabilities",
+          "description": "Tier enhancement and exclusive features",
+          "benefits": ["Higher effective tier", "Exclusive symbols", "Priority processing"]
+        },
+        {
+          "title": "Business Tools",
+          "description": "Management and analytics dashboards",
+          "benefits": ["Usage analytics", "Bulk operations", "Team management"]
+        }
+      ]
+    }
+  },
+  "performance": {
+    "caching": {
+      "static_assets": "365d",
+      "api_responses": "1h",
+      "educational_content": "24h"
+    },
+    "optimization": {
+      "minify_assets": true,
+      "compress_responses": true,
+      "lazy_load_content": true,
+      "image_optimization": true
+    },
+    "monitoring": {
+      "response_time_tracking": true,
+      "error_rate_monitoring": true,
+      "user_interaction_analytics": true,
+      "performance_budgets": {
+        "initial_load": "3s",
+        "interaction_response": "100ms",
+        "content_load": "1s"
+      }
+    }
+  },
+  "deployment": {
+    "environment": "production",
+    "cdn": {
+      "provider": "cloudflare",
+      "regions": ["global"],
+      "cache_rules": ["static_assets", "api_responses"]
+    },
+    "ssl": {
+      "certificate_type": "wildcard",
+      "tls_version": "1.3",
+      "hsts_enabled": true
+    },
+    "security_headers": {
+      "content_security_policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';",
+      "x_frame_options": "DENY",
+      "x_content_type_options": "nosniff",
+      "referrer_policy": "strict-origin-when-cross-origin"
+    }
+  },
+  "analytics": {
+    "privacy_focused": true,
+    "track_events": [
+      "lambda_id_preview",
+      "demo_generation",
+      "tier_comparison_view",
+      "format_guide_access",
+      "educational_content_view"
+    ],
+    "retention_days": 90,
+    "anonymization": true
+  }
+}

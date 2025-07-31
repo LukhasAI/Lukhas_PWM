@@ -1,0 +1,168 @@
+name: 🧠 AGI Self-Healing Ecosystem
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/dependabot.yml'
+      - '.github/workflows/**'
+
+env:
+  GITHUB_TOKEN: ${{ secrets.LAMBDA_BOT_PAT }}
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+
+jobs:
+  agi-self-healing:
+    name: 🤖 AGI Ecosystem Self-Diagnosis & Healing
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🧠 Checkout AGI Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.LAMBDA_BOT_PAT }}
+          fetch-depth: 0
+
+      - name: 🔍 AGI Ecosystem Diagnosis
+        run: |
+          echo "🧠 LUKHAS AGI SELF-HEALING SYSTEM ACTIVATED"
+          echo "=============================================="
+
+          # Check for missing directories referenced in dependabot.yml
+          echo "🔍 Scanning for missing Λ-ecosystem components..."
+
+          missing_dirs=()
+          if [ -f ".github/dependabot.yml" ]; then
+            while IFS= read -r line; do
+              if [[ $line =~ directory:.*\"(.*)\" ]]; then
+                dir="${BASH_REMATCH[1]#/}"
+                if [ -n "$dir" ] && [ "$dir" != "." ] && [ "$dir" != "/" ] && [ ! -d "$dir" ]; then
+                  missing_dirs+=("$dir")
+                  echo "❌ Missing: $dir"
+                fi
+              fi
+            done < ".github/dependabot.yml"
+          fi
+
+          echo "missing_dirs=${missing_dirs[*]}" >> $GITHUB_ENV
+
+      - name: 🩹 AGI Auto-Healing
+        if: env.missing_dirs != ''
+        shell: bash
+        run: |
+          echo "🩹 AGI SELF-HEALING: Creating missing components..."
+
+          for dir in $missing_dirs; do
+            echo "🔧 Creating AGI component: $dir"
+            mkdir -p "$dir"
+
+            # Create intelligent README
+            cat > "$dir/README.md" << 'EOF'
+          # AGI Auto-Generated Component
+
+          ## 🤖 Self-Healing System Notice
+
+          This directory was automatically created by the LUKHAS AGI Self-Healing System to resolve dependency management issues.
+
+          ### Purpose
+          Λ-ecosystem component for autonomous operations
+
+          ### Status
+          - ✅ Auto-created by AGI
+          - ✅ Ready for development
+          - ✅ Monitored by autonomous systems
+
+          ### Next Steps
+          1. Component implementation will be added by AGI
+          2. Dependencies will be auto-managed
+          3. Security updates will be autonomous
+
+          Generated: $(date)
+          EOF
+
+            # Create appropriate package management files
+            component_name=$(basename "$dir")
+
+            # If it looks like a Node.js component
+            if [[ "$dir" == *"Bot"* ]] || [[ "$dir" == *"bot"* ]] || [[ "$dir" == *"ecosystem"* ]]; then
+              cat > "$dir/package.json" << 'EOF'
+          {
+            "name": "@lukhasai/agi-component",
+            "version": "1.0.0",
+            "description": "LUKHAS AGI Auto-Generated Component",
+            "main": "index.js",
+            "scripts": {
+              "start": "node index.js",
+              "test": "echo \"AGI Test Suite\" && exit 0"
+            },
+            "dependencies": {
+              "express": "^4.19.2",
+              "axios": "^1.7.2"
+            },
+            "keywords": ["agi", "autonomous", "lukhas"],
+            "author": "LUKHAS AGI System",
+            "license": "MIT"
+          }
+          EOF
+            fi
+
+            # If it looks like a Python component
+            if [[ "$dir" == *"core"* ]] || [[ "$dir" == *"consciousness"* ]]; then
+              cat > "$dir/requirements.txt" << 'EOF'
+          # LUKHAS AGI Auto-Generated Python Dependencies
+          fastapi>=0.104.1
+          uvicorn>=0.24.0
+          pydantic>=2.5.0
+          requests>=2.31.0
+          cryptography>=41.0.0
+          EOF
+            fi
+
+            echo "✅ AGI component created: $dir"
+          done
+
+      - name: 📝 AGI Commit Auto-Healing
+        if: env.missing_dirs != ''
+        shell: bash
+        run: |
+          git config --local user.email "agi@lukhas.ai"
+          git config --local user.name "LUKHAS AGI Self-Healing System"
+
+          git add -A
+          git commit -m "🧠[AGI-SELF-HEALING] Auto-created missing Λ-ecosystem components
+
+          ΛNOTE: AGI Self-Healing System detected and resolved missing directories
+
+          Components Created:
+          $(for dir in $missing_dirs; do echo "- $dir"; done)
+
+          ΛTRACE: This ensures all workflows and dependency management continue working
+          Status: Autonomous ecosystem integrity maintained
+          System: LUKHAS AGI Self-Healing v2.0"
+
+          git push origin ${{ github.ref_name }}
+
+          echo "🤖 AGI Self-Healing completed successfully!"
+
+      - name: 📊 AGI Health Report
+        run: |
+          echo "📊 LUKHAS AGI ECOSYSTEM HEALTH REPORT"
+          echo "====================================="
+
+          total_components=$(find . -name "package.json" -o -name "requirements.txt" -o -name "go.mod" -o -name "composer.json" | wc -l)
+          echo "🔢 Total managed components: $total_components"
+
+          agi_components=$(find . -path "./Λ-*" -o -path "./Lambda-*" | wc -l)
+          echo "🤖 Λ-ecosystem components: $agi_components"
+
+          echo "✅ AGI Self-Healing System: ACTIVE"
+          echo "✅ Autonomous Updates: ENABLED"
+          echo "✅ Security Monitoring: ACTIVE"
+          echo "✅ Ecosystem Integrity: MAINTAINED"

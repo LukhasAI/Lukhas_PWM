@@ -1,0 +1,24 @@
+{
+  "deployment_version": "1.0.0",
+  "deployment_date": "/Users/agi_dev/Downloads/Consolidation-Repo",
+  "apis": {
+    "dream_commerce": {
+      "name": "LUKHAS Dream Commerce API",
+      "version": "1.0.0",
+      "location": "deployments/dream_commerce",
+      "includes_personality": true
+    },
+    "memory_services": {
+      "name": "LUKHAS Memory Services API",
+      "version": "1.0.0",
+      "location": "deployments/memory_services",
+      "includes_personality": false
+    },
+    "consciousness_platform": {
+      "name": "LUKHAS Consciousness Platform API",
+      "version": "1.0.0",
+      "location": "deployments/consciousness_platform",
+      "includes_personality": false
+    }
+  }
+}

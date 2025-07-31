@@ -1,0 +1,224 @@
+name: "🤖 ΛBot Auto Conflict Resolution"
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: ["main", "pre-audit", "develop"]
+
+  # Manual trigger for conflict resolution
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: "PR number to resolve conflicts for"
+        required: true
+        type: number
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  BOT_USER_AGENT: "LambdaBot/1.0 (LUKHAS-AGI-ConflictResolver)"
+
+jobs:
+  resolve-conflicts:
+    name: "🤖 ΛBot Conflict Resolution"
+    runs-on: ubuntu-latest
+    if: |
+      (github.event_name == 'pull_request' &&
+       (contains(github.event.pull_request.head.ref, 'lambda-bot/security-fixes-') ||
+        contains(github.event.pull_request.head.ref, 'jules-') ||
+        contains(github.event.pull_request.head.ref, 'codex-'))) ||
+      github.event_name == 'workflow_dispatch'
+
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: ${{ github.event.inputs.pr_number && format('refs/pull/{0}/head', github.event.inputs.pr_number) || github.head_ref }}
+
+      - name: "Setup Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: "Setup Git Configuration"
+        run: |
+          git config --global user.name "LambdaBot"
+          git config --global user.email "lambda-bot@lukhas.ai"
+          git config --global pull.rebase false
+          git config --global merge.conflictstyle "diff3"
+
+      - name: "Get PR Information"
+        id: pr-info
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            PR_NUMBER="${{ github.event.inputs.pr_number }}"
+          else
+            PR_NUMBER="${{ github.event.pull_request.number }}"
+          fi
+
+          echo "pr_number=$PR_NUMBER" >> $GITHUB_OUTPUT
+
+          # Get PR details
+          PR_DATA=$(gh pr view $PR_NUMBER --json headRefName,baseRefName,mergeable,mergeStateStatus,title)
+          HEAD_REF=$(echo "$PR_DATA" | jq -r '.headRefName')
+          BASE_REF=$(echo "$PR_DATA" | jq -r '.baseRefName')
+          MERGEABLE=$(echo "$PR_DATA" | jq -r '.mergeable')
+          MERGE_STATE=$(echo "$PR_DATA" | jq -r '.mergeStateStatus')
+          PR_TITLE=$(echo "$PR_DATA" | jq -r '.title')
+
+          echo "head_ref=$HEAD_REF" >> $GITHUB_OUTPUT
+          echo "base_ref=$BASE_REF" >> $GITHUB_OUTPUT
+          echo "mergeable=$MERGEABLE" >> $GITHUB_OUTPUT
+          echo "merge_state=$MERGE_STATE" >> $GITHUB_OUTPUT
+          echo "pr_title=$PR_TITLE" >> $GITHUB_OUTPUT
+
+          echo "🔍 PR #$PR_NUMBER Analysis:"
+          echo "  Head: $HEAD_REF"
+          echo "  Base: $BASE_REF"
+          echo "  Mergeable: $MERGEABLE"
+          echo "  State: $MERGE_STATE"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "Check for Conflicts"
+        id: conflict-check
+        run: |
+          PR_NUMBER="${{ steps.pr-info.outputs.pr_number }}"
+          HEAD_REF="${{ steps.pr-info.outputs.head_ref }}"
+          BASE_REF="${{ steps.pr-info.outputs.base_ref }}"
+
+          # Fetch latest changes
+          git fetch origin $HEAD_REF:$HEAD_REF
+          git fetch origin $BASE_REF:$BASE_REF
+
+          # Switch to head branch
+          git checkout $HEAD_REF
+
+          # Try to merge base branch
+          if git merge origin/$BASE_REF --no-commit --no-ff; then
+            echo "has_conflicts=false" >> $GITHUB_OUTPUT
+            echo "✅ No conflicts detected"
+            git merge --abort 2>/dev/null || true
+          else
+            echo "has_conflicts=true" >> $GITHUB_OUTPUT
+            echo "⚠️ Conflicts detected"
+
+            # Get list of conflicted files
+            CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
+            echo "conflicted_files<<EOF" >> $GITHUB_OUTPUT
+            echo "$CONFLICTED_FILES" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+
+            echo "📋 Conflicted files:"
+            echo "$CONFLICTED_FILES"
+
+            # Reset to clean state
+            git merge --abort 2>/dev/null || true
+          fi
+
+      - name: "Auto-Resolve Conflicts"
+        if: steps.conflict-check.outputs.has_conflicts == 'true'
+        run: |
+          HEAD_REF="${{ steps.pr-info.outputs.head_ref }}"
+          BASE_REF="${{ steps.pr-info.outputs.base_ref }}"
+          PR_NUMBER="${{ steps.pr-info.outputs.pr_number }}"
+
+          echo "🤖 Starting automatic conflict resolution..."
+
+          # Switch to head branch
+          git checkout $HEAD_REF
+
+          # Start merge
+          git merge origin/$BASE_REF --no-commit --no-ff || true
+
+          # Get conflicted files
+          CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
+
+          # Use the Python conflict resolution script
+          python3 .github/scripts/lambda-bot-conflict-resolver.py $CONFLICTED_FILES
+
+          # Commit the resolved conflicts
+          git commit -m "🤖 ΛBot: Auto-resolved merge conflicts
+
+          Automatically resolved conflicts using intelligent merging:
+          - Security files: Kept HEAD (newer fixes)
+          - Documentation: Intelligent merge with symbolic tag preservation
+          - Python files: Import deduplication and symbolic header preservation
+          - Config files: Kept HEAD (safer)
+
+          Files resolved: $(echo '$CONFLICTED_FILES' | tr '\n' ' ')
+
+          ΛTAG: auto-conflict-resolution, lambda-bot
+          ΛORIGIN_AGENT: ΛBot-ConflictResolver"
+
+          # Push resolved changes
+          git push origin $HEAD_REF
+
+          echo "✅ Conflicts resolved and pushed"
+
+      - name: "Update PR Status"
+        if: always()
+        run: |
+          PR_NUMBER="${{ steps.pr-info.outputs.pr_number }}"
+          HAS_CONFLICTS="${{ steps.conflict-check.outputs.has_conflicts }}"
+
+          if [ "$HAS_CONFLICTS" = "true" ]; then
+            # Remove conflict labels and add resolved label
+            gh pr edit $PR_NUMBER --remove-label "merge-conflict,needs-manual-review" --add-label "auto-resolved,lambda-bot-processed" 2>/dev/null || true
+
+            # Add success comment
+            gh pr comment $PR_NUMBER --body "🤖 **ΛBot Conflict Resolution** ✅
+
+            Conflicts have been automatically resolved using intelligent merging strategies:
+
+            **Resolution Strategy:**
+            - 🔒 Security files: Kept HEAD version (newer fixes)
+            - 📖 Documentation: Intelligent merge with symbolic tag preservation
+            - 🐍 Python files: Import deduplication and symbolic header preservation
+            - ⚙️ Config files: Kept HEAD version (safer approach)
+
+            **Files Resolved:**
+            \`\`\`
+            ${{ steps.conflict-check.outputs.conflicted_files }}
+            \`\`\`
+
+            The PR is now ready for review and should be mergeable.
+
+            **Next Steps:**
+            - Review the auto-resolved changes
+            - Test the merged code
+            - Merge when ready
+
+            *Powered by ΛBot Intelligent Conflict Resolution*"
+          else
+            echo "✅ No conflicts to resolve"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "Trigger Auto-Merge"
+        if: |
+          steps.conflict-check.outputs.has_conflicts == 'true' &&
+          contains(github.event.pull_request.head.ref, 'lambda-bot/security-fixes-')
+        run: |
+          PR_NUMBER="${{ steps.pr-info.outputs.pr_number }}"
+
+          # Wait a moment for PR to update
+          sleep 10
+
+          # Check if PR is now mergeable
+          MERGEABLE=$(gh pr view $PR_NUMBER --json mergeable --jq '.mergeable')
+
+          if [ "$MERGEABLE" = "MERGEABLE" ]; then
+            echo "🚀 PR is now mergeable - triggering auto-merge"
+
+            # Trigger the auto-merge workflow
+            gh workflow run lambda-bot-auto-merge.yml -f pr_number=$PR_NUMBER
+
+            echo "✅ Auto-merge triggered for resolved PR"
+          else
+            echo "⚠️ PR still not mergeable after conflict resolution"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

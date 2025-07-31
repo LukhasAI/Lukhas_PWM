@@ -1,0 +1,78 @@
+{
+  "consent_policies": {
+    "version": "2.0.0",
+    "last_updated": "2025-07-05",
+    "symbolic_system": "ΛSENT",
+    "policy_types": {
+      "essential": {
+        "symbol": "⚡",
+        "description": "Essential functions required for basic operation",
+        "revocable": false,
+        "scopes": ["basic_interaction", "essential_functions"]
+      },
+      "functional": {
+        "symbol": "🔧", 
+        "description": "Functional features that enhance user experience",
+        "revocable": true,
+        "scopes": ["audio", "trace", "analytics"]
+      },
+      "enhanced": {
+        "symbol": "✨",
+        "description": "Enhanced features with sensitive data access", 
+        "revocable": true,
+        "enhanced_security": true,
+        "scopes": ["location", "biometric", "memory"]
+      },
+      "premium": {
+        "symbol": "💎",
+        "description": "Premium features with maximum data access",
+        "revocable": true,
+        "enhanced_security": true,
+        "symbolic_verification": true,
+        "scopes": ["replay", "integration"]
+      }
+    }
+  },
+  "revocation_policies": {
+    "immediate_revocation": ["analytics", "location", "audio"],
+    "cooling_off_period": {
+      "biometric": 24,
+      "memory": 48, 
+      "replay": 72
+    },
+    "cascade_revocation": {
+      "memory": ["analytics", "trace"],
+      "replay": ["memory", "biometric", "trace"]
+    }
+  },
+  "compliance_frameworks": {
+    "gdpr": {
+      "enabled": true,
+      "right_to_be_forgotten": true,
+      "data_portability": true,
+      "consent_withdrawal": true
+    },
+    "eu_ai_act": {
+      "enabled": true,
+      "high_risk_systems": ["biometric", "memory", "replay"],
+      "transparency_requirements": true
+    },
+    "ccpa": {
+      "enabled": true,
+      "opt_out_rights": true,
+      "data_minimization": true
+    }
+  },
+  "symbolic_consent_representation": {
+    "format": "unicode_symbols",
+    "compression": "enabled",
+    "max_length": 50,
+    "fallback_format": "text_codes"
+  },
+  "zero_knowledge_integration": {
+    "enabled": true,
+    "proof_types": ["consent_existence", "scope_validation", "time_bound_consent"],
+    "verification_chain": "verifold_replay_chain",
+    "privacy_preserving": true
+  }
+}
