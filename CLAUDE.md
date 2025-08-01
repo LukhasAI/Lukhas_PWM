@@ -191,3 +191,77 @@ The system includes 3 microservice deployments:
 - Memory Services (`deployments/memory_services/`)
 
 Each service is Docker-containerized with FastAPI endpoints.
+
+## File Organization Guidelines
+
+**IMPORTANT**: When creating new files, follow the proper directory structure to maintain a clean root directory.
+
+### Directory Structure for New Files
+
+```
+🧠 LUKHAS_PWM/
+├── 📄 Root Files (ONLY these belong in root)
+│   ├── CLAUDE.md                    # This file
+│   ├── README.md                    # Primary documentation
+│   ├── LICENSE                      # Legal
+│   ├── requirements.txt             # Core dependencies
+│   ├── package.json                 # Node.js dependencies
+│   ├── lukhas_pwm_config.yaml       # Core configuration
+│   └── .gitignore, .env.example     # Environment files
+│
+├── 📁 docs/                         # All documentation
+│   ├── 📁 reports/                  # Analysis reports
+│   │   ├── 📁 status/               # Status reports (PWM_*_STATUS_REPORT.md)
+│   │   └── 📁 analysis/             # Analysis results (PWM_*_REPORT.json)
+│   ├── 📁 planning/                 # Planning documents
+│   │   └── 📁 completed/            # Completed phase plans (PWM_*_PLAN.md)
+│   └── 📁 archive/                  # Archived documentation
+│
+├── 📁 tools/                        # Analysis & utility tools
+│   ├── 📁 analysis/                 # Analysis scripts (PWM_*.py)
+│   ├── 📁 scripts/                  # Utility scripts
+│   └── 📁 documentation_suite/      # Documentation generators
+│
+├── 📁 tests/                        # Test suites
+│   ├── 📁 governance/               # Governance tests (test_*.py)
+│   ├── 📁 security/                 # Security tests
+│   └── 📁 integration/              # Integration tests
+│
+└── 📁 [Module Directories]          # Core LUKHAS modules
+```
+
+### File Placement Rules
+
+**NEVER create these in root:**
+- Analysis scripts (PWM_*.py) → Place in `tools/analysis/`
+- Test files (test_*.py) → Place in appropriate `tests/` subdirectory
+- Reports (*.json, *_REPORT.md) → Place in `docs/reports/`
+- Planning documents → Place in `docs/planning/`
+- Temporary or working files → Use appropriate module directory
+
+**Examples:**
+- ❌ `/PWM_FUNCTIONAL_ANALYSIS.py` 
+- ✅ `/tools/analysis/PWM_FUNCTIONAL_ANALYSIS.py`
+
+- ❌ `/test_governance.py`
+- ✅ `/tests/governance/test_governance.py`
+
+- ❌ `/PWM_OPERATIONAL_STATUS_REPORT.md`
+- ✅ `/docs/reports/status/PWM_OPERATIONAL_STATUS_REPORT.md`
+
+### When Creating New Components
+
+1. **Analysis Tools**: Always place in `tools/analysis/` or `tools/scripts/`
+2. **Documentation**: Use `docs/` with appropriate subdirectory
+3. **Tests**: Place in `tests/` with module-specific subdirectory
+4. **Module Code**: Use the appropriate module directory
+5. **Configuration**: Only core configs belong in root
+
+### Automated Organization
+
+A pre-commit hook and GitHub Action help maintain organization:
+- Files created in wrong locations will be flagged
+- Suggestions provided for correct placement
+- Automatic organization can be triggered
+
+Remember: A clean root directory makes the project more professional and easier to navigate!

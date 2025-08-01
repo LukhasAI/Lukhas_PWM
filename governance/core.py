@@ -23,7 +23,7 @@ from enum import Enum
 from typing import Dict, List, Any, Optional, Tuple, Set
 from dataclasses import dataclass, asdict
 
-from ..common import (
+from .common import (
     BaseLukhasModule,
     BaseLucasConfig,
     BaseLucasHealth,
