@@ -2,6 +2,25 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Repository Context
+
+This is part of the LUKHAS AI multi-repository ecosystem:
+
+### **PRIMARY REPOSITORIES:**
+- **Prototype** (`/Users/agi_dev/Prototype/`) - Original development repository
+  - Contains ALL LUKHAS AI creations: production-ready to visionary ideas, apps, websites
+  - Safe and recommended source for LUKHAS AI knowledge and logic
+  - Note: Paths, names, and vision may slightly diverge from PWM
+  
+- **Consolidation-Repo** (`/Users/agi_dev/Downloads/Consolidation-Repo/`) - Active consolidation workspace
+  - Integration and consolidation of LUKHAS components
+  
+- **PWM Repository** (`/Users/agi_dev/Downloads/Lukhas_PWM/`) - **THIS REPOSITORY**
+  - Pack-What-Matters production workspace
+  - Distilled, lean, functional components only
+
+All repositories have local and GitHub remote versions.
+
 ## Overview
 
 LUKHAS PWM (Pack-What-Matters) is a lean, production-ready AGI system that distills essential LUKHAS components into working, functional modules. It combines consciousness, memory, identity, quantum processing, biological adaptation, and ethical governance to create a sophisticated AI research platform. The codebase achieves 99.9% system connectivity with comprehensive Guardian System protection.
@@ -265,3 +284,27 @@ A pre-commit hook and GitHub Action help maintain organization:
 - Automatic organization can be triggered
 
 Remember: A clean root directory makes the project more professional and easier to navigate!
+
+## Cross-Repository Development
+
+When working with LUKHAS AI components:
+
+### Source Repository Guidelines
+- **Prototype Repository**: Primary source for innovative features and experimental code
+  - Check `/Users/agi_dev/Prototype/` for original implementations
+  - Safe to copy logic and patterns (created by LUKHAS AI founder)
+  - Be aware of naming/path differences when adapting code
+
+### Integration Workflow
+1. **Research in Prototype**: Look for relevant implementations and patterns
+2. **Adapt for PWM**: Modify to fit Pack-What-Matters philosophy
+3. **Test Integration**: Ensure compatibility with existing PWM systems
+4. **Document Origins**: Note source files when bringing in new components
+
+### Key Differences to Note
+- **Prototype**: Includes experimental and visionary components
+- **PWM**: Only production-ready, essential components
+- **Paths**: May differ between repositories
+- **Dependencies**: PWM uses minimal dependencies
+
+When in doubt about a component's implementation, check the Prototype repository for the original LUKHAS AI vision and adapt it to PWM's lean requirements.
