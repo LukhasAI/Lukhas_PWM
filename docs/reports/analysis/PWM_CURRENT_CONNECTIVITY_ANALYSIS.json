@@ -1,0 +1,2211 @@
+{
+  "timestamp": "2025-08-01T17:31:39.408855Z",
+  "analysis_summary": {
+    "total_python_files": 3732,
+    "connected_files": 3471,
+    "isolated_files": 261,
+    "hub_files": 50,
+    "average_connectivity": 5.884244372990354
+  },
+  "connectivity_metrics": {
+    "highly_connected_threshold": 10,
+    "isolated_threshold": 0,
+    "average_imports_per_file": 5.230975348338692
+  },
+  "critical_hubs": [
+    {
+      "file": "orchestration/core_modules/orchestration_service.py",
+      "module": "orchestration.core_modules.orchestration_service",
+      "imports_out": 106,
+      "imports_in": 1,
+      "connectivity_score": 107,
+      "lines_of_code": 2654
+    },
+    {
+      "file": "core/colonies/base_colony.py",
+      "module": "core.colonies.base_colony",
+      "imports_out": 14,
+      "imports_in": 63,
+      "connectivity_score": 77,
+      "lines_of_code": 229
+    },
+    {
+      "file": "memory/core.py",
+      "module": "memory.core",
+      "imports_out": 30,
+      "imports_in": 27,
+      "connectivity_score": 57,
+      "lines_of_code": 1206
+    },
+    {
+      "file": "memory/memory_hub.py",
+      "module": "memory.memory_hub",
+      "imports_out": 28,
+      "imports_in": 24,
+      "connectivity_score": 52,
+      "lines_of_code": 1326
+    },
+    {
+      "file": "core/actor_system.py",
+      "module": "core.actor_system",
+      "imports_out": 15,
+      "imports_in": 34,
+      "connectivity_score": 49,
+      "lines_of_code": 794
+    },
+    {
+      "file": "core/symbolism/tags.py",
+      "module": "core.symbolism.tags",
+      "imports_out": 1,
+      "imports_in": 43,
+      "connectivity_score": 44,
+      "lines_of_code": 26
+    },
+    {
+      "file": "orchestration/specialized/content_enterprise_orchestrator.py",
+      "module": "orchestration.specialized.content_enterprise_orchestrator",
+      "imports_out": 43,
+      "imports_in": 0,
+      "connectivity_score": 43,
+      "lines_of_code": 1059
+    },
+    {
+      "file": "identity/interface.py",
+      "module": "identity.interface",
+      "imports_out": 11,
+      "imports_in": 29,
+      "connectivity_score": 40,
+      "lines_of_code": 256
+    },
+    {
+      "file": "core/swarm.py",
+      "module": "core.swarm",
+      "imports_out": 5,
+      "imports_in": 34,
+      "connectivity_score": 39,
+      "lines_of_code": 327
+    },
+    {
+      "file": "consciousness/consciousness_hub.py",
+      "module": "consciousness.consciousness_hub",
+      "imports_out": 20,
+      "imports_in": 19,
+      "connectivity_score": 39,
+      "lines_of_code": 907
+    },
+    {
+      "file": "core/monitoring_observability.py",
+      "module": "core.monitoring_observability",
+      "imports_out": 37,
+      "imports_in": 1,
+      "connectivity_score": 38,
+      "lines_of_code": 1056
+    },
+    {
+      "file": "orchestration/integration_hub.py",
+      "module": "orchestration.integration_hub",
+      "imports_out": 30,
+      "imports_in": 8,
+      "connectivity_score": 38,
+      "lines_of_code": 382
+    },
+    {
+      "file": "memory/emotional.py",
+      "module": "memory.emotional",
+      "imports_out": 11,
+      "imports_in": 26,
+      "connectivity_score": 37,
+      "lines_of_code": 1186
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/monitoring_observability.py",
+      "module": ".pwm_cleanup_archive.BACKUP_BEFORE_CONSOLIDATION_20250801_002312.core.monitoring_observability",
+      "imports_out": 37,
+      "imports_in": 0,
+      "connectivity_score": 37,
+      "lines_of_code": 1056
+    },
+    {
+      "file": "core/colonies/ethics_swarm_colony.py",
+      "module": "core.colonies.ethics_swarm_colony",
+      "imports_out": 20,
+      "imports_in": 16,
+      "connectivity_score": 36,
+      "lines_of_code": 1329
+    },
+    {
+      "file": "core/core_hub.py",
+      "module": "core.core_hub",
+      "imports_out": 21,
+      "imports_in": 14,
+      "connectivity_score": 35,
+      "lines_of_code": 703
+    },
+    {
+      "file": "memory/core/unified_memory_orchestrator.py",
+      "module": "memory.core.unified_memory_orchestrator",
+      "imports_out": 27,
+      "imports_in": 8,
+      "connectivity_score": 35,
+      "lines_of_code": 1761
+    },
+    {
+      "file": "identity/identity_hub.py",
+      "module": "identity.identity_hub",
+      "imports_out": 24,
+      "imports_in": 11,
+      "connectivity_score": 35,
+      "lines_of_code": 1138
+    },
+    {
+      "file": "core/event_bus.py",
+      "module": "core.event_bus",
+      "imports_out": 9,
+      "imports_in": 24,
+      "connectivity_score": 33,
+      "lines_of_code": 382
+    },
+    {
+      "file": "core/event_sourcing.py",
+      "module": "core.event_sourcing",
+      "imports_out": 10,
+      "imports_in": 22,
+      "connectivity_score": 32,
+      "lines_of_code": 567
+    }
+  ],
+  "isolated_files": [
+    {
+      "file": "tools/keyword_extractor.py",
+      "lines_of_code": 164,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 8333
+    },
+    {
+      "file": "tools/AiDocumentationGenerator.py",
+      "lines_of_code": 592,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 22447
+    },
+    {
+      "file": "tools/dev_tools.py",
+      "lines_of_code": 507,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 17504
+    },
+    {
+      "file": "tools/comprehensive_core_auditor.py",
+      "lines_of_code": 600,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 24044
+    },
+    {
+      "file": "tools/SyntaxFixerBot.py",
+      "lines_of_code": 463,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 17354
+    },
+    {
+      "file": "tools/DependencyConnectivityTest.py",
+      "lines_of_code": 302,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 11333
+    },
+    {
+      "file": "tools/CoreAnalyzer.py",
+      "lines_of_code": 410,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 17620
+    },
+    {
+      "file": "tools/TrueCoreAnalyzer.py",
+      "lines_of_code": 280,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 12193
+    },
+    {
+      "file": "tools/secure_context_policy.json.py",
+      "lines_of_code": 52,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 1248
+    },
+    {
+      "file": "tools/TestIntegrationSimple.py",
+      "lines_of_code": 346,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 10647
+    },
+    {
+      "file": "tools/ContextAnalyzer.py",
+      "lines_of_code": 377,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 13874
+    },
+    {
+      "file": "tools/missing_component_hunter.py",
+      "lines_of_code": 405,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 14577
+    },
+    {
+      "file": "tools/CriticalConnectivityAnalyzer.py",
+      "lines_of_code": 206,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 8489
+    },
+    {
+      "file": "tools/simple_troubleshooter.py",
+      "lines_of_code": 281,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 8289
+    },
+    {
+      "file": "tools/post_consolidation_auditor.py",
+      "lines_of_code": 799,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 29627
+    },
+    {
+      "file": "tools/vscode_diagnostic.py",
+      "lines_of_code": 94,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2992
+    },
+    {
+      "file": "tools/OrganizationScanner.py",
+      "lines_of_code": 368,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 13135
+    },
+    {
+      "file": "tools/PatternScanner.py",
+      "lines_of_code": 325,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 13643
+    },
+    {
+      "file": "tools/full_connectivity_resolver.py",
+      "lines_of_code": 740,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 24544
+    },
+    {
+      "file": "tools/check_all_box_alignment.py",
+      "lines_of_code": 120,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4402
+    },
+    {
+      "file": "tools/comprehensive_organizational_audit.py",
+      "lines_of_code": 486,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 20122
+    },
+    {
+      "file": "tools/documentation/memory_evolution/memory_evolution.py",
+      "lines_of_code": 12,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 287
+    },
+    {
+      "file": "bio/core/symbolic_bio_systems_inspiration.py",
+      "lines_of_code": 245,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 11146
+    },
+    {
+      "file": "core/demo_coordination.py",
+      "lines_of_code": 264,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 9443
+    },
+    {
+      "file": "core/circuit_breaker.py",
+      "lines_of_code": 1026,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 36360
+    },
+    {
+      "file": "core/swarm_visualizer.py",
+      "lines_of_code": 70,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2590
+    },
+    {
+      "file": "core/memoria.py",
+      "lines_of_code": 78,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2626
+    },
+    {
+      "file": "core/spine/emotion_mapper_alt.py",
+      "lines_of_code": 74,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2678
+    },
+    {
+      "file": "core/symbolic_diagnostics/.!54565!__init__.py",
+      "lines_of_code": 28,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 1289
+    },
+    {
+      "file": "core/rem/streamlit_lidar.py",
+      "lines_of_code": 63,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 1905
+    },
+    {
+      "file": "core/rem/visualizer.py",
+      "lines_of_code": 76,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2441
+    },
+    {
+      "file": "core/services/personality/personas.py",
+      "lines_of_code": 62,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 1648
+    },
+    {
+      "file": "core/interfaces/dashboad.py",
+      "lines_of_code": 135,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 6404
+    },
+    {
+      "file": "core/interfaces/ui/config/dashboard_settings.py",
+      "lines_of_code": 99,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 4245
+    },
+    {
+      "file": "core/interfaces/ui/components/payload_builder.py",
+      "lines_of_code": 74,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2904
+    },
+    {
+      "file": "core/interfaces/tools/cli/speak.py",
+      "lines_of_code": 89,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3216
+    },
+    {
+      "file": "core/interfaces/logic/voice_narration_player.py",
+      "lines_of_code": 60,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2811
+    },
+    {
+      "file": "core/interfaces/logic/safety_filter.py",
+      "lines_of_code": 47,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2846
+    },
+    {
+      "file": "core/interfaces/logic/memory_handler.py",
+      "lines_of_code": 44,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2488
+    },
+    {
+      "file": "core/interfaces/as_agent/agent_logic/voice_narration_player.py",
+      "lines_of_code": 60,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2811
+    },
+    {
+      "file": "core/interfaces/as_agent/agent_logic/safety_filter.py",
+      "lines_of_code": 47,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2846
+    },
+    {
+      "file": "core/interfaces/as_agent/agent_logic/memory_handler.py",
+      "lines_of_code": 44,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2488
+    },
+    {
+      "file": "core/interfaces/as_agent/streamlit/components/payload_builder.py",
+      "lines_of_code": 74,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2904
+    },
+    {
+      "file": "core/interfaces/as_agent/core/nias_filter.py",
+      "lines_of_code": 92,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4562
+    },
+    {
+      "file": "core/interfaces/as_agent/core/duet_conductor.py",
+      "lines_of_code": 84,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3615
+    },
+    {
+      "file": "core/interfaces/as_agent/core/checkout_handler.py",
+      "lines_of_code": 108,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4974
+    },
+    {
+      "file": "core/interfaces/as_agent/core/reward_reputation.py",
+      "lines_of_code": 94,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3815
+    },
+    {
+      "file": "core/interfaces/as_agent/core/affiliate_log.py",
+      "lines_of_code": 93,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3547
+    },
+    {
+      "file": "core/interfaces/as_agent/core/vision_prompts.py",
+      "lines_of_code": 83,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2400
+    },
+    {
+      "file": "core/interfaces/as_agent/core/vendor_sync.py",
+      "lines_of_code": 177,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 7222
+    },
+    {
+      "file": "core/interfaces/as_agent/core/generate_video.py",
+      "lines_of_code": 81,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3646
+    },
+    {
+      "file": "core/interfaces/as_agent/core/render_ai.py",
+      "lines_of_code": 133,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 5384
+    },
+    {
+      "file": "core/interfaces/as_agent/core/filter_gpt.py",
+      "lines_of_code": 108,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4033
+    },
+    {
+      "file": "core/interfaces/as_agent/core/scheduler.py",
+      "lines_of_code": 145,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 5649
+    },
+    {
+      "file": "core/interfaces/as_agent/core/voice_duet.py",
+      "lines_of_code": 80,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3305
+    },
+    {
+      "file": "core/interfaces/as_agent/core/emotion_log.py",
+      "lines_of_code": 115,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4046
+    },
+    {
+      "file": "core/interfaces/as_agent/core/wallet.py",
+      "lines_of_code": 120,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4945
+    },
+    {
+      "file": "core/interfaces/as_agent/auth/vendor_hospitality_sync.py",
+      "lines_of_code": 83,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 4485
+    },
+    {
+      "file": "core/interfaces/as_agent/auth/registry.py",
+      "lines_of_code": 182,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 8083
+    },
+    {
+      "file": "core/interfaces/as_agent/sample_payloads/trace_log_viewer.py",
+      "lines_of_code": 64,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3345
+    },
+    {
+      "file": "core/interfaces/as_agent/utils/symbolic_github_export.py",
+      "lines_of_code": 94,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3433
+    },
+    {
+      "file": "core/interfaces/as_agent/sys/nias/main_loop.py",
+      "lines_of_code": 80,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3392
+    },
+    {
+      "file": "core/interfaces/as_agent/sys/nias/replay_queue.py",
+      "lines_of_code": 80,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3534
+    },
+    {
+      "file": "core/interfaces/as_agent/sys/nias/dream_log_viewer.py",
+      "lines_of_code": 97,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4359
+    },
+    {
+      "file": "core/interfaces/as_agent/sys/nias/feedback_insight_cli.py",
+      "lines_of_code": 79,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3364
+    },
+    {
+      "file": "core/interfaces/as_agent/sys/dast/schedule_manager.py",
+      "lines_of_code": 57,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 2839
+    },
+    {
+      "file": "core/interfaces/as_agent/widgets/terminal_widget.py",
+      "lines_of_code": 66,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 3005
+    },
+    {
+      "file": "core/interfaces/as_agent/widgets/widget_engine.py",
+      "lines_of_code": 172,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 8219
+    },
+    {
+      "file": "core/interfaces/as_agent/widgets/widget_archive.py",
+      "lines_of_code": 69,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 3893
+    },
+    {
+      "file": "memory/systems/dream_memory_export.py",
+      "lines_of_code": 190,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 9612
+    },
+    {
+      "file": "memory/systems/integration_bridge.py",
+      "lines_of_code": 106,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 5966
+    },
+    {
+      "file": "memory/systems/memory_trace.py",
+      "lines_of_code": 96,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4346
+    },
+    {
+      "file": "memory/systems/memory_voice_helix.py",
+      "lines_of_code": 534,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 19388
+    },
+    {
+      "file": "memory/systems/memory_trace_logger.py",
+      "lines_of_code": 93,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3126
+    },
+    {
+      "file": "memory/systems/memory_handler.py",
+      "lines_of_code": 37,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2318
+    },
+    {
+      "file": "memory/systems/agent_memory_trace_animator.py",
+      "lines_of_code": 490,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 29722
+    },
+    {
+      "file": "memory/systems/chatgpt_memory_integrator.py",
+      "lines_of_code": 436,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 33022
+    },
+    {
+      "file": "memory/systems/voice_memory_bridge.py",
+      "lines_of_code": 30,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 1134
+    },
+    {
+      "file": "memory/systems/memoria/dreams_alt.py",
+      "lines_of_code": 105,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 5283
+    },
+    {
+      "file": "memory/consolidation/memory_consolidation.py",
+      "lines_of_code": 26,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 861
+    },
+    {
+      "file": "identity/trace.py",
+      "lines_of_code": 86,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2369
+    },
+    {
+      "file": "identity/core/verifold_connector.py",
+      "lines_of_code": 41,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 1127
+    },
+    {
+      "file": "identity/core/id_service/mnemonic.py",
+      "lines_of_code": 25,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 981
+    },
+    {
+      "file": "identity/core/trace/pattern_analyzer.py",
+      "lines_of_code": 29,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 875
+    },
+    {
+      "file": "identity/core/qrs/qrg_generator.py",
+      "lines_of_code": 29,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 871
+    },
+    {
+      "file": "identity/core/qrs/session_replay.py",
+      "lines_of_code": 29,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 857
+    },
+    {
+      "file": "identity/core/sing/cross_device_manager.py",
+      "lines_of_code": 30,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 901
+    },
+    {
+      "file": "identity/lukhas_identity/security/awareness_protocol.py",
+      "lines_of_code": 57,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 2243
+    },
+    {
+      "file": "identity/auth/cognitive_sync_adapter.py",
+      "lines_of_code": 54,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 1899
+    },
+    {
+      "file": "identity/diagnostics/insight_cli.py",
+      "lines_of_code": 72,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3186
+    },
+    {
+      "file": "config/interface_dashboard_settings.py",
+      "lines_of_code": 99,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 4231
+    },
+    {
+      "file": "config/dashboard_settings.py",
+      "lines_of_code": 99,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 4211
+    },
+    {
+      "file": "security/self_healing_eu_compliance_engine.py",
+      "lines_of_code": 780,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 32714
+    },
+    {
+      "file": "security/self_healing_eu_compliance_monitor.py",
+      "lines_of_code": 735,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 28284
+    },
+    {
+      "file": "security/quantum-secure-agi/src/security/post_quantum_crypto.py",
+      "lines_of_code": 457,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 19823
+    },
+    {
+      "file": "creativity/creative_expression_processor.py",
+      "lines_of_code": 69,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2466
+    },
+    {
+      "file": "creativity/creative_expressions_engine.py",
+      "lines_of_code": 276,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 11744
+    },
+    {
+      "file": "creativity/personality_refiner.py",
+      "lines_of_code": 116,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4446
+    },
+    {
+      "file": "creativity/creative_core.py",
+      "lines_of_code": 265,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 7965
+    },
+    {
+      "file": "creativity/personality/brain.py",
+      "lines_of_code": 39,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 1211
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/lukhas_personality/narrative_engine/dream_narrator_queue.py",
+      "lines_of_code": 125,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 5267
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/lukhas_personality/creative_core/creative_core.py",
+      "lines_of_code": 265,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 7965
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/lukhas_personality/brain/brain.py",
+      "lines_of_code": 39,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 1211
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/bio/symbolic/crista_optimizer.py",
+      "lines_of_code": 68,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 2292
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/bio/symbolic/bio_symbolic_architectures.py",
+      "lines_of_code": 121,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 5666
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/bio/symbolic/bio_systems_inspiration.py",
+      "lines_of_code": 245,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 11146
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/resource_optimization_integration.py",
+      "lines_of_code": 640,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 26114
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/demo_coordination.py",
+      "lines_of_code": 264,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 9443
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/circuit_breaker.py",
+      "lines_of_code": 1026,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 36360
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/swarm_visualizer.py",
+      "lines_of_code": 70,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2590
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/memoria.py",
+      "lines_of_code": 78,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2626
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/spine/emotion_mapper_alt.py",
+      "lines_of_code": 74,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2678
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/symbolic_diagnostics/.!54565!__init__.py",
+      "lines_of_code": 28,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 1289
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/utils/symbolic_utils.py",
+      "lines_of_code": 61,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 1434
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/rem/streamlit_lidar.py",
+      "lines_of_code": 63,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 1905
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/rem/visualizer.py",
+      "lines_of_code": 76,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2441
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/services/personality/personas.py",
+      "lines_of_code": 62,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 1648
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/dashboad.py",
+      "lines_of_code": 135,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 6404
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/ui/config/dashboard_settings.py",
+      "lines_of_code": 99,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 4245
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/ui/components/payload_builder.py",
+      "lines_of_code": 74,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2904
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/tools/cli/speak.py",
+      "lines_of_code": 89,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3216
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/logic/voice_narration_player.py",
+      "lines_of_code": 60,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2811
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/logic/safety_filter.py",
+      "lines_of_code": 47,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2846
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/logic/memory_handler.py",
+      "lines_of_code": 44,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2488
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/logic/voice/voice_renderer.py",
+      "lines_of_code": 53,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 3309
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/agent_logic/voice_narration_player.py",
+      "lines_of_code": 60,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2811
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/agent_logic/safety_filter.py",
+      "lines_of_code": 47,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2846
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/agent_logic/memory_handler.py",
+      "lines_of_code": 44,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2488
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/streamlit/components/payload_builder.py",
+      "lines_of_code": 74,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2904
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/core/agent_handoff.py",
+      "lines_of_code": 109,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4716
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/core/nias_filter.py",
+      "lines_of_code": 92,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4562
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/core/duet_conductor.py",
+      "lines_of_code": 84,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3615
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/core/checkout_handler.py",
+      "lines_of_code": 108,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4974
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/core/reward_reputation.py",
+      "lines_of_code": 94,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3815
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/core/affiliate_log.py",
+      "lines_of_code": 93,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3547
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/core/vision_prompts.py",
+      "lines_of_code": 83,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2400
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/core/vendor_sync.py",
+      "lines_of_code": 177,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 7222
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/core/generate_video.py",
+      "lines_of_code": 81,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3646
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/core/render_ai.py",
+      "lines_of_code": 133,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 5384
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/core/filter_gpt.py",
+      "lines_of_code": 108,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4033
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/core/gatekeeper.py",
+      "lines_of_code": 147,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 5849
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/core/scheduler.py",
+      "lines_of_code": 145,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 5649
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/core/voice_duet.py",
+      "lines_of_code": 80,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3305
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/core/emotion_log.py",
+      "lines_of_code": 115,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4046
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/core/wallet.py",
+      "lines_of_code": 120,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4945
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/auth/vendor_hospitality_sync.py",
+      "lines_of_code": 83,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 4485
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/auth/registry.py",
+      "lines_of_code": 182,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 8083
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/sample_payloads/trace_log_viewer.py",
+      "lines_of_code": 64,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3345
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/utils/symbolic_utils.py",
+      "lines_of_code": 56,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 2624
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/utils/symbolic_github_export.py",
+      "lines_of_code": 94,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3433
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/sys/nias/main_loop.py",
+      "lines_of_code": 80,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3392
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/sys/nias/replay_queue.py",
+      "lines_of_code": 80,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3534
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/sys/nias/trace_logger.py",
+      "lines_of_code": 68,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3443
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/sys/nias/symbolic_matcher.py",
+      "lines_of_code": 60,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 2726
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/sys/nias/dream_log_viewer.py",
+      "lines_of_code": 97,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4359
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/sys/nias/feedback_insight_cli.py",
+      "lines_of_code": 79,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3364
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/sys/dast/schedule_manager.py",
+      "lines_of_code": 57,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 2839
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/sys/dast/dast_logger.py",
+      "lines_of_code": 184,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 7137
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/sys/abas/abas.py",
+      "lines_of_code": 53,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 2530
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/widgets/terminal_widget.py",
+      "lines_of_code": 66,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 3005
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/widgets/widget_engine.py",
+      "lines_of_code": 172,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 8219
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/core/interfaces/as_agent/widgets/widget_archive.py",
+      "lines_of_code": 69,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 3893
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/features/docututor/memory_evolution/memory_evolution.py",
+      "lines_of_code": 12,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 287
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/features/config/interface_dashboard_settings.py",
+      "lines_of_code": 99,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 4231
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/features/config/dashboard_settings.py",
+      "lines_of_code": 99,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 4211
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/quantum/core/identity_engine.py",
+      "lines_of_code": 772,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 30301
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/quantum/systems/quantum_states.py",
+      "lines_of_code": 96,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3847
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/quantum/systems/bio_integration/bulletproof_system.py",
+      "lines_of_code": 1008,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 42247
+    },
+    {
+      "file": ".pwm_cleanup_archive/BACKUP_BEFORE_CONSOLIDATION_20250801_002312/quantum/systems/bio_integration/optimization_adapter.py",
+      "lines_of_code": 841,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 35052
+    },
+    {
+      "file": ".pwm_cleanup_archive/ARCHIVE_NON_PRODUCTION/analysis-tools/audit_trail_drift_self_healing_system.py",
+      "lines_of_code": 1757,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 76672
+    },
+    {
+      "file": "learning/edu_module.py",
+      "lines_of_code": 116,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 6615
+    },
+    {
+      "file": "learning/neural_integrator.py",
+      "lines_of_code": 787,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 32056
+    },
+    {
+      "file": "learning/doc_generator_learning_engine.py",
+      "lines_of_code": 471,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 26026
+    },
+    {
+      "file": "learning/meta_adaptive/system.py",
+      "lines_of_code": 428,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 27611
+    },
+    {
+      "file": "learning/meta_adaptive/adaptive_ux_core.py",
+      "lines_of_code": 855,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 55084
+    },
+    {
+      "file": "learning/results/trace_reader.py",
+      "lines_of_code": 117,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4535
+    },
+    {
+      "file": "learning/adaptive_agi/Meta_Learning/symbolic_feedback.py",
+      "lines_of_code": 945,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 40685
+    },
+    {
+      "file": "learning/adaptive_agi/Meta_Learning/monitor_dashboard.py",
+      "lines_of_code": 660,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 27271
+    },
+    {
+      "file": "learning/systems/duet_conductor.py",
+      "lines_of_code": 81,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 4513
+    },
+    {
+      "file": "meta/HEADER_TEMPLATE.py",
+      "lines_of_code": 31,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 917
+    },
+    {
+      "file": "compliance/A-consent-verifier.py",
+      "lines_of_code": 125,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 6120
+    },
+    {
+      "file": "compliance/audit_log.py",
+      "lines_of_code": 92,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2882
+    },
+    {
+      "file": "reasoning/reasoning_errors.py",
+      "lines_of_code": 14,
+      "has_class": true,
+      "has_function": false,
+      "file_size": 388
+    },
+    {
+      "file": "reasoning/reasoning.py",
+      "lines_of_code": 696,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 35600
+    },
+    {
+      "file": "reasoning/scaffold_modules_reasoning_engine.py",
+      "lines_of_code": 1568,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 62843
+    },
+    {
+      "file": "reasoning/token_engine.py",
+      "lines_of_code": 89,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3044
+    },
+    {
+      "file": "ethics/ethical_safety_alignment.py",
+      "lines_of_code": 88,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3776
+    },
+    {
+      "file": "ethics/policy_validator.py",
+      "lines_of_code": 212,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 7766
+    },
+    {
+      "file": "ethics/policy_engine.py",
+      "lines_of_code": 212,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 7724
+    },
+    {
+      "file": "ethics/policy_manager.py",
+      "lines_of_code": 140,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 5634
+    },
+    {
+      "file": "ethics/governance_validator.py",
+      "lines_of_code": 212,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 7822
+    },
+    {
+      "file": "ethics/decision_framework.py",
+      "lines_of_code": 212,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 7794
+    },
+    {
+      "file": "ethics/governance_model.py",
+      "lines_of_code": 212,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 7766
+    },
+    {
+      "file": "ethics/ethical_evaluator.py",
+      "lines_of_code": 92,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2994
+    },
+    {
+      "file": "ethics/dao_community.py",
+      "lines_of_code": 594,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 24045
+    },
+    {
+      "file": "ethics/tools/lambda_auditor.py",
+      "lines_of_code": 1046,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 44094
+    },
+    {
+      "file": "voice/memory_helix.py",
+      "lines_of_code": 514,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 19742
+    },
+    {
+      "file": "voice/duet_conductor.py",
+      "lines_of_code": 56,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 3013
+    },
+    {
+      "file": "voice/speech_framework.py",
+      "lines_of_code": 23,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 648
+    },
+    {
+      "file": "voice/adaptation_module.py",
+      "lines_of_code": 87,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 4893
+    },
+    {
+      "file": "orchestration/specialized/\u039bDependaBoT_robust.py",
+      "lines_of_code": 1442,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 58666
+    },
+    {
+      "file": "orchestration/specialized/freeze_protection_check.py",
+      "lines_of_code": 28,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 890
+    },
+    {
+      "file": "orchestration/brain/integration_manager.py",
+      "lines_of_code": 667,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 27940
+    },
+    {
+      "file": "orchestration/brain/cognitive_enhancement.py",
+      "lines_of_code": 170,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 7289
+    },
+    {
+      "file": "orchestration/brain/human_oversight_manager.py",
+      "lines_of_code": 71,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2540
+    },
+    {
+      "file": "orchestration/brain/prime_oscillator.py",
+      "lines_of_code": 13,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 401
+    },
+    {
+      "file": "orchestration/brain/brain.py",
+      "lines_of_code": 39,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 1211
+    },
+    {
+      "file": "orchestration/brain/\u039bbot_brain_system.py",
+      "lines_of_code": 137,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4559
+    },
+    {
+      "file": "orchestration/brain/emotional_resonance.py",
+      "lines_of_code": 937,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 39001
+    },
+    {
+      "file": "orchestration/brain/cognitive/curious_lukhas.py",
+      "lines_of_code": 208,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 7636
+    },
+    {
+      "file": "orchestration/brain/cognitive/cognitive_voice.py",
+      "lines_of_code": 61,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2012
+    },
+    {
+      "file": "orchestration/brain/cognitive/cognitive_ai_client.py",
+      "lines_of_code": 380,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 13700
+    },
+    {
+      "file": "orchestration/brain/cognitive/cognitive_updater.py",
+      "lines_of_code": 599,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 34252
+    },
+    {
+      "file": "orchestration/brain/core/capability_analyzer.py",
+      "lines_of_code": 766,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 35225
+    },
+    {
+      "file": "orchestration/brain/core/ai_config.py",
+      "lines_of_code": 301,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 10704
+    },
+    {
+      "file": "orchestration/brain/core/brand_manager.py",
+      "lines_of_code": 361,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 12921
+    },
+    {
+      "file": "orchestration/brain/core/core_integrator.py",
+      "lines_of_code": 740,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 28373
+    },
+    {
+      "file": "orchestration/brain/spine/emotional_sorter.py",
+      "lines_of_code": 60,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 2821
+    },
+    {
+      "file": "orchestration/brain/spine/guardian.py",
+      "lines_of_code": 28,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 700
+    },
+    {
+      "file": "orchestration/brain/spine/emotion_mapper_alt.py",
+      "lines_of_code": 81,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2856
+    },
+    {
+      "file": "orchestration/brain/integration/federated_integrator.py",
+      "lines_of_code": 847,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 34699
+    },
+    {
+      "file": "orchestration/brain/personality/personality.py",
+      "lines_of_code": 193,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 7162
+    },
+    {
+      "file": "orchestration/brain/personality/creative_personality.py",
+      "lines_of_code": 253,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 7880
+    },
+    {
+      "file": "orchestration/brain/personality/creative_expressions.py",
+      "lines_of_code": 107,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4676
+    },
+    {
+      "file": "orchestration/brain/utils/trace_logger.py",
+      "lines_of_code": 190,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 7827
+    },
+    {
+      "file": "orchestration/brain/qrl_code/qrly.py",
+      "lines_of_code": 109,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 4536
+    },
+    {
+      "file": "orchestration/brain/qrl_code/com_validator.py",
+      "lines_of_code": 15,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 520
+    },
+    {
+      "file": "orchestration/brain/reasoning/symbolic_loop.py",
+      "lines_of_code": 296,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 10974
+    },
+    {
+      "file": "orchestration/brain/symbolic_ai/modules/dissonance_detector.py",
+      "lines_of_code": 24,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 897
+    },
+    {
+      "file": "orchestration/brain/rem/streamlit_lidar.py",
+      "lines_of_code": 70,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2077
+    },
+    {
+      "file": "orchestration/brain/rem/rem_visualizer.py",
+      "lines_of_code": 83,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2611
+    },
+    {
+      "file": "orchestration/brain/neuro_symbolic/governance/symbolic_action_prrotocol.py",
+      "lines_of_code": 119,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 5233
+    },
+    {
+      "file": "orchestration/brain/ethics/ethical_stop.py",
+      "lines_of_code": 96,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 3671
+    },
+    {
+      "file": "orchestration/brain/ethics/ethical_conflict_resolution.py",
+      "lines_of_code": 42,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 1386
+    },
+    {
+      "file": "orchestration/brain/emotional/ethical_stop.py",
+      "lines_of_code": 108,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 3874
+    },
+    {
+      "file": "orchestration/brain/emotional/ethical_conflict_resolution.py",
+      "lines_of_code": 63,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 1759
+    },
+    {
+      "file": "orchestration/brain/monitoring/rate_modulator.py",
+      "lines_of_code": 721,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 30571
+    },
+    {
+      "file": "orchestration/brain/monitoring/remediator_agent.py",
+      "lines_of_code": 1055,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 42292
+    },
+    {
+      "file": "orchestration/brain/monitoring/governance_monitor.py",
+      "lines_of_code": 259,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 12699
+    },
+    {
+      "file": "governance/policy_manager.py",
+      "lines_of_code": 81,
+      "has_class": false,
+      "has_function": true,
+      "file_size": 3052
+    },
+    {
+      "file": "governance/EthicalAuditor.py",
+      "lines_of_code": 598,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 24690
+    },
+    {
+      "file": "symbolic/vocabularies/vocabulary_template.py",
+      "lines_of_code": 110,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 2973
+    },
+    {
+      "file": "symbolic/bio/crista_optimizer.py",
+      "lines_of_code": 68,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 2292
+    },
+    {
+      "file": "symbolic/bio/bio_symbolic_architectures.py",
+      "lines_of_code": 121,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 5798
+    },
+    {
+      "file": "symbolic/bio/bio_systems_inspiration.py",
+      "lines_of_code": 121,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 5626
+    },
+    {
+      "file": "dream/quantum_dream_config.py",
+      "lines_of_code": 41,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 1514
+    },
+    {
+      "file": "dream/dream_narrator_queue.py",
+      "lines_of_code": 125,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 5267
+    },
+    {
+      "file": "dream/dream_replay.py",
+      "lines_of_code": 151,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 7042
+    },
+    {
+      "file": "dream/oracle_dream.py",
+      "lines_of_code": 268,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 10846
+    },
+    {
+      "file": "dream/dream_export_streamlit.py",
+      "lines_of_code": 99,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4092
+    },
+    {
+      "file": "dream/dream_injector.py",
+      "lines_of_code": 120,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 5084
+    },
+    {
+      "file": "dream/dream_summary_generator.py",
+      "lines_of_code": 124,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 5154
+    },
+    {
+      "file": "dream/core/dream_log_viewer.py",
+      "lines_of_code": 90,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4185
+    },
+    {
+      "file": "dream/oneiric/oneiric_core/utils/symbolic_logger.py",
+      "lines_of_code": 12,
+      "has_class": true,
+      "has_function": true,
+      "file_size": 228
+    },
+    {
+      "file": "dream/cli/dream_cli.py",
+      "lines_of_code": 112,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4809
+    },
+    {
+      "file": "dream/cli/dream_replay_cli.py",
+      "lines_of_code": 107,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 4897
+    },
+    {
+      "file": "dream/base/dream_loop/dream_loop.py",
+      "lines_of_code": 198,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 8140
+    },
+    {
+      "file": "quantum/core/identity_engine.py",
+      "lines_of_code": 772,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 30301
+    },
+    {
+      "file": "quantum/systems/quantum_states.py",
+      "lines_of_code": 96,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 3847
+    },
+    {
+      "file": "quantum/systems/bio_integration/bulletproof_system.py",
+      "lines_of_code": 1008,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 42247
+    },
+    {
+      "file": "quantum/systems/bio_integration/optimization_adapter.py",
+      "lines_of_code": 841,
+      "has_class": false,
+      "has_function": false,
+      "file_size": 35052
+    }
+  ],
+  "module_statistics": {
+    "tools": {
+      "file_count": 74,
+      "total_lines": 23887,
+      "connected_files": 42,
+      "isolated_files": 23,
+      "avg_connectivity": 3.608108108108108
+    },
+    "bio": {
+      "file_count": 56,
+      "total_lines": 15194,
+      "connected_files": 55,
+      "isolated_files": 1,
+      "avg_connectivity": 6.339285714285714
+    },
+    "trace": {
+      "file_count": 20,
+      "total_lines": 4644,
+      "connected_files": 19,
+      "isolated_files": 0,
+      "avg_connectivity": 6.5
+    },
+    "core": {
+      "file_count": 458,
+      "total_lines": 94563,
+      "connected_files": 378,
+      "isolated_files": 51,
+      "avg_connectivity": 6.456331877729258
+    },
+    "memory": {
+      "file_count": 231,
+      "total_lines": 98813,
+      "connected_files": 213,
+      "isolated_files": 14,
+      "avg_connectivity": 8.909090909090908
+    },
+    "identity": {
+      "file_count": 148,
+      "total_lines": 47474,
+      "connected_files": 108,
+      "isolated_files": 13,
+      "avg_connectivity": 6.635135135135135
+    },
+    "config": {
+      "file_count": 9,
+      "total_lines": 1098,
+      "connected_files": 7,
+      "isolated_files": 2,
+      "avg_connectivity": 2.3333333333333335
+    },
+    "security": {
+      "file_count": 21,
+      "total_lines": 6476,
+      "connected_files": 17,
+      "isolated_files": 3,
+      "avg_connectivity": 4.428571428571429
+    },
+    "creativity": {
+      "file_count": 35,
+      "total_lines": 13341,
+      "connected_files": 25,
+      "isolated_files": 5,
+      "avg_connectivity": 5.885714285714286
+    },
+    ".pwm_cleanup_archive": {
+      "file_count": 1601,
+      "total_lines": 369494,
+      "connected_files": 1323,
+      "isolated_files": 181,
+      "avg_connectivity": 5.109931292941911
+    },
+    "bridge": {
+      "file_count": 21,
+      "total_lines": 6645,
+      "connected_files": 20,
+      "isolated_files": 0,
+      "avg_connectivity": 7.666666666666667
+    },
+    "learning": {
+      "file_count": 62,
+      "total_lines": 25693,
+      "connected_files": 46,
+      "isolated_files": 9,
+      "avg_connectivity": 5.209677419354839
+    },
+    "red_team": {
+      "file_count": 1,
+      "total_lines": 99,
+      "connected_files": 1,
+      "isolated_files": 0,
+      "avg_connectivity": 2.0
+    },
+    "consciousness": {
+      "file_count": 61,
+      "total_lines": 27944,
+      "connected_files": 57,
+      "isolated_files": 0,
+      "avg_connectivity": 7.934426229508197
+    },
+    "tests": {
+      "file_count": 12,
+      "total_lines": 2888,
+      "connected_files": 12,
+      "isolated_files": 0,
+      "avg_connectivity": 6.5
+    },
+    "meta": {
+      "file_count": 3,
+      "total_lines": 455,
+      "connected_files": 1,
+      "isolated_files": 1,
+      "avg_connectivity": 0.6666666666666666
+    },
+    "architectures": {
+      "file_count": 16,
+      "total_lines": 1408,
+      "connected_files": 10,
+      "isolated_files": 0,
+      "avg_connectivity": 3.3125
+    },
+    "compliance": {
+      "file_count": 21,
+      "total_lines": 2721,
+      "connected_files": 17,
+      "isolated_files": 3,
+      "avg_connectivity": 4.380952380952381
+    },
+    "reasoning": {
+      "file_count": 59,
+      "total_lines": 29703,
+      "connected_files": 55,
+      "isolated_files": 4,
+      "avg_connectivity": 7.406779661016949
+    },
+    "ethics": {
+      "file_count": 96,
+      "total_lines": 26727,
+      "connected_files": 79,
+      "isolated_files": 11,
+      "avg_connectivity": 6.125
+    },
+    "voice": {
+      "file_count": 53,
+      "total_lines": 11359,
+      "connected_files": 43,
+      "isolated_files": 4,
+      "avg_connectivity": 5.849056603773585
+    },
+    "orchestration": {
+      "file_count": 356,
+      "total_lines": 117639,
+      "connected_files": 271,
+      "isolated_files": 41,
+      "avg_connectivity": 6.514044943820225
+    },
+    "governance": {
+      "file_count": 14,
+      "total_lines": 3135,
+      "connected_files": 11,
+      "isolated_files": 2,
+      "avg_connectivity": 4.142857142857143
+    },
+    "api": {
+      "file_count": 19,
+      "total_lines": 5602,
+      "connected_files": 18,
+      "isolated_files": 0,
+      "avg_connectivity": 7.052631578947368
+    },
+    "symbolic": {
+      "file_count": 71,
+      "total_lines": 20425,
+      "connected_files": 66,
+      "isolated_files": 4,
+      "avg_connectivity": 4.830985915492958
+    },
+    "dream": {
+      "file_count": 92,
+      "total_lines": 20669,
+      "connected_files": 72,
+      "isolated_files": 13,
+      "avg_connectivity": 5.282608695652174
+    },
+    "emotion": {
+      "file_count": 17,
+      "total_lines": 4819,
+      "connected_files": 17,
+      "isolated_files": 0,
+      "avg_connectivity": 8.176470588235293
+    },
+    "deployments": {
+      "file_count": 12,
+      "total_lines": 1156,
+      "connected_files": 12,
+      "isolated_files": 0,
+      "avg_connectivity": 3.4166666666666665
+    },
+    "quantum": {
+      "file_count": 93,
+      "total_lines": 35486,
+      "connected_files": 79,
+      "isolated_files": 4,
+      "avg_connectivity": 7.096774193548387
+    }
+  }
+}

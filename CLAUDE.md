@@ -19,7 +19,14 @@ This is part of the LUKHAS AI multi-repository ecosystem:
   - Pack-What-Matters production workspace
   - Distilled, lean, functional components only
 
-All repositories have local and GitHub remote versions.
+- **LUKHAS Archive** (`/Users/agi_dev/lukhas-archive/`) - **IMPORTANT: Archive Repository**
+  - All removed, deprecated, or refactored code goes here
+  - **NEVER DELETE** - Always move to archive
+  - Preserves all LUKHAS innovations and prototypes
+  - Organized by date and source module
+  - Used for: backups, deprecations, major refactors, experimental code
+
+All repositories have local and GitHub remote versions (except archive which is local-only with cloud backup).
 
 ## Overview
 

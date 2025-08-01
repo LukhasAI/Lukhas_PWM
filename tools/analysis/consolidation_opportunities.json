@@ -1,0 +1,3480 @@
+{
+  "logger_consolidation": {
+    "count": 812,
+    "instances": [
+      {
+        "file": "./tools/AiDocumentationGenerator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./tools/SyntaxFixerBot.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./tools/generate_lukhas_ecosystem_documentation.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./tools/ContextAnalyzer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./tools/enhanced_ecosystem_documentation.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./tools/comprehensive_organizational_audit.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./tools/documentation/plugin.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./tools/documentation/symbolic_knowledge_core/knowledge_graph.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./tools/documentation/content_generation_engine/doc_generator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./tools/analysis/smart_consolidator.py",
+        "type": "custom_class"
+      },
+      {
+        "file": "./tools/dev/consolidate_duplicates.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./tools/dev/practical_integration_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./tools/documentation_suite/ai_documentation_engine/api_documentation_generator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./tools/documentation_suite/ai_documentation_engine/documentation_analytics.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./tools/documentation_suite/ai_documentation_engine/interactive_tutorial_generator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./tools/documentation_suite/ai_documentation_engine/ecosystem_documentation_generator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/endocrine_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/bio_integration_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/bio_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/simulation_controller.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/core.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/protein_synthesizer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/recovery_protocol.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/bio_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/endocrine_daily_operations.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/colony_self_repair.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/core/oscillators_prime_oscillator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/core/hormonal_system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/core/systems_mitochondria_model.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/core/symbolic_adaptive_threshold_colony.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/core/symbolic_preprocessing_colony.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/core/symbolic_fallback_systems.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/core/bio_symbolic_swarm_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/core/adapters_voice_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/core/symbolic_bio_symbolic_orchestrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/core/symbolic_anomaly_filter_colony.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/core/symbolic_contextual_mapping_colony.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/core/oscillators_base_oscillator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/core/symbolic_quantum_attention.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/core/oscillators_oscillator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bio/core/symbolic_bio_symbolic.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./trace/entropy/radar.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./trace/diagnostics/engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/integrated_system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/ai_interface.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/integration_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/resource_efficiency_analyzer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/plugin_registry.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/actor_supervision_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/config_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/resource_optimization_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/id.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/distributed_tracing.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/event_replayer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/image_processing_pipeline.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/symbolic_drift_analyzer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/oracle_nervous_system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/integrated_safety_system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/symbolic_boot.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/core_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/cluster_sharding.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/enhanced_swarm.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/event_sourcing.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/core_system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/energy_consumption_analysis.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/practical_optimizations.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/consistency_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/module_registry.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/event_bus.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/notion_sync.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/supervision.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/bot.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/common.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/circuit_breaker.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/efficient_communication.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/observability_steering.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/task_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/mailbox.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/event_replay_snapshot.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/identity_aware_base_colony.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/quantum_identity_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/quantized_thought_cycles.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/tiered_state_management.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/hub_registry.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/direct_ai_router.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/agent_coordination.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/memoria.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/resource_efficiency.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/tier_aware_colony_proxy.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/actor_system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/p2p_communication.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/service_discovery.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/global_initialization.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/validation.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/agi/adaptive/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/colonies/memory_colony_enhanced.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/colonies/temporal_colony.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/colonies/creativity_colony.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/colonies/oracle_colony.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/colonies/memory_colony.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/colonies/base_colony.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/colonies/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/colonies/supervisor_agent.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/colonies/governance_colony_enhanced.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/colonies/governance_colony.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/colonies/reasoning_colony.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/colonies/ethics_swarm_colony.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/symbolic_bridge/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/identity/mapper.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/identity/processor.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/identity/engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/identity/persona_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/identity/manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/integration/neural_symbolic_bridge.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/integration/system_coordinator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/personality/creative_personality.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/personality/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/personality/creative_personality_clean.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/symbolic_diagnostics/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/unified/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/utils/user_interaction_init.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/utils/tracing_init.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/utils/grow_init.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/observability/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/introspection/introspector.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/bridges/identity_core_bridge.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/bridges/consciousness_quantum_bridge.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/bridges/bio_symbolic_bridge.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/bridges/memory_learning_bridge.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/bridges/quantum_memory_bridge.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/bridges/memory_consciousness_bridge.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/bridges/core_safety_bridge.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/safety/constitutional_safety.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/safety/predictive_harm_prevention.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/safety/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/safety/multi_agent_consensus.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/safety/safety_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/integrations/nias_dream_bridge.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/integrations/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/symbolic_reasoning/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/engines/identity_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/engines/learning_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/engines/creative_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/engines/consciousness_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/engines/communication_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/ai/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/symbolism/archiver.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/symbolism/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/verifold/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/governance/governance_colony.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/meta_learning/enhancement_system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/symbolic/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/symbolic/symbolic_loop_controller.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/symbolic/collapse/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/user_interface_manager/text_handler.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/user_interface_manager/voice_handler.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/monitoring/collapse_tracker.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/monitoring/collapse_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/infrastructure/node_collection.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/infrastructure/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/infrastructure/node_registry.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/infrastructure/node_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/modules/nias/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/modules/nias/nias_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/modules/nias/openai_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/modules/nias/dream_recorder.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/data/crud_operations.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/neural_architectures/neural_integrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/neural_architectures/abas/abas_quantum_specialist_wrapper.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/neural_architectures/abas/abas_quantum_specialist_mock.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/neural_architectures/abas/abas_quantum_specialist.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interaction/symptom_reporter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/logging/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/base/base_config.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/base/base_health.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/base/symbolic.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/base/logger.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/base/ethics.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/base/base_module.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/services/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/services/location/geofencing_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/services/location/tracker.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/cli.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/interfaces_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/socket.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/design/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/tools/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/tools/dao/dao_vote.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/tools/dao/dao_propose.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/tools/cli/speak.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/tools/cli/command_registry.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/tools/dev/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/registries/intelligence_engine_registry.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/nias/generate_nias_docs.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/logic/identity/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/dashboard/core/dashboard_colony_agent.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/dashboard/core/dynamic_tab_system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/dashboard/core/universal_adaptive_dashboard.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/dashboard/core/fallback_system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/dashboard/core/self_healing_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/dashboard/core/morphing_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/dashboard/api/websocket_server.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/voice/voice_agent.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/voice/listen.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/voice/edge_voice.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/voice/voice_emotional/context_aware_modular_voice.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/voice/integrations/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/api/v1/grpc/pb2_grpc.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/protocols/awareness_protocol.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/as_agent/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/as_agent/sys/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/interfaces/as_agent/sys/dast/dast_logger.py",
+        "type": "other"
+      },
+      {
+        "file": "./core/hub_services/coordinator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/hub_services/service_registry.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./core/flow/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/openai_memory_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/service.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/voice_memory_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/quantum_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/memory_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/evolution.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/fold_universal_bridge.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/memory_fold.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/memory_optimization.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/distributed_state_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/basic.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/glyph_memory_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/symbolic_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/node.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/dream_memory_fold.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/lightweight_concurrency.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/memoria.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/tools/lambda_vault_scan.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/tools/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/colonies/episodic_memory_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/core/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/core/base_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/proteome/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/episodic/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/tests/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/docs/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/convergence/memory_trace_harmonizer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/protection/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/protection/sanctum_vault/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/resonance/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/hooks/registry.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/hooks/base.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/governance/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/integrity/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/scaffold/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/replay_system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_profiler.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/in_memory_cache_storage_wrapper.py",
+        "type": "other"
+      },
+      {
+        "file": "./memory/systems/symbolic_snapshot.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_loop_rebuilder.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_evolution.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/glyph_memory_bridge.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_lock.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_helix.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_identity.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_resonance_analyzer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_tracker_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_node.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_helix_golden.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_visualizer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_processing.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/processor.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_profiler_wrapper.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_validator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/trauma_lock.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_profiler_mock.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_voice_helix.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_planning_wrapper.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_planning_mock.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/simple_store.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/recall_handler.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_drift_stabilizer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/multimodal_memory_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_helix_visualizer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/distributed_memory.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/dream_integrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/collapse_buffer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_viz.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/collapse_trace.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memory_learning/memory_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memoria/dreams.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memoria/replayer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memoria/reflector.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memoria/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memoria/dream_cron.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/memoria/gpt_reflection.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/systems/remvix/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/consolidation/memory_consolidator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/repair/trauma_repair_wrapper.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/repair/trauma_repair_mock.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./memory/repair/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/identity_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/privacy_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/qrg_coverage_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/auth_backend/trust_scorer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/auth_backend/audit_logger.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/auth_backend/pqc_crypto_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/tools/onboarding_cli.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/auth_utils/cultural_safety_checker.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/auth_utils/shared_logging.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/auth_utils/grid_size_calculator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/auth_utils/attention_monitor.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/auth_utils/cognitive_load_estimator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/qrs_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/lambd_id_service.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/brain_identity_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/brain_identity_connector.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/swarm/tier_aware_swarm_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/colonies/biometric_verification_colony.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/colonies/consciousness_verification_colony.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/colonies/dream_verification_colony.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/auth/dream_auth.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/auth/bio_symbolic_fusion.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/auth/biometric_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/health/identity_health_monitor.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/tagging/identity_tag_resolver.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/integrations/consciousness_bridge.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/integrations/inference_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/integrations/memory_connector.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/glyph/distributed_glyph_generation.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/glyph/steganographic_id.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/glyph/glyph_pipeline.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/events/identity_event_publisher.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/onboarding/onboarding_config.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/onboarding/onboarding.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/qrg/qrg_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/core/tier/tier_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/auth/constitutional_gatekeeper.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/auth/cultural_profile_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/auth/entropy_synchronizer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/auth/adaptive_ui_controller.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/utils/entropy_calculator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/utils/symbolic_parser.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/mobile_platform/mobile_ui_renderer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/api/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/api/api.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/api/onboarding_api.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/api/auth/onboarding.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/api/auth/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/api/auth/flows.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/api/controllers/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/api/controllers/lambd_id_controller.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/api/routes/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./identity/api/routes/lambd_id_routes.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./analysis_tools/audit_decision_embedding_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./config/fallback_settings.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./config/knowledge/symbolic_knowledge_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./security/moderator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./security/self_healing_eu_compliance_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./security/self_healing_eu_compliance_monitor.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./security/privacy/zkp_dream_validator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./security/red_team_framework/adversarial_testing/prompt_injection_suite.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./security/red_team_framework/validation_frameworks/security_control_validation.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./security/red_team_framework/penetration_testing/ai_penetration_tester.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./security/red_team_framework/attack_simulation/attack_scenario_generator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./creativity/creative_market.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./creativity/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./creativity/advanced_haiku_generator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./creativity/voice_integrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./creativity/personality/voice/voice_narrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./creativity/personality/voice/voice_personality.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./creativity/engines/engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./creativity/systems/voice_personality_creativity_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./creativity/emotion/voice_profiling_emotion_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bridge/symbolic_memory_mapper.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bridge/personality_communication_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bridge/openai_core_service.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bridge/trace_logger.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bridge/symbolic_dream_bridge.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bridge/symbolic_reasoning_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bridge/llm_wrappers/perplexity_wrapper.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bridge/llm_wrappers/unified_openai_client.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bridge/llm_wrappers/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bridge/llm_wrappers/gemini_wrapper.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bridge/llm_wrappers/anthropic_wrapper.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bridge/llm_wrappers/azure_openai_wrapper.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./bridge/llm_wrappers/env_loader.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/federated_meta_learning.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/learning_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/plugin_learning_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/metalearningenhancementsystem_wrapper.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/meta_learning_enhanced.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/metalearningenhancementsystem.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/adaptive_meta_learning_system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/neural_integrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/metalearningenhancementsystem_mock.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/learning_system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/tutor.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/integrated_system_orchestrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/embodied_thought/generative_reflex.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/meta/MetaLearningAdapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/meta/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/meta/MetaLearningEnhancement.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/meta_adaptive/meta_learning.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/meta_adaptive/adaptive_ux_core.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/adaptive_agi/Meta_Learning/symbolic_feedback.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/adaptive_agi/Meta_Learning/monitor_dashboard.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/meta_learning/federated_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/meta_learning/meta_core.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/meta_learning/symbolic_feedback.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/service/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/federated/FederatedLearningSystem.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/federated/FederatedIntegration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./learning/adaptive/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/service.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/cognitive_architecture_controller.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/openai_consciousness_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/dream_bridge_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/quantum_consciousness_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/quantum_consciousness_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/consciousness_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/cognitive/adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/cognitive/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/cognitive/reflective_introspection.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/core/engine_poetic.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/core/engine_complete.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/core/engine_codex.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/core/engine_alt.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/core/engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/processing/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/quantum_integration/quantum_consciousness_integration_wrapper.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/quantum_integration/quantum_consciousness_visualizer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/quantum_integration/quantum_consciousness_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/integration/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/awareness/symbolic_trace_logger.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/awareness/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/awareness/awareness_protocol.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/awareness/bio_symbolic_awareness_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/awareness/awareness_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/awareness/system_awareness.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/awareness/awareness_processor.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/awareness/awareness_tracker.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/states/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/systems/validator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/systems/integrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/systems/mapper.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/systems/consciousness.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/systems/lambda_bot_consciousness_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/systems/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/systems/consciousness_colony_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/systems/\u039bBot_consciousness_monitor.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/systems/unified_consciousness_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/systems/state.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/systems/cognitive_systems/voice_personality.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/systems/dream_engine/dream_reflection_loop.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/reflection/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./consciousness/reflection/self_reflection_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./tests/guardian_reflector/src/guardian_reflector.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./meta/HEADER_FOOTER_TEMPLATE.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./architectures/nias/core/nias_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./architectures/nias/integration/nias_integration_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./architectures/dast/core/dast_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./architectures/dast/integration/dast_integration_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./architectures/abas/core/abas_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./architectures/abas/integration/abas_integration_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./compliance/A-consent-verifier.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./compliance/audit_log.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./compliance/compliance_registry.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./compliance/ai_compliance.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./compliance/ai_regulatory_framework/global_compliance/multi_jurisdiction_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./compliance/ai_regulatory_framework/eu_ai_act/compliance_validator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./compliance/ai_regulatory_framework/nist/ai_risk_management.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./compliance/ai_regulatory_framework/gdpr/data_protection_validator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./reasoning/coherence_patch_validator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./reasoning/\u039bBot_reasoning.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./reasoning/reasoning_diagnostics.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./reasoning/oracle_predictor.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./reasoning/openai_oracle_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./reasoning/symbolic_loop_harmonizer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./reasoning/adaptive_reasoning_loop.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./reasoning/lukhas_id_reasoning_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./reasoning/ethical_reasoning_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./reasoning/reasoning_colony.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./reasoning/reasoning_metrics.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./reasoning/abstract_reasoning_demo.original.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./reasoning/trace_summary_builder.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./reasoning/causal/CausalReasoningModule.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./reasoning/goals/goal_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./reasoning/utils/agentic_trace.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./reasoning/intent/intent_detector.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./reasoning/intent/intent_processor.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./reasoning/diagnostics/trace_mapper.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/compliance_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/policy_validator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/policy_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/ethics_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/compliance.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/governance_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/compliance_engine20250503213400_p95.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/compliance_simple.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/batch_guard.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/simplified_ethics_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/decision_node.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/quantum_mesh_integrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/glyph_ethics_validator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/hitlo_bridge.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/hitlo_bridge_simple.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/meg_guard.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/governance_validator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/decision_framework.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/meg_openai_guard.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/meg_bridge.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/governance_model.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/ethical_evaluator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/dao_community.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/compliance_validator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/ethics_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/stabilization/tuner.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/tools/quantum_mesh_visualizer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/tools/lambda_auditor.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/governor/dao_controller.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/core/shared_ethics_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/security/main_node_security_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/security/flagship_security_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/security/secure_utils.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/security/privacy.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/training/alignment_overseer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/utils/tag_misinterpretation_sim.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/compliance/engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/seedra/seedra_core.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/simulations/colony_dilemma_simulation.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/simulations/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/policy_engines/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/policy_engines/integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/policy_engines/base.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/policy_engines/examples/gpt4_policy.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/policy_engines/examples/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./ethics/policy_engines/examples/three_laws.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/emotional_modulator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/message_handler.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/symbolic_voice_core.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/personality.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/voice_narrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/voice_cultural_integrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/voice_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/integrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/memory_helix.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/dream_voice_pipeline.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/voice_profiling.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/interface.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/processor.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/speech_processor.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/voice_system_integrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/modularity_system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/synthesis.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/bio_core/voice/quantum_voice_enhancer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/bio_core/oscillator/bio_quantum_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/bio_core/oscillator/quantum_layer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/safety/voice_safety_guard.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/integrations/elevenlabs/elevenlabs_client.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/integrations/openai/dalle_client.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/integrations/openai/whisper_client.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/systems/voice_synthesis.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/systems/synthesis.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/interfaces/eleven_tts.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/interfaces/voice_interface.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./voice/interfaces/input/stream_handler.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/integration_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/workflow_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/colony_orchestrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/core.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/main_node.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/master_orchestrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/agent_orchestrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/base.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/golden_trio/trio_orchestrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/swarm/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/colonies/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/echo/echo_controller.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/core/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/coordination/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/config/migration_router.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/config/production_config.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/security/ethics_loop_guard.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/security/LGOV_validator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/security/dast_orchestrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/processing/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/agents/multi_agent_collaboration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/agents/meta_cognitive_orchestrator_alt.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/specialized/lambda_dependa_bot.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/specialized/\u039bDependaBoT_robust.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/specialized/freeze_protection_check.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/specialized/content_enterprise_orchestrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/specialized/inter_agent_simulation.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/specialized/loop_recovery_simulator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/symbol_validator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/canadian_awareness_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/pr_security_review_github_actions.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/brain_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/quantum_annealed_consensus.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/us_institutional_awareness_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/controller.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/das_awareness_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/dynamic_adaptive_dashboard.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/integration_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/context_analyzer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/cognitive_enhancement.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/federated_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/eu_awareness_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/adaptive_image_generator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/quantum_neuro_symbolic_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/eu_ai_transparency.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/research_awareness_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/autonomous_github_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/awareness_engine_elevated.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/consciousness_core.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/uk_awareness_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/brain_integration_enhanced.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/github_vulnerability_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/privacy_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/core_system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/safety_guardrails.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/main_node.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/identity_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/lambda_bot_batch_processor.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/enhanced_brain_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/lambdabot_autonomous_workflow_fixer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/autonomous_system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/cognitive_core.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/lambdabot_autonomous_fixer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/awareness_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/australian_awareness_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/\u039bbot_brain_system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/pr_security_review_task.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/experience_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/MultiBrainSymphony.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/GlobalInstitutionalCompliantEngine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/main_bot.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/demo.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/trace_memoria_logger.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/token_budget_controller.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/collaborative_ai_agent_system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/compliance_registry.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/ai_compliance.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/GlobalInstitutionalFramework.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/visualization/golden_healix_mapper.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/visualization/memory_helix_visualizer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/cognitive/cognitive_updater.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/cognitive/awareness/awareness.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/net/client.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/net/async_client.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/core/core_integrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/spine/healix_mapper.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/spine/fold_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/spine/accent_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/integration/brain_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/integration/federated_integrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/personality/voice_personality.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/consciousness/dream_narrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/consciousness/memory_identity.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/prediction/predictive_resource_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/prediction/world_models.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/unified_integration/adapters/awareness_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/unified_integration/adapters/bio_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/unified_integration/adapters/dream_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/unified_integration/adapters/voice_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/unified_integration/adapters/legacy_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/unified_integration/adapters/cognitive_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/unified_integration/adapters/oscillator_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/unified_integration/adapters/intent_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/unified_integration/adapters/brain_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/abstract_reasoning/confidence_calibrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/abstract_reasoning/bio_quantum_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/abstract_reasoning/interface.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/abstract_reasoning/oscillator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/abstract_reasoning/core.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/abstract_reasoning/bio_quantum_radar_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/meta/compliance_engine_20250503213400.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/meta/cognition/reflection_layer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/meta/learning/system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/meta/integrations/bot_enhancement.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/compliance/constitutional_ai.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/compliance/ai_compliance_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/reasoning/symbolic_loop.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/reasoning/symbolic_validator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/symbolic_engine/semantic_reasoner.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/symbolic_engine/symbolic_core.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/neuro_symbolic/hybrid_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/neuro_symbolic/neural_processor.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/neuro_symbolic/neuro_symbolic_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/neuro_symbolic/neuro_symbolic_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/ethics/ethics_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/ethics/ethical_hierarchy.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/seamless/experience_core.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/orchestration/core.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/orchestration/main_node.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/governance/dao_governance_node.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/monitoring/rate_modulator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/monitoring/remediator_agent.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/monitoring/governance_monitor.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/monitoring/guardian_reflector.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/meta_cognitive/reflective_introspection_system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/neural/neural_intelligence_api.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/neural/neural_intelligence_main.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/brain/neural/cognitive_core.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/core_modules/signals.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/core_modules/plugin_loader.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/core_modules/controller.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/core_modules/workflow_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/core_modules/symbolic_signal_router.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/core_modules/symbolic_handshake.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/core_modules/core_integrator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/monitoring/health_checks.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/dream/dream_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/dream/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/interfaces/plugin_registry.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./orchestration/interfaces/agent_interface.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./api/core/services.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./api/core/memory.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./api/core/glyph_exchange.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./api/core/consciousness.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./api/core/dream.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./api/core/dream_commerce.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./api/core/emotion.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/symbolic_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/foundry/lambda_sage.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/bio/mito_quantum_attention_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/bio/quantum_attention.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/core/symbolic_language.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/processing/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/integration/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/features/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/features/glyphs.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/features/glyphs/glyph.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/features/glyphs/symbolic_foundry.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/features/glyphs/glyph_sentinel.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/features/collapse/trace.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/features/collapse/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/features/collapse/engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/features/collapse/buffer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/features/drift/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/features/memoria/recall_hooks.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/features/memoria/symbolic_trace_map.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/reasoning/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./symbolic/neural/neural_symbolic_bridge.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./dream/colony_dream_coordinator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./dream/dream_pipeline.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./dream/dream_director.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./dream/feedback_propagator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./dream/openai_dream_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./dream/immersive_ingestion.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./dream/dream_data_sources.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./dream/quantum_dream_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./dream/modifiers/quantum_state_modifier.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./dream/core/dream_glyph_bridge.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./dream/core/dream_log.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./dream/core/nias_dream_bridge.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./dream/core/dream_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./dream/core/dream_cli.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./dream/core/dream_delivery_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./dream/core/snapshot_redirection_controller.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./dream/core/dream_limiter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./dream/oneiric/oneiric_core/engine/dream_engine_fastapi.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./dream/engine/dream_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./emotion/affect_stagnation_detector.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./emotion/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./emotion/cycler.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./emotion/recurring_emotion_tracker.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./emotion/mood_regulator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./emotion/mood_regulation/mood_regulator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./emotion/affect_detection/affect_stagnation_detector.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./emotion/affect_detection/recurring_emotion_tracker.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/validator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/coordinator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/metadata.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/voice_enhancer.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/healix_mapper.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/dream_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/oscillator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/consensus_system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/processor.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/post_quantum_crypto_enhanced.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/vault_manager.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/attention_economics.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/abas_quantum_specialist.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/bio_system.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/\u039bBot_quantum_security.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/neuro_symbolic_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/processing_core.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/entanglement.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/core/identity_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/core/ethics_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/core/engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/core/neuro_symbolic_engine.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/processing/__init__.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/processing/quantum_colony.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/processing/quantum_security_integration.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/processing/quantum_glyph_registry.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/processing/quantum_consensus_system_enhanced.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/processing/quantum_hub.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/systems/quantum_entanglement.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/systems/quantum_processing_core.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/systems/quantum_processor.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/systems/quantum_validator.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/systems/bio_integration/optimization_adapter.py",
+        "type": "standard_logging"
+      },
+      {
+        "file": "./quantum/systems/bio_integration/connectivity_consolidator.py",
+        "type": "standard_logging"
+      }
+    ],
+    "recommendation": "Create unified logger in core/utilities/logger.py"
+  },
+  "config_consolidation": {
+    "count": 306,
+    "instances": [
+      "./tools/gen_audit_logger_check.py",
+      "./tools/session_logger.py",
+      "./tools/about.py",
+      "./tools/CriticalConnectivityAnalyzer.py",
+      "./tools/vscode_diagnostic.py",
+      "./tools/full_connectivity_resolver.py",
+      "./tools/generate_html_post.py",
+      "./tools/analysis/PWM_OPERATIONAL_SUMMARY.py",
+      "./tools/analysis/audit_decision_embedding_engine.py",
+      "./tools/analysis/smart_consolidator.py"
+    ],
+    "recommendation": "Create unified config system in core/config/"
+  },
+  "base_class_consolidation": {
+    "count": 3,
+    "instances": {
+      "__init__:get_document_effectiveness:get_popular_sequences:identify_patterns:recommend_next_docs:record_interaction:update_user_preferences": [
+        [
+          "./tools/documentation/memory_evolution/usage_learning.py",
+          "UsageBasedLearning"
+        ],
+        [
+          "./learning/usage_learning.py",
+          "UsageBasedLearning"
+        ]
+      ],
+      "__init__": [
+        [
+          "./tools/enterprise/health_check_system.py",
+          "DatabaseHealthCheck"
+        ],
+        [
+          "./bio/recovery_protocol.py",
+          "BioRecoveryProtocol"
+        ],
+        [
+          "./core/common.py",
+          "BaseMessage"
+        ],
+        [
+          "./memory/core.py",
+          "ConsensusProtocol"
+        ],
+        [
+          "./memory/fold_system/distributed_memory_fold.py",
+          "ConsensusProtocol"
+        ],
+        [
+          "./memory/systems/core.py",
+          "BaseModule"
+        ],
+        [
+          "./bridge/integration_bridge.py",
+          "BaseLucasModule"
+        ],
+        [
+          "./architectures/abas/core/abas_engine.py",
+          "ABASEngine"
+        ],
+        [
+          "./orchestration/colony_orchestrator.py",
+          "BaseColony"
+        ],
+        [
+          "./orchestration/brain/reasoning/symbolic_validator.py",
+          "BaseValidator"
+        ]
+      ],
+      "": [
+        [
+          "./tools/enterprise/observability_system.py",
+          "MetricBaseline"
+        ],
+        [
+          "./core/agent_coordination.py",
+          "CoordinationProtocol"
+        ],
+        [
+          "./core/interfaces/protocols/awareness_protocol.py",
+          "ProtocolStatus"
+        ],
+        [
+          "./memory/protection/symbolic_quarantine_sanctum.py",
+          "RepairProtocolType"
+        ],
+        [
+          "./memory/systems/core.py",
+          "BaseConfig"
+        ],
+        [
+          "./memory/systems/core.py",
+          "BaseHealth"
+        ],
+        [
+          "./identity/api/api.py",
+          "BaseModel"
+        ],
+        [
+          "./creativity/creative_q_expression.py",
+          "CreativeExpressionProtocol"
+        ],
+        [
+          "./creativity/creative_engine.py",
+          "SymbolicKnowledgeBase"
+        ],
+        [
+          "./learning/learning_gateway.py",
+          "LearningGatewayInterface"
+        ],
+        [
+          "./learning/system.py",
+          "BaseMetaLearner"
+        ],
+        [
+          "./learning/learning_system.py",
+          "BaseMetaLearner"
+        ],
+        [
+          "./reasoning/abstract_reasoning_demo.original.py",
+          "AbstractReasoningBrainInterface"
+        ],
+        [
+          "./voice/systems/synthesis.py",
+          "BaseTTSProvider"
+        ],
+        [
+          "./orchestration/config/production_config.py",
+          "DatabaseConfig"
+        ],
+        [
+          "./orchestration/specialized/lambda_dependa_bot.py",
+          "CodeFixerBase"
+        ],
+        [
+          "./orchestration/specialized/lambda_dependa_bot.py",
+          "BotProtocol"
+        ],
+        [
+          "./orchestration/core_modules/orchestration_service.py",
+          "OrchestrationProtocol"
+        ],
+        [
+          "./quantum/\u039bBot_quantum_security.py",
+          "LatticeBasedCrypto"
+        ],
+        [
+          "./quantum/\u039bBot_quantum_security.py",
+          "HashBasedSignatures"
+        ],
+        [
+          "./quantum/\u039bBot_quantum_security.py",
+          "CodeBasedCrypto"
+        ]
+      ]
+    },
+    "recommendation": "Consolidate base classes in core/base/"
+  },
+  "utility_consolidation": {
+    "patterns": {
+      "load_": 81,
+      "get_": 1292,
+      "save_": 41,
+      "check_": 104,
+      "validate_": 115,
+      "parse_": 10,
+      "set_": 45,
+      "format_": 8,
+      "convert_": 5
+    },
+    "recommendation": "Extract common utilities to core/utilities/"
+  },
+  "memory_system_unification": {
+    "current_systems": [
+      "memory/systems"
+    ],
+    "target_architecture": {
+      "name": "DNA-like Memory Helix",
+      "features": [
+        "Immutable core structure",
+        "Emotional vector integration",
+        "Forensic compliance",
+        "EU GDPR right to erasure",
+        "Causal chain preservation",
+        "Dream recall integration"
+      ],
+      "target_path": "memory/helix/"
+    }
+  },
+  "dream_engine_merger": {
+    "current_systems": [
+      "dream/engine",
+      "dream/oneiric"
+    ],
+    "target_architecture": {
+      "name": "Quantum Learning Dream Engine",
+      "features": [
+        "Multi-parallel scenario generation",
+        "Self-training on unexperienced outcomes",
+        "Past experience analysis",
+        "Decision outcome prediction",
+        "Emotional impact simulation"
+      ],
+      "target_path": "dream/quantum_learning/"
+    }
+  },
+  "emotion_integration": {
+    "current_systems": [
+      "emotion"
+    ],
+    "target_architecture": {
+      "name": "Integrated Emotion-Feeling-Memory System",
+      "features": [
+        "Emotion recognition",
+        "Feeling linkage to memory",
+        "Mood regulation",
+        "Empathy simulation",
+        "Emotional learning"
+      ],
+      "target_path": "emotion/integrated/"
+    }
+  }
+}

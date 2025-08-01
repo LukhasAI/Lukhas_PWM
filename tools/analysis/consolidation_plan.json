@@ -1,0 +1,73 @@
+{
+  "memory_consolidation": {
+    "target": "memory/helix/",
+    "description": "Unified DNA-like memory with emotional vectors",
+    "merge_candidates": [
+      "memory/folding/",
+      "memory/systems/",
+      "memory/emotional_memory.py",
+      "symbolic/features/memory/"
+    ],
+    "preserve": [
+      "Immutable helix structure",
+      "Emotional vector integration",
+      "EU compliance (right to erase)",
+      "Forensic capabilities",
+      "Causal chain preservation"
+    ]
+  },
+  "dream_consolidation": {
+    "target": "dream/quantum_learning/",
+    "description": "Multi-parallel scenario generation for self-training",
+    "merge_candidates": [
+      "dream/engine/",
+      "dream/oneiric/",
+      "creativity/generators/"
+    ],
+    "preserve": [
+      "Parallel scenario generation",
+      "Self-training on unexperienced outcomes",
+      "Past experience analysis",
+      "Decision outcome prediction"
+    ]
+  },
+  "emotion_consolidation": {
+    "target": "emotion/integrated/",
+    "description": "Emotion-feeling-memory integration",
+    "merge_candidates": [
+      "emotion/",
+      "bio/personality/",
+      "lukhas_personality/"
+    ],
+    "preserve": [
+      "Emotion recognition",
+      "Feeling linkage",
+      "Memory integration",
+      "Mood regulation"
+    ]
+  },
+  "quantum_consolidation": {
+    "target": "quantum/sgi_core/",
+    "description": "Quantum-inspired SGI processing",
+    "merge_candidates": [
+      "quantum/",
+      "architectures/quantum_inspired/"
+    ],
+    "preserve": [
+      "Multi-state processing",
+      "Quantum-resistant security",
+      "Parallel computation"
+    ]
+  },
+  "utility_extraction": {
+    "target": "core/utilities/",
+    "description": "Shared utilities and helpers",
+    "extract_from": "all_modules",
+    "patterns": [
+      "Logger classes",
+      "Config loaders",
+      "Base classes",
+      "Common decorators"
+    ]
+  }
+}
