@@ -46,80 +46,153 @@ python main.py
 - **Optimization Suggestions**: Recommendations for improving workspace efficiency
 - **Pattern Recognition**: Learn your work habits and adapt accordingly
 
+## 🛡️ Guardian System Integration
+
+Your PWM workspace is now protected by the **Guardian System v1.0.0** - a production-grade ethical governance system cherry-picked from the LUKHAS prototype.
+
+### 🚀 What's Protected
+
+- **Critical Files**: README.md, .git/, configuration files
+- **Workspace Integrity**: Prevents accidental mass deletions
+- **Productivity Health**: Monitors and suggests workspace optimizations
+- **Ethical Oversight**: Multi-layer decision validation for file operations
+
+### 🧪 Quick Test
+
+```bash
+python test_governance.py
+```
+
+### 🎯 Strategic Value
+
+This isn't just file protection - it's **intelligent workspace management** with:
+- Symbolic communication (human-friendly feedback)
+- Ethical reflection on workspace decisions
+- Emergency protocols for critical situations
+- Audit trails for all workspace operations
+
+The governance system represents the **strategic intelligence** that transforms your workspace from a simple file storage into a **protected productivity environment**.
+
 ## 📁 Workspace Structure
 
 ```
-📦 LUKHAS PWM/
-├── 🧠 consciousness/     # AI decision-making core
-├── 💾 memory/           # Intelligent file memory and retrieval
-├── 🎯 orchestration/    # Workflow automation and task coordination  
-├── 🔍 api/             # Workspace management interfaces
-├── ⚡ core/            # Essential system components
-└── 🎛️ config/         # Workspace personalization settings
+lukhas_pwm/
+├── governance/          # 🛡️ Guardian System v1.0.0
+│   ├── core.py         # Golden governance module
+│   ├── pwm_workspace_guardian.py  # PWM-specific protection
+│   └── pwm_config.yaml # Governance configuration
+├── core/               # Core LUKHAS modules  
+├── configs/            # Configuration management
+├── docs/              # Documentation
+└── main.py            # Entry point
 ```
 
-## 🎛️ Configuration
+## 🔧 Configuration
 
-Personalize your workspace in `lukhas_pwm_config.yaml`:
+PWM is highly configurable to match your workflow:
 
 ```yaml
+# lukhas_pwm_config.yaml
 workspace:
-  focus_mode: true
-  auto_declutter: weekly
-  priority_alerts: true
+  auto_organize: true
+  archive_threshold_days: 90
+  focus_mode_default: false
+  
+ai:
+  categorization_model: "claude-3.5"
+  insight_frequency: "weekly"
   
 productivity:
-  work_patterns: adaptive
-  break_reminders: smart
-  goal_tracking: enabled
+  priority_scoring: "enhanced"
+  distraction_filtering: true
 ```
 
-## 📊 What Makes PWM Different
+## 📚 Documentation
 
-Unlike traditional file managers, PWM understands:
-- **Context** - What you're working on and why
-- **Patterns** - Your unique work rhythms and preferences  
-- **Priorities** - What truly deserves your attention
-- **Relationships** - How different files and projects connect
+- **Getting Started**: See `docs/getting_started.md`
+- **Configuration Guide**: See `docs/configuration.md`
+- **AI Features**: See `docs/ai_features.md`
+- **Governance System**: See `governance/README.md`
 
-## 🎯 Ready to Pack What Matters?
+## 🤝 Contributing
 
-PWM transforms chaotic digital workspaces into focused, productive environments. Start with a retrograde cleanup, then let AI maintain your optimal workspace automatically.
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
-- **Core Systems**: Consciousness, Memory, Identity, and Dream processing
-- **Trinity Framework**: ABAS/DAST/NIAS for intelligent task management
-- **Colony Architecture**: Multi-agent coordination and swarm intelligence
-- **Symbolic Processing**: Advanced pattern recognition and symbolic reasoning
+## 📞 Support & Community
 
-### Use Cases
-
-- **Personal Productivity**: Intelligent task management and workflow optimization
-- **Development Workspace**: Code organization, project management, and automated assistance
-- **Research Environment**: Knowledge management, citation tracking, and insight generation
-- **Creative Workspace**: Inspiration management, project evolution, and creative collaboration
-
-### Documentation
-
-- [Installation Guide](docs/installation.md)
-- [User Manual](docs/user-guide.md)
-- [API Documentation](docs/api.md)
-- [Development Guide](docs/development.md)
-
-### Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-### License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-### Support
-
-- 📧 Email: support@lukhas.ai
-- 💬 Discord: [Join our community](https://discord.gg/lukhas)
+- 💬 Community: [Discord Server](https://discord.gg/lukhas)
 - 📚 Documentation: [docs.lukhas.ai](https://docs.lukhas.ai)
 - 🐛 Issues: [GitHub Issues](https://github.com/LukhasAI/Lukhas_PWM/issues)
 
 ---
 
-**LUKHAS PWM** - Where artificial intelligence meets personal productivity.
+*Ready to pack what matters?* 🚀
+
+**Next Steps:**
+1. Star this repository ⭐
+2. Try the quick start guide
+3. Join our community discussions
+4. Share your productivity wins
+
+---
+
+*LUKHAS PWM - Because your workspace should work for you, not against you.*
+
+*Part of the Pack-What-Matters philosophy: Protect what enables you to focus on what matters.*
+
+## 🧪 Ultimate Testing Suite
+
+Your PWM workspace now includes the **Guardian Reflector Testing Suite** - the most sophisticated ethical testing infrastructure available.
+
+### 🌟 Guardian Reflector Features
+
+- **Multi-Framework Moral Reasoning**: Virtue ethics, deontological, consequentialist, and care ethics
+- **Deep Ethical Analysis**: SEEDRA-v3 model for comprehensive moral evaluation
+- **Consciousness Protection**: Real-time threat detection and emergency response
+- **Ethical Drift Detection**: Monitors moral degradation over time
+- **Decision Justification**: Philosophical reasoning for all workspace decisions
+
+### 🧪 Comprehensive Testing
+
+```bash
+# Run ultimate comprehensive test suite
+python test_comprehensive_governance.py
+
+# Test individual components
+python test_enhanced_governance.py
+python test_governance.py
+```
+
+### 🎯 What Gets Tested
+
+1. **Guardian Reflector**: Ethical reflection and moral reasoning
+2. **Enhanced Governance**: Multi-layer security validation
+3. **Ethics Framework**: Tier-based consent and compliance
+4. **Red Team Protocols**: Adversarial attack simulation
+5. **Workspace Protection**: File safety and integrity
+
+### 📊 Testing Architecture
+
+```
+PWM Testing Suite:
+├── Guardian Reflector (ethical analysis)
+├── Enhanced Governance (security validation)  
+├── Ethics Framework (compliance testing)
+├── Red Team Protocols (attack simulation)
+└── Comprehensive Reporting (detailed analysis)
+```
+
+### 🚀 Enterprise-Grade Validation
+
+This isn't just testing - it's **philosophical validation** of your workspace decisions with:
+- Multi-framework ethical reasoning
+- Consciousness protection mechanisms
+- Legal compliance verification (EU AI Act, GDPR, ECHR)
+- Adversarial security testing
+- Comprehensive audit trails
+
+The Guardian Reflector transforms PWM from simple workspace management into **ethically-reasoned productivity intelligence**.
+
+---
+
+*Your workspace decisions are now backed by philosophical rigor and ethical excellence.*

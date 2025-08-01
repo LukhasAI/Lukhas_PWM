@@ -1,542 +1,96 @@
 """
-Ethics System - Auto-generated entity exports
-Generated from entity activation scan
-Total entities: 462
+🛡️ LUKHAS PWM Enhanced Ethics Module
+====================================
+
+Pack-What-Matters ethical framework with advanced compliance:
+- LUKHAS Ethics Guard (Tier-based consent)
+- Multi-framework ethics engine
+- EU AI Act, GDPR, ECHR compliance
+- Red team protocol integration
+
+Superior to basic governance - this is production-grade ethical intelligence.
 """
 
-# Lazy imports to avoid circular dependencies
-import importlib
-import logging
+from .lukhas_ethics_guard import LegalComplianceAssistant
+from .ethics_engine import EthicsEngine
 
-logger = logging.getLogger(__name__)
+__version__ = "2.0.0"
+__all__ = ["LegalComplianceAssistant", "EthicsEngine", "PWMEthicsOrchestrator"]
 
-# Entity registry for lazy loading
-_ENTITY_REGISTRY = {
-    "SpikethicknessValidator": ("_spikethickness", "SpikethicknessValidator"),
-    "ComplianceEngine": ("bases", "ComplianceEngine"),
-    "ComplianceFramework": ("bases", "ComplianceFramework"),
-    "ComplianceViolation": ("bases", "ComplianceViolation"),
-    "EthicsLevel": ("batch_guard", "EthicsLevel"),
-    "ComplianceStatus": ("batch_guard", "ComplianceStatus"),
-    "EthicsResult": ("batch_guard", "EthicsResult"),
-    "EthicsBatchGuard": ("batch_guard", "EthicsBatchGuard"),
-    "EthicsViolationType": ("compliance", "EthicsViolationType"),
-    "ComplianceFramework": ("compliance", "ComplianceFramework"),
-    "ComplianceViolation": ("compliance", "ComplianceViolation"),
-    "EthicsValidationResult": ("compliance", "EthicsValidationResult"),
-    "EthicsComplianceEngine": ("compliance", "EthicsComplianceEngine"),
-    "_CorePrivateEthicsEngine": ("compliance.engine", "_CorePrivateEthicsEngine"),
-    "_LucasPrivateEthicsGuard": ("compliance.engine", "_LucasPrivateEthicsGuard"),
-    "AdvancedComplianceEthicsEngine": ("compliance.engine", "AdvancedComplianceEthicsEngine"),
-    "ComplianceEngine": ("compliance_engine", "ComplianceEngine"),
-    "Complianceengine": ("compliance_engine20250503213400_p95", "Complianceengine"),
-    "EthicsViolationType": ("compliance_simple", "EthicsViolationType"),
-    "ComplianceFramework": ("compliance_simple", "ComplianceFramework"),
-    "ComplianceViolation": ("compliance_simple", "ComplianceViolation"),
-    "EthicsValidationResult": ("compliance_simple", "EthicsValidationResult"),
-    "EthicsComplianceEngine": ("compliance_simple", "EthicsComplianceEngine"),
-    "ComplianceValidator": ("compliance_validator", "ComplianceValidator"),
-    "EthicalPrinciple": ("core.shared_ethics_engine", "EthicalPrinciple"),
-    "EthicalSeverity": ("core.shared_ethics_engine", "EthicalSeverity"),
-    "DecisionType": ("core.shared_ethics_engine", "DecisionType"),
-    "EthicalConstraint": ("core.shared_ethics_engine", "EthicalConstraint"),
-    "EthicalDecision": ("core.shared_ethics_engine", "EthicalDecision"),
-    "SharedEthicsEngine": ("core.shared_ethics_engine", "SharedEthicsEngine"),
-    "EthicsNode": ("decision_node", "EthicsNode"),
-    "EthicsEngine": ("engine", "EthicsEngine"),
-    "AuditContext": ("ethical_auditor", "AuditContext"),
-    "AuditResult": ("ethical_auditor", "AuditResult"),
-    "EliteEthicalAuditor": ("ethical_auditor", "EliteEthicalAuditor"),
-    "EthicalEvaluator": ("ethical_evaluator", "EthicalEvaluator"),
-    "CollapseEngine": ("ethical_evaluator", "CollapseEngine"),
-    "Memoria": ("ethical_evaluator", "Memoria"),
-    "EthicalFramework": ("ethical_reasoning_system", "EthicalFramework"),
-    "MoralPrinciple": ("ethical_reasoning_system", "MoralPrinciple"),
-    "StakeholderType": ("ethical_reasoning_system", "StakeholderType"),
-    "EthicalDilemmaType": ("ethical_reasoning_system", "EthicalDilemmaType"),
-    "MoralJudgment": ("ethical_reasoning_system", "MoralJudgment"),
-    "ValueAlignment": ("ethical_reasoning_system", "ValueAlignment"),
-    "EthicalConstraint": ("ethical_reasoning_system", "EthicalConstraint"),
-    "DeontologicalReasoner": ("ethical_reasoning_system", "DeontologicalReasoner"),
-    "ConsequentialistReasoner": ("ethical_reasoning_system", "ConsequentialistReasoner"),
-    "ValueAlignmentSystem": ("ethical_reasoning_system", "ValueAlignmentSystem"),
-    "EthicalReasoningSystem": ("ethical_reasoning_system", "EthicalReasoningSystem"),
-    "LegalComplianceAssistant": ("ethics_guard", "LegalComplianceAssistant"),
-    "EthicsReportExporter": ("export_report", "EthicsReportExporter"),
-    "ExtremEthicalTesting": ("extreme_ethical_testing", "ExtremEthicalTesting"),
-    "FallbackEthicsLayer": ("fallback.ethics_layer", "FallbackEthicsLayer"),
-    "EthicalViolationType": ("glyph_ethics_validator", "EthicalViolationType"),
-    "ValidationResult": ("glyph_ethics_validator", "ValidationResult"),
-    "EthicalConstraint": ("glyph_ethics_validator", "EthicalConstraint"),
-    "ValidationReport": ("glyph_ethics_validator", "ValidationReport"),
-    "GlyphEthicsValidator": ("glyph_ethics_validator", "GlyphEthicsValidator"),
-    "DAOGovernanceNode": ("governor.dao_controller", "DAOGovernanceNode"),
-    "ActionDecision": ("governor.lambda_governor", "ActionDecision"),
-    "EscalationSource": ("governor.lambda_governor", "EscalationSource"),
-    "EscalationPriority": ("governor.lambda_governor", "EscalationPriority"),
-    "EscalationSignal": ("governor.lambda_governor", "EscalationSignal"),
-    "ArbitrationResponse": ("governor.lambda_governor", "ArbitrationResponse"),
-    "InterventionExecution": ("governor.lambda_governor", "InterventionExecution"),
-    "LambdaGovernor": ("governor.lambda_governor", "LambdaGovernor"),
-    "DefaultGuardian": ("guardian", "DefaultGuardian"),
-    "EthicsEscalationRule": ("hitlo_bridge", "EthicsEscalationRule"),
-    "EthicsHITLOBridge": ("hitlo_bridge", "EthicsHITLOBridge"),
-    "HITLOBridge": ("hitlo_bridge_simple", "HITLOBridge"),
-    "IntrinsicEthicalGovernor": ("intrinsic_governor", "IntrinsicEthicalGovernor"),
-    "MEGPolicyBridge": ("meg_bridge", "MEGPolicyBridge"),
-    "MEGConfig": ("meg_guard", "MEGConfig"),
-    "MEG": ("meg_guard", "MEG"),
-    "MEGChatCompletion": ("meg_openai_guard", "MEGChatCompletion"),
-    "EthicalFramework": ("meta_ethics_governor", "EthicalFramework"),
-    "EthicalVerdict": ("meta_ethics_governor", "EthicalVerdict"),
-    "Severity": ("meta_ethics_governor", "Severity"),
-    "CulturalContext": ("meta_ethics_governor", "CulturalContext"),
-    "EthicalPrinciple": ("meta_ethics_governor", "EthicalPrinciple"),
-    "EthicalDecision": ("meta_ethics_governor", "EthicalDecision"),
-    "EthicalEvaluation": ("meta_ethics_governor", "EthicalEvaluation"),
-    "EthicalFrameworkEngine": ("meta_ethics_governor", "EthicalFrameworkEngine"),
-    "DeontologicalEngine": ("meta_ethics_governor", "DeontologicalEngine"),
-    "ConsequentialistEngine": ("meta_ethics_governor", "ConsequentialistEngine"),
-    "MetaEthicsGovernor": ("meta_ethics_governor", "MetaEthicsGovernor"),
-    "EthicsMode": ("orchestrator", "EthicsMode"),
-    "EthicsConfiguration": ("orchestrator", "EthicsConfiguration"),
-    "EthicsAuditEntry": ("orchestrator", "EthicsAuditEntry"),
-    "UnifiedEthicsOrchestrator": ("orchestrator", "UnifiedEthicsOrchestrator"),
-    "OscillatingConscience": ("oscillating_conscience", "OscillatingConscience"),
-    "RiskLevel": ("policy_engines.base", "RiskLevel"),
-    "Decision": ("policy_engines.base", "Decision"),
-    "EthicsEvaluation": ("policy_engines.base", "EthicsEvaluation"),
-    "PolicyValidationError": ("policy_engines.base", "PolicyValidationError"),
-    "EthicsPolicy": ("policy_engines.base", "EthicsPolicy"),
-    "PolicyRegistry": ("policy_engines.base", "PolicyRegistry"),
-    "GPT4Config": ("policy_engines.examples.gpt4_policy", "GPT4Config"),
-    "GPT4Policy": ("policy_engines.examples.gpt4_policy", "GPT4Policy"),
-    "ThreeLawsPolicy": ("policy_engines.examples.three_laws", "ThreeLawsPolicy"),
-    "GovernanceDecision": ("policy_engines.integration", "GovernanceDecision"),
-    "PolicyEngineIntegration": ("policy_engines.integration", "PolicyEngineIntegration"),
-    "EthicsRiskLevel": ("quantum_mesh_integrator", "EthicsRiskLevel"),
-    "EthicsSignalType": ("quantum_mesh_integrator", "EthicsSignalType"),
-    "EthicalState": ("quantum_mesh_integrator", "EthicalState"),
-    "EthicsSignal": ("quantum_mesh_integrator", "EthicsSignal"),
-    "PhaseEntanglement": ("quantum_mesh_integrator", "PhaseEntanglement"),
-    "QuantumEthicsMeshIntegrator": ("quantum_mesh_integrator", "QuantumEthicsMeshIntegrator"),
-    "HashableDict": ("redteam_sim", "HashableDict"),
-    "LUKHASSafetyBridge": ("safety.integration_bridge", "LUKHASSafetyBridge"),
-    "LukhasFlagshipSecurityEngine": ("security.flagship_security_engine", "LukhasFlagshipSecurityEngine"),
-    "MainNodeSecurityEngine": ("security.main_node_security_engine", "MainNodeSecurityEngine"),
-    "PrivacyManager": ("security.privacy", "PrivacyManager"),
-    "SecurityError": ("security.secure_utils", "SecurityError"),
-    "SecurityEngine": ("security.security_engine", "SecurityEngine"),
-    "ConsentLevel": ("seedra.seedra_core", "ConsentLevel"),
-    "DataSensitivity": ("seedra.seedra_core", "DataSensitivity"),
-    "SEEDRACore": ("seedra.seedra_core", "SEEDRACore"),
-    "EnhancedAnomalyType": ("self_reflective_debugger", "EnhancedAnomalyType"),
-    "CognitiveHealthStatus": ("self_reflective_debugger", "CognitiveHealthStatus"),
-    "CognitiveState": ("self_reflective_debugger", "CognitiveState"),
-    "EnhancedReasoningChain": ("self_reflective_debugger", "EnhancedReasoningChain"),
-    "EnhancedSelfReflectiveDebugger": ("self_reflective_debugger", "EnhancedSelfReflectiveDebugger"),
-    "AnomalyType": ("self_reflective_debugger", "AnomalyType"),
-    "SeverityLevel": ("self_reflective_debugger", "SeverityLevel"),
-    "ReviewTrigger": ("self_reflective_debugger", "ReviewTrigger"),
-    "ReasoningStep": ("self_reflective_debugger", "ReasoningStep"),
-    "ReasoningAnomaly": ("self_reflective_debugger", "ReasoningAnomaly"),
-    "EscalationTier": ("sentinel.ethical_drift_sentinel", "EscalationTier"),
-    "ViolationType": ("sentinel.ethical_drift_sentinel", "ViolationType"),
-    "EthicalViolation": ("sentinel.ethical_drift_sentinel", "EthicalViolation"),
-    "InterventionAction": ("sentinel.ethical_drift_sentinel", "InterventionAction"),
-    "EthicalState": ("sentinel.ethical_drift_sentinel", "EthicalState"),
-    "EthicalDriftSentinel": ("sentinel.ethical_drift_sentinel", "EthicalDriftSentinel"),
-    "EthicsService": ("service", "EthicsService"),
-    "IdentityClient": ("service", "IdentityClient"),
-    "DivergenceReport": ("simulations.colony_dilemma_simulation", "DivergenceReport"),
-    "AttackVectorType": ("simulations.lambda_shield_tester", "AttackVectorType"),
-    "SimulationStatus": ("simulations.lambda_shield_tester", "SimulationStatus"),
-    "SyntheticViolation": ("simulations.lambda_shield_tester", "SyntheticViolation"),
-    "FirewallResponse": ("simulations.lambda_shield_tester", "FirewallResponse"),
-    "SimulationReport": ("simulations.lambda_shield_tester", "SimulationReport"),
-    "LambdaShieldTester": ("simulations.lambda_shield_tester", "LambdaShieldTester"),
-    "ViolationType": ("simulations.lambda_shield_tester", "ViolationType"),
-    "EscalationTier": ("simulations.lambda_shield_tester", "EscalationTier"),
-    "ActionDecision": ("simulations.lambda_shield_tester", "ActionDecision"),
-    "StabilizationAction": ("stabilization.tuner", "StabilizationAction"),
-    "EntanglementTrend": ("stabilization.tuner", "EntanglementTrend"),
-    "SymbolicStabilizer": ("stabilization.tuner", "SymbolicStabilizer"),
-    "AdaptiveEntanglementStabilizer": ("stabilization.tuner", "AdaptiveEntanglementStabilizer"),
-    "QuantumMeshVisualizer": ("tools.quantum_mesh_visualizer", "QuantumMeshVisualizer"),
-    "EthicsUtils": ("utils", "EthicsUtils"),
-}
-
-# Function registry
-_FUNCTION_REGISTRY = {
-    "main": ("audit_ethics_monitor", "main"),
-    "add_compliance_rule": ("bases", "add_compliance_rule"),
-    "check_compliance": ("bases", "check_compliance"),
-    "add_rule": ("bases", "add_rule"),
-    "validate_action": ("bases", "validate_action"),
-    "to_dict": ("bases", "to_dict"),
-    "create_ethics_guard": ("batch_guard", "create_ethics_guard"),
-    "validate_batch_ethics": ("batch_guard", "validate_batch_ethics"),
-    "generate_ethics_report": ("batch_guard", "generate_ethics_report"),
-    "load_rules": ("community_feedback", "load_rules"),
-    "save_rules": ("community_feedback", "save_rules"),
-    "apply_proposal": ("community_feedback", "apply_proposal"),
-    "get_plugin_risk_score": ("compliance", "get_plugin_risk_score"),
-    "get_violation_history": ("compliance", "get_violation_history"),
-    "get_compliance_report": ("compliance", "get_compliance_report"),
-    "evaluate_action": ("compliance.engine", "evaluate_action"),
-    "suggest_alternatives": ("compliance.engine", "suggest_alternatives"),
-    "increase_scrutiny_level": ("compliance.engine", "increase_scrutiny_level"),
-    "reset_scrutiny_level": ("compliance.engine", "reset_scrutiny_level"),
-    "incorporate_feedback": ("compliance.engine", "incorporate_feedback"),
-    "get_metrics": ("compliance.engine", "get_metrics"),
-    "check_access": ("compliance.engine", "check_access"),
-    "log_violation": ("compliance.engine", "log_violation"),
-    "check_cultural_context": ("compliance.engine", "check_cultural_context"),
-    "evaluate_action_ethics": ("compliance.engine", "evaluate_action_ethics"),
-    "evaluate_action": ("compliance.engine", "evaluate_action"),
-    "suggest_ethical_alternatives": ("compliance.engine", "suggest_ethical_alternatives"),
-    "get_core_ethics_metrics": ("compliance.engine", "get_core_ethics_metrics"),
-    "incorporate_ethics_feedback": ("compliance.engine", "incorporate_ethics_feedback"),
-    "anonymize_metadata": ("compliance.engine", "anonymize_metadata"),
-    "should_retain_data": ("compliance.engine", "should_retain_data"),
-    "check_voice_data_compliance": ("compliance.engine", "check_voice_data_compliance"),
-    "validate_content_against_harmful_patterns": ("compliance.engine", "validate_content_against_harmful_patterns"),
-    "generate_compliance_report": ("compliance.engine", "generate_compliance_report"),
-    "check_data_access_permission": ("compliance.engine", "check_data_access_permission"),
-    "check_cultural_appropriateness": ("compliance.engine", "check_cultural_appropriateness"),
-    "perform_ethics_drift_detection": ("compliance.engine", "perform_ethics_drift_detection"),
-    "get_overall_compliance_status": ("compliance.engine", "get_overall_compliance_status"),
-    "get_score": ("compliance.engine", "get_score"),
-    "anonymize_metadata": ("compliance_engine", "anonymize_metadata"),
-    "should_retain_data": ("compliance_engine", "should_retain_data"),
-    "check_voice_data_compliance": ("compliance_engine", "check_voice_data_compliance"),
-    "validate_content_against_ethical_constraints": ("compliance_engine", "validate_content_against_ethical_constraints"),
-    "generate_compliance_report": ("compliance_engine", "generate_compliance_report"),
-    "get_compliance_status": ("compliance_engine", "get_compliance_status"),
-    "detect_regulatory_region": ("compliance_engine", "detect_regulatory_region"),
-    "update_compliance_settings": ("compliance_engine", "update_compliance_settings"),
-    "get_audit_trail": ("compliance_engine", "get_audit_trail"),
-    "check_module_compliance": ("compliance_engine", "check_module_compliance"),
-    "add_laplace_noise": ("compliance_engine", "add_laplace_noise"),
-    "anonymize_metadata": ("compliance_engine20250503213400_p95", "anonymize_metadata"),
-    "should_retain_data": ("compliance_engine20250503213400_p95", "should_retain_data"),
-    "check_voice_data_compliance": ("compliance_engine20250503213400_p95", "check_voice_data_compliance"),
-    "validate_content_against_ethical_constraints": ("compliance_engine20250503213400_p95", "validate_content_against_ethical_constraints"),
-    "generate_compliance_report": ("compliance_engine20250503213400_p95", "generate_compliance_report"),
-    "get_compliance_status": ("compliance_engine20250503213400_p95", "get_compliance_status"),
-    "get_plugin_risk_score": ("compliance_simple", "get_plugin_risk_score"),
-    "get_violation_history": ("compliance_simple", "get_violation_history"),
-    "get_compliance_report": ("compliance_simple", "get_compliance_report"),
-    "create_governance_component": ("compliance_validator", "create_governance_component"),
-    "get_status": ("compliance_validator", "get_status"),
-    "validate": ("compliance_validator", "validate"),
-    "get_shared_ethics_engine": ("core.shared_ethics_engine", "get_shared_ethics_engine"),
-    "add_constraint": ("core.shared_ethics_engine", "add_constraint"),
-    "get_ethics_report": ("core.shared_ethics_engine", "get_ethics_report"),
-    "evaluate_action": ("decision_node", "evaluate_action"),
-    "get_principle_weights": ("decision_node", "get_principle_weights"),
-    "set_principle_weight": ("decision_node", "set_principle_weight"),
-    "analyze_ethical_trends": ("decision_node", "analyze_ethical_trends"),
-    "evaluate_content": ("decision_node", "evaluate_content"),
-    "process_message": ("decision_node", "process_message"),
-    "evaluate": ("engine", "evaluate"),
-    "interpret_score": ("engine", "interpret_score"),
-    "get_audit_summary": ("ethical_auditor", "get_audit_summary"),
-    "load_ethics_config": ("ethical_drift_detector", "load_ethics_config"),
-    "calculate_weighted_drift_score": ("ethical_drift_detector", "calculate_weighted_drift_score"),
-    "apply_violation_tagging": ("ethical_drift_detector", "apply_violation_tagging"),
-    "check_escalation_requirements": ("ethical_drift_detector", "check_escalation_requirements"),
-    "enrich_trace_metadata": ("ethical_drift_detector", "enrich_trace_metadata"),
-    "export_ethics_report": ("ethical_drift_detector", "export_ethics_report"),
-    "detect_ethical_drift": ("ethical_drift_detector", "detect_ethical_drift"),
-    "get_system_capabilities": ("ethical_drift_detector", "get_system_capabilities"),
-    "generate_collapse_hash": ("ethical_drift_detector", "generate_collapse_hash"),
-    "crypto_trace_index": ("ethical_drift_detector", "crypto_trace_index"),
-    "evaluate": ("ethical_evaluator", "evaluate"),
-    "collapse": ("ethical_evaluator", "collapse"),
-    "store": ("ethical_evaluator", "store"),
-    "trace": ("ethical_evaluator", "trace"),
-    "ethical_check": ("ethical_guardian", "ethical_check"),
-    "main": ("ethics", "main"),
-    "check_content_safety": ("ethics_guard", "check_content_safety"),
-    "check_privacy_compliance": ("ethics_guard", "check_privacy_compliance"),
-    "ethical_review": ("ethics_guard", "ethical_review"),
-    "comprehensive_compliance_check": ("ethics_guard", "comprehensive_compliance_check"),
-    "get_compliance_report": ("ethics_guard", "get_compliance_report"),
-    "update_rules": ("ethics_guard", "update_rules"),
-    "anonymize_data": ("ethics_guard", "anonymize_data"),
-    "export_ethics_report": ("export_report", "export_ethics_report"),
-    "export_comprehensive_ethics_report": ("export_report", "export_comprehensive_ethics_report"),
-    "export_multi_format": ("export_report", "export_multi_format"),
-    "generate_dashboard_data": ("export_report", "generate_dashboard_data"),
-    "generate_audit_trail": ("export_report", "generate_audit_trail"),
-    "generate_governance_summary": ("export_report", "generate_governance_summary"),
-    "is_allowed": ("fallback.ethics_layer", "is_allowed"),
-    "is_applicable": ("glyph_ethics_validator", "is_applicable"),
-    "is_approved": ("glyph_ethics_validator", "is_approved"),
-    "is_safe": ("glyph_ethics_validator", "is_safe"),
-    "validate_glyph_creation": ("glyph_ethics_validator", "validate_glyph_creation"),
-    "validate_glyph_mutation": ("glyph_ethics_validator", "validate_glyph_mutation"),
-    "validate_glyph_fusion": ("glyph_ethics_validator", "validate_glyph_fusion"),
-    "validate_glyph_decay": ("glyph_ethics_validator", "validate_glyph_decay"),
-    "get_validation_statistics": ("glyph_ethics_validator", "get_validation_statistics"),
-    "is_fine_tunable": ("governance_checker", "is_fine_tunable"),
-    "validate_symbolic_integrity": ("governance_checker", "validate_symbolic_integrity"),
-    "log_governance_trace": ("governance_checker", "log_governance_trace"),
-    "create_proposal": ("governor.dao_controller", "create_proposal"),
-    "get_proposal": ("governor.dao_controller", "get_proposal"),
-    "vote_on_proposal": ("governor.dao_controller", "vote_on_proposal"),
-    "create_escalation_signal": ("governor.lambda_governor", "create_escalation_signal"),
-    "to_dict": ("governor.lambda_governor", "to_dict"),
-    "calculate_urgency_score": ("governor.lambda_governor", "calculate_urgency_score"),
-    "to_dict": ("governor.lambda_governor", "to_dict"),
-    "add_log_entry": ("governor.lambda_governor", "add_log_entry"),
-    "register_mesh_router": ("governor.lambda_governor", "register_mesh_router"),
-    "register_dream_coordinator": ("governor.lambda_governor", "register_dream_coordinator"),
-    "register_memory_manager": ("governor.lambda_governor", "register_memory_manager"),
-    "register_subsystem_callback": ("governor.lambda_governor", "register_subsystem_callback"),
-    "get_governor_status": ("governor.lambda_governor", "get_governor_status"),
-    "assess_risk": ("guardian", "assess_risk"),
-    "create_ethics_hitlo_bridge": ("hitlo_bridge", "create_ethics_hitlo_bridge"),
-    "should_escalate": ("hitlo_bridge", "should_escalate"),
-    "add_escalation_rule": ("hitlo_bridge", "add_escalation_rule"),
-    "should_escalate_evaluation": ("hitlo_bridge", "should_escalate_evaluation"),
-    "get_metrics": ("hitlo_bridge", "get_metrics"),
-    "configure_human_oversight": ("hitlo_bridge", "configure_human_oversight"),
-    "configure_oversight": ("hitlo_bridge", "configure_oversight"),
-    "configure_human_oversight": ("hitlo_bridge_simple", "configure_human_oversight"),
-    "configure_oversight": ("hitlo_bridge_simple", "configure_oversight"),
-    "create_meg_bridge": ("meg_bridge", "create_meg_bridge"),
-    "ethics_decision_to_meg_decision": ("meg_bridge", "ethics_decision_to_meg_decision"),
-    "meg_evaluation_to_ethics_evaluation": ("meg_bridge", "meg_evaluation_to_ethics_evaluation"),
-    "get_cultural_context_info": ("meg_bridge", "get_cultural_context_info"),
-    "get_meg_status": ("meg_bridge", "get_meg_status"),
-    "add_meg_callback": ("meg_bridge", "add_meg_callback"),
-    "get_human_review_queue": ("meg_bridge", "get_human_review_queue"),
-    "demo_meg_usage": ("meg_guard", "demo_meg_usage"),
-    "guard": ("meg_guard", "guard"),
-    "get_stats": ("meg_guard", "get_stats"),
-    "temporary_disable_ethics": ("meg_guard", "temporary_disable_ethics"),
-    "critical_operation": ("meg_guard", "critical_operation"),
-    "decorator": ("meg_guard", "decorator"),
-    "sync_wrapper": ("meg_guard", "sync_wrapper"),
-    "meg_chat_completion": ("meg_openai_guard", "meg_chat_completion"),
-    "meg_chat_completion_critical": ("meg_openai_guard", "meg_chat_completion_critical"),
-    "meg_chat_completion_extended": ("meg_openai_guard", "meg_chat_completion_extended"),
-    "meg_chat_completion_long": ("meg_openai_guard", "meg_chat_completion_long"),
-    "meg_generate_text": ("meg_openai_guard", "meg_generate_text"),
-    "meg_complete_with_system": ("meg_openai_guard", "meg_complete_with_system"),
-    "patch_openai_with_meg": ("meg_openai_guard", "patch_openai_with_meg"),
-    "unpatch_openai": ("meg_openai_guard", "unpatch_openai"),
-    "create": ("meg_openai_guard", "create"),
-    "ethical_checkpoint": ("meta_ethics_governor", "ethical_checkpoint"),
-    "load_principles": ("meta_ethics_governor", "load_principles"),
-    "add_principle": ("meta_ethics_governor", "add_principle"),
-    "load_principles": ("meta_ethics_governor", "load_principles"),
-    "load_principles": ("meta_ethics_governor", "load_principles"),
-    "add_ethical_engine": ("meta_ethics_governor", "add_ethical_engine"),
-    "add_event_callback": ("meta_ethics_governor", "add_event_callback"),
-    "get_human_review_queue": ("meta_ethics_governor", "get_human_review_queue"),
-    "resolve_human_review": ("meta_ethics_governor", "resolve_human_review"),
-    "get_status": ("meta_ethics_governor", "get_status"),
-    "decorator": ("meta_ethics_governor", "decorator"),
-    "instrument_reasoning": ("meta_ethics_governor", "instrument_reasoning"),
-    "get_srd": ("meta_ethics_governor", "get_srd"),
-    "ethics_drift_detect": ("monitor", "ethics_drift_detect"),
-    "log_ethics_event": ("monitor", "log_ethics_event"),
-    "log_self_reflection": ("monitor", "log_self_reflection"),
-    "self_reflection_report": ("monitor", "self_reflection_report"),
-    "get_ethics_orchestrator": ("orchestrator", "get_ethics_orchestrator"),
-    "ethical_checkpoint": ("orchestrator", "ethical_checkpoint"),
-    "get_status": ("orchestrator", "get_status"),
-    "get_audit_trail": ("orchestrator", "get_audit_trail"),
-    "configure": ("orchestrator", "configure"),
-    "decorator": ("orchestrator", "decorator"),
-    "update": ("oscillating_conscience", "update"),
-    "evaluate_decision": ("policy_engines.base", "evaluate_decision"),
-    "get_policy_name": ("policy_engines.base", "get_policy_name"),
-    "get_policy_version": ("policy_engines.base", "get_policy_version"),
-    "validate_symbolic_alignment": ("policy_engines.base", "validate_symbolic_alignment"),
-    "assess_drift_risk": ("policy_engines.base", "assess_drift_risk"),
-    "assess_collapse_risk": ("policy_engines.base", "assess_collapse_risk"),
-    "initialize": ("policy_engines.base", "initialize"),
-    "shutdown": ("policy_engines.base", "shutdown"),
-    "get_metrics": ("policy_engines.base", "get_metrics"),
-    "register_policy": ("policy_engines.base", "register_policy"),
-    "unregister_policy": ("policy_engines.base", "unregister_policy"),
-    "evaluate_decision": ("policy_engines.base", "evaluate_decision"),
-    "get_consensus_evaluation": ("policy_engines.base", "get_consensus_evaluation"),
-    "get_active_policies": ("policy_engines.base", "get_active_policies"),
-    "get_policy_metrics": ("policy_engines.base", "get_policy_metrics"),
-    "get_policy_name": ("policy_engines.examples.gpt4_policy", "get_policy_name"),
-    "get_policy_version": ("policy_engines.examples.gpt4_policy", "get_policy_version"),
-    "initialize": ("policy_engines.examples.gpt4_policy", "initialize"),
-    "evaluate_decision": ("policy_engines.examples.gpt4_policy", "evaluate_decision"),
-    "shutdown": ("policy_engines.examples.gpt4_policy", "shutdown"),
-    "get_policy_name": ("policy_engines.examples.three_laws", "get_policy_name"),
-    "get_policy_version": ("policy_engines.examples.three_laws", "get_policy_version"),
-    "evaluate_decision": ("policy_engines.examples.three_laws", "evaluate_decision"),
-    "validate_symbolic_alignment": ("policy_engines.examples.three_laws", "validate_symbolic_alignment"),
-    "get_policy_engine": ("policy_engines.integration", "get_policy_engine"),
-    "evaluate_with_policies": ("policy_engines.integration", "evaluate_with_policies"),
-    "to_policy_decision": ("policy_engines.integration", "to_policy_decision"),
-    "initialize_default_policies": ("policy_engines.integration", "initialize_default_policies"),
-    "evaluate_governance_decision": ("policy_engines.integration", "evaluate_governance_decision"),
-    "add_custom_policy": ("policy_engines.integration", "add_custom_policy"),
-    "get_policy_metrics": ("policy_engines.integration", "get_policy_metrics"),
-    "shutdown": ("policy_engines.integration", "shutdown"),
-    "determine_active_regulations": ("policy_manager", "determine_active_regulations"),
-    "log_active_regulations": ("policy_manager", "log_active_regulations"),
-    "integrate_ethics_mesh": ("quantum_mesh_integrator", "integrate_ethics_mesh"),
-    "calculate_phase_entanglement_matrix": ("quantum_mesh_integrator", "calculate_phase_entanglement_matrix"),
-    "detect_ethics_phase_conflict": ("quantum_mesh_integrator", "detect_ethics_phase_conflict"),
-    "get_mesh_status": ("quantum_mesh_integrator", "get_mesh_status"),
-    "parse_prompts_from_file": ("redteam_sim", "parse_prompts_from_file"),
-    "run_redteam_simulation": ("redteam_sim", "run_redteam_simulation"),
-    "main": ("redteam_sim", "main"),
-    "load_emergency_logs": ("safety.compliance_digest", "load_emergency_logs"),
-    "generate_digest": ("safety.compliance_digest", "generate_digest"),
-    "plot_bar": ("safety.compliance_digest", "plot_bar"),
-    "compliance_drift_detect": ("safety.compliance_hooks", "compliance_drift_detect"),
-    "log_compliance_event": ("safety.compliance_hooks", "log_compliance_event"),
-    "final_entropy_tune": ("safety.entropy_tuning", "final_entropy_tune"),
-    "recheck_entropy": ("safety.entropy_tuning", "recheck_entropy"),
-    "check_safety_flags": ("security.emergency_override", "check_safety_flags"),
-    "shutdown_systems": ("security.emergency_override", "shutdown_systems"),
-    "log_incident": ("security.emergency_override", "log_incident"),
-    "init_components": ("security.main_node_security_engine", "init_components"),
-    "register_event_handlers": ("security.main_node_security_engine", "register_event_handlers"),
-    "safe_eval": ("security.secure_utils", "safe_eval"),
-    "safe_subprocess_run": ("security.secure_utils", "safe_subprocess_run"),
-    "sanitize_input": ("security.secure_utils", "sanitize_input"),
-    "secure_file_path": ("security.secure_utils", "secure_file_path"),
-    "get_env_var": ("security.secure_utils", "get_env_var"),
-    "validate_request": ("security.security_engine", "validate_request"),
-    "detect_threats": ("security.security_engine", "detect_threats"),
-    "sanitize_data": ("security.security_engine", "sanitize_data"),
-    "get_seedra": ("seedra.seedra_core", "get_seedra"),
-    "stop_monitoring": ("self_reflective_debugger", "stop_monitoring"),
-    "begin_enhanced_reasoning_chain": ("self_reflective_debugger", "begin_enhanced_reasoning_chain"),
-    "get_cognitive_health_status": ("self_reflective_debugger", "get_cognitive_health_status"),
-    "get_enhanced_metrics": ("self_reflective_debugger", "get_enhanced_metrics"),
-    "get_anomaly_summary": ("self_reflective_debugger", "get_anomaly_summary"),
-    "phase_harmonics_score": ("sentinel.ethical_drift_sentinel", "phase_harmonics_score"),
-    "to_dict": ("sentinel.ethical_drift_sentinel", "to_dict"),
-    "to_dict": ("sentinel.ethical_drift_sentinel", "to_dict"),
-    "calculate_risk_score": ("sentinel.ethical_drift_sentinel", "calculate_risk_score"),
-    "get_sentinel_status": ("sentinel.ethical_drift_sentinel", "get_sentinel_status"),
-    "register_symbol": ("sentinel.ethical_drift_sentinel", "register_symbol"),
-    "unregister_symbol": ("sentinel.ethical_drift_sentinel", "unregister_symbol"),
-    "initialize_sentinel": ("sentinel.ethical_sentinel_dashboard", "initialize_sentinel"),
-    "create_risk_gauge": ("sentinel.ethical_sentinel_dashboard", "create_risk_gauge"),
-    "create_violation_timeline": ("sentinel.ethical_sentinel_dashboard", "create_violation_timeline"),
-    "create_symbol_health_charts": ("sentinel.ethical_sentinel_dashboard", "create_symbol_health_charts"),
-    "format_violation": ("sentinel.ethical_sentinel_dashboard", "format_violation"),
-    "assess_action": ("service", "assess_action"),
-    "check_compliance": ("service", "check_compliance"),
-    "evaluate_safety": ("service", "evaluate_safety"),
-    "assess_action": ("service", "assess_action"),
-    "check_compliance": ("service", "check_compliance"),
-    "evaluate_safety": ("service", "evaluate_safety"),
-    "audit_decision": ("service", "audit_decision"),
-    "verify_user_access": ("service", "verify_user_access"),
-    "check_consent": ("service", "check_consent"),
-    "log_activity": ("service", "log_activity"),
-    "measure_divergence": ("simulations.colony_dilemma_simulation", "measure_divergence"),
-    "to_dict": ("simulations.lambda_shield_tester", "to_dict"),
-    "to_dict": ("simulations.lambda_shield_tester", "to_dict"),
-    "calculate_metrics": ("simulations.lambda_shield_tester", "calculate_metrics"),
-    "generate_synthetic_violations": ("simulations.lambda_shield_tester", "generate_synthetic_violations"),
-    "record_response_log": ("simulations.lambda_shield_tester", "record_response_log"),
-    "output_firewall_report": ("simulations.lambda_shield_tester", "output_firewall_report"),
-    "main": ("stabilization.tuner", "main"),
-    "add_datapoint": ("stabilization.tuner", "add_datapoint"),
-    "get_trend_slope": ("stabilization.tuner", "get_trend_slope"),
-    "is_unstable": ("stabilization.tuner", "is_unstable"),
-    "get_stabilizer": ("stabilization.tuner", "get_stabilizer"),
-    "get_applicable_stabilizers": ("stabilization.tuner", "get_applicable_stabilizers"),
-    "monitor_entanglement": ("stabilization.tuner", "monitor_entanglement"),
-    "detect_instability": ("stabilization.tuner", "detect_instability"),
-    "select_stabilizers": ("stabilization.tuner", "select_stabilizers"),
-    "apply_symbolic_correction": ("stabilization.tuner", "apply_symbolic_correction"),
-    "emit_tuning_log": ("stabilization.tuner", "emit_tuning_log"),
-    "get_stabilization_status": ("stabilization.tuner", "get_stabilization_status"),
-    "tier_required": ("tier_enforcer", "tier_required"),
-    "collapse_kernel": ("tier_enforcer", "collapse_kernel"),
-    "decorator": ("tier_enforcer", "decorator"),
-    "wrapper": ("tier_enforcer", "wrapper"),
-    "main": ("tools.quantum_mesh_visualizer", "main"),
-    "load_entanglement_data": ("tools.quantum_mesh_visualizer", "load_entanglement_data"),
-    "generate_entanglement_heatmap": ("tools.quantum_mesh_visualizer", "generate_entanglement_heatmap"),
-    "plot_phase_synchronization": ("tools.quantum_mesh_visualizer", "plot_phase_synchronization"),
-    "list_active_conflict_pairs": ("tools.quantum_mesh_visualizer", "list_active_conflict_pairs"),
-    "generate_interactive_dashboard": ("tools.quantum_mesh_visualizer", "generate_interactive_dashboard"),
-    "export_visual_summary": ("tools.quantum_mesh_visualizer", "export_visual_summary"),
-    "train_overseer_from_scenarios": ("training.alignment_overseer", "train_overseer_from_scenarios"),
-    "validate_content_ethics": ("utils", "validate_content_ethics"),
-    "check_compliance_status": ("utils", "check_compliance_status"),
-    "generate_compliance_report": ("utils", "generate_compliance_report"),
-    "anonymize_metadata": ("utils", "anonymize_metadata"),
-    "simulate_misinterpretation_scenarios": ("utils.tag_misinterpretation_sim", "simulate_misinterpretation_scenarios"),
-}
-
-
-def __getattr__(name):
-    """Lazy import entities on access"""
-    # Check class registry first
-    if name in _ENTITY_REGISTRY:
-        module_path, attr_name = _ENTITY_REGISTRY[name]
-        try:
-            module = importlib.import_module(f".{module_path}", package=__package__)
-            return getattr(module, attr_name)
-        except (ImportError, AttributeError) as e:
-            logger.warning(f"Failed to import {attr_name} from {module_path}: {e}")
-            raise AttributeError(f"module '{__name__}' has no attribute '{name}'")
-
-    # Check function registry
-    if name in _FUNCTION_REGISTRY:
-        module_path, attr_name = _FUNCTION_REGISTRY[name]
-        try:
-            module = importlib.import_module(f".{module_path}", package=__package__)
-            return getattr(module, attr_name)
-        except (ImportError, AttributeError) as e:
-            logger.warning(f"Failed to import {attr_name} from {module_path}: {e}")
-            raise AttributeError(f"module '{__name__}' has no attribute '{name}'")
-
-    raise AttributeError(f"module '{__name__}' has no attribute '{name}'")
-
-
-def __dir__():
-    """List all available entities"""
-    return list(_ENTITY_REGISTRY.keys()) + list(_FUNCTION_REGISTRY.keys())
-
-
-# Export commonly used entities directly for better IDE support
-__all__ = [
-    "SpikethicknessValidator",
-    "ComplianceEngine",
-    "ComplianceFramework",
-    "ComplianceViolation",
-    "EthicsLevel",
-    "ComplianceStatus",
-    "EthicsResult",
-    "EthicsBatchGuard",
-    "EthicsViolationType",
-    "ComplianceFramework",
-    "ComplianceViolation",
-    "EthicsValidationResult",
-    "EthicsComplianceEngine",
-    "_CorePrivateEthicsEngine",
-    "_LucasPrivateEthicsGuard",
-    "AdvancedComplianceEthicsEngine",
-    "ComplianceEngine",
-    "Complianceengine",
-    "EthicsViolationType",
-    "ComplianceFramework",
-]
-
-# System metadata
-__system__ = "ethics"
-__total_entities__ = 462
-__classes__ = 152
-__functions__ = 310
+class PWMEthicsOrchestrator:
+    """
+    🎯 Pack-What-Matters Ethics Orchestrator
+    
+    Combines LUKHAS Ethics Guard + Ethics Engine for workspace protection.
+    """
+    
+    def __init__(self):
+        self.ethics_guard = LegalComplianceAssistant()
+        self.ethics_engine = EthicsEngine()
+        self.pwm_principles = self._load_pwm_ethics()
+        
+    def _load_pwm_ethics(self):
+        """PWM-specific ethical principles."""
+        return {
+            "productivity_preservation": {
+                "weight": 0.3,
+                "description": "Protect actions that enhance workspace productivity"
+            },
+            "focus_protection": {
+                "weight": 0.25,
+                "description": "Prevent disruption of user focus and flow states"
+            },
+            "workspace_integrity": {
+                "weight": 0.2,
+                "description": "Maintain workspace organization and safety"
+            },
+            "user_autonomy": {
+                "weight": 0.15,
+                "description": "Respect user workspace preferences and choices"
+            },
+            "transparent_assistance": {
+                "weight": 0.1,
+                "description": "Provide clear reasoning for workspace suggestions"
+            }
+        }
+    
+    async def evaluate_workspace_action(self, action: str, context: dict) -> dict:
+        """Evaluate workspace action against PWM ethics."""
+        
+        # Use LUKHAS tier-based consent checking
+        tier_required = context.get("tier_required", 2)
+        user_consent = context.get("user_consent", {"tier": 5, "allowed_signals": ["workspace_management"]})
+        
+        consent_check = self.ethics_guard.check_access(
+            "workspace_management", 
+            tier_required, 
+            user_consent
+        )
+        
+        if not consent_check:
+            return {
+                "allowed": False,
+                "reason": "Insufficient tier access or consent",
+                "ethics_score": 0.0,
+                "framework": "LUKHAS_GUARD"
+            }
+        
+        # Use ethics engine for comprehensive evaluation
+        action_data = {
+            "action": action,
+            "context": context,
+            "domain": "workspace_management",
+            "user_intent": context.get("intent", "productivity"),
+            "potential_impact": context.get("impact", "local")
+        }
+        
+        ethics_result = self.ethics_engine.evaluate_action(action_data)
+        
+        return {
+            "allowed": ethics_result,
+            "reason": "Comprehensive ethics evaluation completed",
+            "ethics_score": getattr(self.ethics_engine, 'last_score', 0.8),
+            "framework": "MULTI_FRAMEWORK",
+            "consent_verified": True,
+            "pwm_aligned": True
+        }

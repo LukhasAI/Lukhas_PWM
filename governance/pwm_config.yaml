@@ -1,0 +1,63 @@
+# 🎯 LUKHAS PWM Governance Configuration
+# Pack-What-Matters specific governance settings
+
+governance:
+  enabled: true
+  version: "1.0.0"
+  mode: "pwm_workspace"
+
+guardian_system:
+  remediator_sensitivity: 0.7
+  reflection_depth: 3
+  firewall_enabled: true
+
+safety_thresholds:
+  workspace_warning: 0.6
+  productivity_critical: 0.8
+  emergency_intervention: 0.95
+
+pwm_specific:
+  protect_git_operations: true
+  monitor_file_deletions: true
+  workspace_bloat_detection: true
+  backup_integrity_checks: true
+  
+  # Protected file patterns
+  protected_patterns:
+    - "*.git/*"
+    - "README.md"
+    - "*.config.*"
+    - "requirements*.txt"
+    - "package*.json"
+    - ".env*"
+
+compliance:
+  audit_log_enabled: true
+  transparency_level: "high"
+  compliance_mode: "strict"
+
+workspace_ethics:
+  principles:
+    productivity_first: 1.0
+    safety_paramount: 1.0
+    user_autonomy: 0.9
+    transparency: 0.9
+    efficiency: 0.8
+
+emergency_protocols:
+  enabled: true
+  auto_backup_on_critical: true
+  workspace_snapshot_on_emergency: true
+  notification_threshold: 0.9
+
+integration:
+  memory_module: true
+  identity_validation: true
+  symbolic_communication: true
+  colony_coordination: true
+
+logging:
+  level: "INFO"
+  symbolic_vocabulary: true
+  decision_history_size: 1000
+  audit_retention_days: 30
