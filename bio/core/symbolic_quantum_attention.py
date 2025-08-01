@@ -18,6 +18,7 @@ class QuantumInspiredAttention:
     1. Quantum superposition (linear combination of states)
     2. Quantum tunneling (probability of crossing energy barriers)
     3. Electron transport chain efficiency patterns
+    """
 
     def __init__(self,
                  dimension: int = 64,

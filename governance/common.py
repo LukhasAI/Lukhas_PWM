@@ -49,16 +49,24 @@ class BaseLucasHealth:
         }
 
 
-def symbolic_vocabulary() -> Dict[str, str]:
-    """Returns the symbolic vocabulary for GLYPH tokens"""
-    return {
-        "SAFE": "✅",
-        "WARNING": "⚠️",
-        "ERROR": "❌",
-        "INFO": "ℹ️",
-        "SUCCESS": "✨",
-        "PROCESSING": "⚙️"
-    }
+def symbolic_vocabulary(func=None):
+    """
+    Decorator or function that returns symbolic vocabulary for GLYPH tokens.
+    Can be used as @symbolic_vocabulary or symbolic_vocabulary()
+    """
+    if func is None:
+        # Called as a function
+        return {
+            "SAFE": "✅",
+            "WARNING": "⚠️",
+            "ERROR": "❌",
+            "INFO": "ℹ️",
+            "SUCCESS": "✨",
+            "PROCESSING": "⚙️"
+        }
+    else:
+        # Used as a decorator
+        return func
 
 
 def symbolic_message(cls):

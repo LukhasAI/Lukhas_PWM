@@ -1,4 +1,3 @@
-lucas_ethics_guard.py
 """
 📄 MODULE      : lucas_ethics_guard.py
 🛡️ PURPOSE     : Enforces symbolic consent, user data access boundaries, and ethical tiers

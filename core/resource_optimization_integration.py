@@ -35,7 +35,7 @@ from typing import Any, Dict, List, Optional, Tuple, Callable
 from collections import defaultdict
 
 # Import our resource management modules
-from .energy_consumption_analysis import EnergyConsumptionAnalyzer,
+from .energy_consumption_analysis import (
     EnergyConsumptionAnalyzer,
     EnergyComponent,
     EnergyProfile,
@@ -47,7 +47,7 @@ from memory.memory_optimization import (
     CompactList,
     BloomFilter
 )
-from .efficient_communication import EfficientCommunicationFabric,
+from .efficient_communication import (
     EfficientCommunicationFabric,
     MessagePriority,
     CommunicationMode
