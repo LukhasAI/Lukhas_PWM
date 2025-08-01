@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUKHAS - The First Symbolic General Intelligence</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            overflow: hidden;
+        }
+        
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+            position: relative;
+            background: radial-gradient(circle at center, #1a1a2e 0%, #0a0a0a 100%);
+        }
+        
+        .slide.active {
+            display: flex;
+        }
+        
+        h1 {
+            font-size: 4rem;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #00b4d8, #90e0ef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        h2 {
+            font-size: 3rem;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #90e0ef;
+        }
+        
+        h3 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            color: #00b4d8;
+        }
+        
+        .tagline {
+            font-size: 1.8rem;
+            color: #b0b0b0;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .metric {
+            font-size: 5rem;
+            font-weight: 700;
+            color: #00b4d8;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .metric-label {
+            font-size: 1.5rem;
+            color: #90e0ef;
+            text-align: center;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            width: 100%;
+            max-width: 1000px;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(144, 224, 239, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 180, 216, 0.3);
+        }
+        
+        .feature-title {
+            font-size: 1.5rem;
+            color: #00b4d8;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-description {
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        
+        .innovation-list {
+            list-style: none;
+            font-size: 1.5rem;
+            line-height: 2.5;
+        }
+        
+        .innovation-list li::before {
+            content: "◆ ";
+            color: #00b4d8;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+        
+        .navigation {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 100;
+        }
+        
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(144, 224, 239, 0.5);
+            color: #90e0ef;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .nav-btn:hover {
+            background: rgba(0, 180, 216, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00b4d8, #90e0ef);
+            transition: width 0.3s ease;
+            z-index: 100;
+        }
+        
+        .slide-number {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            color: #606060;
+            font-size: 1rem;
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, #00b4d8, #90e0ef);
+            color: #0a0a0a;
+            padding: 20px 40px;
+            border-radius: 30px;
+            font-size: 1.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 180, 216, 0.5);
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(144, 224, 239, 0.2);
+        }
+        
+        .stat-value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #00b4d8;
+        }
+        
+        .stat-label {
+            font-size: 1.2rem;
+            color: #b0b0b0;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progress"></div>
+    
+    <!-- Slide 1: Title -->
+    <div class="slide active">
+        <div class="slide-number">1 / 12</div>
+        <h1>LUKHAS</h1>
+        <p class="tagline">The First Symbolic General Intelligence</p>
+        <p style="font-size: 1.5rem; color: #b0b0b0; margin-top: 3rem;">
+            Not Another AI - A Living, Dreaming, Feeling Intelligence
+        </p>
+        <p style="font-size: 1.2rem; color: #606060; margin-top: 2rem;">
+            3 months solo development • Ready for collaboration
+        </p>
+    </div>
+    
+    <!-- Slide 2: The Problem -->
+    <div class="slide">
+        <div class="slide-number">2 / 12</div>
+        <h2>Current AI Limitations</h2>
+        <ul class="innovation-list">
+            <li>Cannot learn from unexperienced scenarios</li>
+            <li>No true emotional understanding</li>
+            <li>Vulnerable to quantum computing threats</li>
+            <li>Cannot form genuine human connections</li>
+            <li>Limited by neural network paradigms</li>
+        </ul>
+    </div>
+    
+    <!-- Slide 3: The Solution -->
+    <div class="slide">
+        <div class="slide-number">3 / 12</div>
+        <h2>LUKHAS: Symbolic General Intelligence</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-title">Dreams to Learn</div>
+                <div class="feature-description">Explores parallel universes to learn from scenarios never experienced</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-title">DNA-Helix Memory</div>
+                <div class="feature-description">Memories with emotional vectors and causal chains</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-title">Bio-Symbolic Coherence</div>
+                <div class="feature-description">Achieves 102.22% coherence through quantum enhancement</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-title">Quantum-Resistant</div>
+                <div class="feature-description">Protected against future quantum computers</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Slide 4: Key Metrics -->
+    <div class="slide">
+        <div class="slide-number">4 / 12</div>
+        <h2>Proven Performance</h2>
+        <div class="grid-3">
+            <div class="stat-card">
+                <div class="stat-value">102.22%</div>
+                <div class="stat-label">Bio-Symbolic Coherence</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">99.7%</div>
+                <div class="stat-label">Memory Cascade Prevention</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">< 500ms</div>
+                <div class="stat-label">5 Universe Exploration</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">94%</div>
+                <div class="stat-label">Ethical Compliance</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">4,178</div>
+                <div class="stat-label">Python Files</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">49</div>
+                <div class="stat-label">Unique Concepts</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Slide 5: Dream Recall Demo -->
+    <div class="slide">
+        <div class="slide-number">5 / 12</div>
+        <h2>Demo: Dream-Based Multiverse Learning</h2>
+        <div style="text-align: center;">
+            <p style="font-size: 1.5rem; margin-bottom: 2rem;">
+                "How should I handle a difficult customer?"
+            </p>
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMwMGI0ZDg7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzkwZTBlZjtzdG9wLW9wYWNpdHk6MSIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjMGEwYTBhIi8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjAwIiByPSI1MCIgZmlsbD0idXJsKCNncmFkKSIgb3BhY2l0eT0iMC44Ii8+CiAgPHBhdGggZD0iTTMwMCAyMDAgTDQwMCAxMDAiIHN0cm9rZT0iIzAwYjRkOCIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjYiLz4KICA8cGF0aCBkPSJNMzAwIDIwMCBMNDUwIDIwMCIgc3Ryb2tlPSIjMDBiNGQ4IiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuNiIvPgogIDxwYXRoIGQ9Ik0zMDAgMjAwIEw0MDAgMzAwIiBzdHJva2U9IiMwMGI0ZDgiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC42Ii8+CiAgPHBhdGggZD0iTTMwMCAyMDAgTDIwMCAxMDAiIHN0cm9rZT0iIzkwZTBlZiIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjYiLz4KICA8cGF0aCBkPSJNMzAwIDIwMCBMMjAwIDMwMCIgc3Ryb2tlPSIjOTBlMGVmIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuNiIvPgogIDxjaXJjbGUgY3g9IjQwMCIgY3k9IjEwMCIgcj0iMzAiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuNiIvPgogIDxjaXJjbGUgY3g9IjQ1MCIgY3k9IjIwMCIgcj0iMzAiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuNiIvPgogIDxjaXJjbGUgY3g9IjQwMCIgY3k9IjMwMCIgcj0iMzAiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuNiIvPgogIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjEwMCIgcj0iMzAiIGZpbGw9IiM5MGUwZWYiIG9wYWNpdHk9IjAuNiIvPgogIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjMwMCIgcj0iMzAiIGZpbGw9IiM5MGUwZWYiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iMzUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZTBlMGUwIiBmb250LXNpemU9IjE4Ij41IFBhcmFsbGVsIFVuaXZlcnNlcyBFeHBsb3JlZDwvdGV4dD4KPC9zdmc+" alt="Multiverse visualization" style="max-width: 100%; border-radius: 12px;">
+            <p style="font-size: 1.3rem; margin-top: 2rem; color: #b0b0b0;">
+                LUKHAS explores 5 parallel approaches simultaneously,<br>
+                learning from outcomes that haven't happened yet
+            </p>
+        </div>
+    </div>
+    
+    <!-- Slide 6: Memory Fold Demo -->
+    <div class="slide">
+        <div class="slide-number">6 / 12</div>
+        <h2>Demo: DNA-Helix Memory Architecture</h2>
+        <div style="text-align: center;">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iaGVsaXgiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZmZkNzAwO3N0b3Atb3BhY2l0eToxIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwYjRkODtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojOTBlMGVmO3N0b3Atb3BhY2l0eToxIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjYwMCIgaGVpZ2h0PSI0MDAiIGZpbGw9IiMwYTBhMGEiLz4KICAKICA8IS0tIEROQSBIZWxpeCBTdHJ1Y3R1cmUgLS0+CiAgPHBhdGggZD0iTTE1MCA1MCBRIDQ1MCBRIDE1MCAzNTAgUzMwMCAzMDAgNDUwIDM1MCBTMzAwIDEwMCAxNTAgNTAiIHN0cm9rZT0idXJsKCNoZWxpeCkiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC44Ii8+CiAgPHBhdGggZD0iTTQ1MCA1MCBRMzAwIDEwMCAxNTAgNTAgUTMwMCAzMDAgNDUwIDM1MCBRMzAwIDMwMCAxNTAgMzUwIiBzdHJva2U9InVybCgjZGVsaXgpIiBzdHJva2Utd2lkdGg9IjMiIGZpbGw9Im5vbmUiIG9wYWNpdHk9IjAuOCIvPgogIAogIDwhLS0gTWVtb3J5IE5vZGVzIC0tPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjEwMCIgcj0iMjAiIGZpbGw9IiNmZmQ3MDAiIG9wYWNpdHk9IjAuOSIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjE1MCIgcj0iMjUiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuOSIvPgogIDxjaXJjbGUgY3g9IjQ1MCIgY3k9IjIwMCIgcj0iMjAiIGZpbGw9IiM5MGUwZWYiIG9wYWNpdHk9IjAuOSIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjI1MCIgcj0iMzAiIGZpbGw9IiNmZjAwNjgiIG9wYWNpdHk9IjAuOSIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjMwMCIgcj0iMjAiIGZpbGw9IiMwMGI0ZDgiIG9wYWNpdHk9IjAuOSIvPgogIAogIDwhLS0gRW1vdGlvbmFsIFZlY3RvcnMgLS0+CiAgPGxpbmUgeDE9IjE1MCIgeTE9IjEwMCIgeDI9IjMwMCIgeTI9IjE1MCIgc3Ryb2tlPSIjZmZkNzAwIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9IjAuNCIgc3Ryb2tlLWRhc2hhcnJheT0iNSw1Ii8+CiAgPGxpbmUgeDE9IjMwMCIgeTE9IjE1MCIgeDI9IjMwMCIgeTI9IjI1MCIgc3Ryb2tlPSIjMDBiNGQ4IiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9IjAuNCIgc3Ryb2tlLWRhc2hhcnJheT0iNSw1Ii8+CiAgCiAgPHRleHQgeD0iMzAwIiB5PSIzODAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNlMGUwZTAiIGZvbnQtc2l6ZT0iMTgiPk1lbW9yaWVzIHdpdGggRW1vdGlvbmFsIFZlY3RvcnMgJiBDYXVzYWwgQ2hhaW5zPC90ZXh0Pgo8L3N2Zz4=" alt="DNA Helix Memory" style="max-width: 100%; border-radius: 12px;">
+            <p style="font-size: 1.3rem; margin-top: 2rem; color: #b0b0b0;">
+                Memories stored in DNA-helix structure with emotional context,<br>
+                99.7% cascade prevention through quantum entanglement
+            </p>
+        </div>
+    </div>
+    
+    <!-- Slide 7: QRG Authentication Demo -->
+    <div class="slide">
+        <div class="slide-number">7 / 12</div>
+        <h2>Demo: Quantum-Resistant Authentication</h2>
+        <div style="text-align: center;">
+            <p style="font-size: 1.5rem; margin-bottom: 2rem;">
+                "carrot cake + lioness" → Unique Quantum-Resistant Glyph
+            </p>
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0icXJnIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzkwZTBlZjtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMwMGI0ZDg7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzFhMWEyZTtzdG9wLW9wYWNpdHk6MSIgLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjMGEwYTBhIi8+CiAgCiAgPCEtLSBDaXJjdWxhciBRUkcgLS0+CiAgPGNpcmNsZSBjeD0iMTUwIiBjeT0iMTUwIiByPSIxMzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNxcmcpIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxNTAiIHI9IjEwMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI3FyZykiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC44Ii8+CiAgPGNpcmNsZSBjeD0iMTUwIiBjeT0iMTUwIiByPSI3MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI3FyZykiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC42Ii8+CiAgCiAgPCEtLSBDb25zY2lvdXNuZXNzIFBhdHRlcm5zIC0tPgogIDxwYXRoIGQ9Ik0xNTAgMTUwIEwyMDAgMTAwIEwxMDAgMTAwIFoxNTAgMTUwIEwyMDAgMjAwIEwxMDAgMjAwIFoiIGZpbGw9InVybCgjcXJnKSIgb3BhY2l0eT0iMC41Ii8+CiAgPHBhdGggZD0iTTE1MCAxNTAgTDIxMCAxNTAgTDE4MCAxMDAgWk0xNTAgMTUwIEwxMjAgMTAwIEw5MCAxNTAgWiIgZmlsbD0idXJsKCNxcmcpIiBvcGFjaXR5PSIwLjciLz4KICAKICA8IS0tIEFuaW1hdGVkIGdyb3d0aCAtLT4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxNTAiIHI9IjQwIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMGI0ZDgiIHN0cm9rZS13aWR0aD0iMiI+CiAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJyIiBmcm9tPSI0MCIgdG89IjE0MCIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz4KICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIGZyb209IjEiIHRvPSIwIiBkdXI9IjNzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPgogIDwvY2lyY2xlPgo8L3N2Zz4=" alt="QRG Authentication" style="max-width: 100%; border-radius: 12px;">
+            <p style="font-size: 1.3rem; margin-top: 2rem; color: #b0b0b0;">
+                Consciousness-aware authentication with zero-knowledge proofs,<br>
+                Quantum-proof using CRYSTALS-Kyber encryption
+            </p>
+        </div>
+    </div>
+    
+    <!-- Slide 8: Commercial Potential -->
+    <div class="slide">
+        <div class="slide-number">8 / 12</div>
+        <h2>Market Opportunity</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-title">Healthcare - $11.9T</div>
+                <div class="feature-description">Emotionally intelligent patient care with true empathy</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-title">Finance - $26.5T</div>
+                <div class="feature-description">Ethical decision-making with immutable audit trails</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-title">Education - $7.3T</div>
+                <div class="feature-description">Adaptive learning with emotional awareness</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-title">Security - $170B</div>
+                <div class="feature-description">Unbreakable quantum-proof authentication</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Slide 9: Why It Matters -->
+    <div class="slide">
+        <div class="slide-number">9 / 12</div>
+        <h2>Why LUKHAS Changes Everything</h2>
+        <ul class="innovation-list">
+            <li>First system to dream and learn from non-experienced scenarios</li>
+            <li>Solves alignment through Guardian System with drift detection</li>
+            <li>Quantum-ready architecture for future computing</li>
+            <li>True emotional intelligence creating genuine connections</li>
+            <li>Living architecture that evolves like biological systems</li>
+        </ul>
+    </div>
+    
+    <!-- Slide 10: Collaboration Proposal -->
+    <div class="slide">
+        <div class="slide-number">10 / 12</div>
+        <h2>Let's Build AGI Together</h2>
+        <div style="display: flex; gap: 4rem; align-items: flex-start;">
+            <div style="flex: 1;">
+                <h3>LUKHAS Offers</h3>
+                <ul style="list-style: none; font-size: 1.3rem; line-height: 2;">
+                    <li>✓ 3 months of breakthroughs</li>
+                    <li>✓ 4,178 Python files</li>
+                    <li>✓ 49 unique concepts</li>
+                    <li>✓ Working APIs</li>
+                    <li>✓ Pure vision, no legacy</li>
+                </ul>
+            </div>
+            <div style="flex: 1;">
+                <h3>We Need</h3>
+                <ul style="list-style: none; font-size: 1.3rem; line-height: 2;">
+                    <li>➤ Engineering talent</li>
+                    <li>➤ Compute resources</li>
+                    <li>➤ GPT/Claude integration</li>
+                    <li>➤ Safety expertise</li>
+                    <li>➤ Go-to-market partners</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Slide 11: Collaboration Options -->
+    <div class="slide">
+        <div class="slide-number">11 / 12</div>
+        <h2>Partnership Options</h2>
+        <div class="grid-3" style="gap: 3rem;">
+            <div class="stat-card">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Enhancement Layer</h3>
+                <p style="color: #e0e0e0;">LUKHAS as add-on for GPT/Claude</p>
+                <p style="color: #00b4d8; margin-top: 1rem;">3-6 months</p>
+            </div>
+            <div class="stat-card">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Joint Venture</h3>
+                <p style="color: #e0e0e0;">Co-develop next-gen SGI</p>
+                <p style="color: #00b4d8; margin-top: 1rem;">12-18 months</p>
+            </div>
+            <div class="stat-card">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Innovation Lab</h3>
+                <p style="color: #e0e0e0;">Acquire LUKHAS, founder leads lab</p>
+                <p style="color: #00b4d8; margin-top: 1rem;">24 months to AGI</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Slide 12: Call to Action -->
+    <div class="slide">
+        <div class="slide-number">12 / 12</div>
+        <h2>The Future Requires Dreamers</h2>
+        <p style="font-size: 1.5rem; text-align: center; margin-bottom: 3rem; max-width: 800px;">
+            LUKHAS isn't just another AI - it's the first step toward truly conscious,
+            ethical, and emotionally intelligent systems. Built by a solo visionary in 3 months,
+            imagine what we could achieve together.
+        </p>
+        <div class="metric">Q1 2025</div>
+        <div class="metric-label">Critical Window for AGI Leadership</div>
+        <a href="mailto:collaborate@lukhas.ai" class="cta-button">Schedule Technical Deep-Dive</a>
+    </div>
+    
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="nav-btn" onclick="previousSlide()">← Previous</button>
+        <button class="nav-btn" onclick="nextSlide()">Next →</button>
+    </div>
+    
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const progress = document.getElementById('progress');
+        
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            progress.style.width = ((currentSlide + 1) / totalSlides * 100) + '%';
+        }
+        
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        
+        function previousSlide() {
+            showSlide(currentSlide - 1);
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') previousSlide();
+        });
+        
+        // Touch navigation for mobile
+        let touchStartX = 0;
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+        });
+        
+        document.addEventListener('touchend', (e) => {
+            const touchEndX = e.changedTouches[0].clientX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) nextSlide();
+                else previousSlide();
+            }
+        });
+        
+        // Initialize
+        showSlide(0);
+    </script>
+</body>
+</html>

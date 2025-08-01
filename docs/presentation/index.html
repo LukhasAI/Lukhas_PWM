@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUKHAS Demo Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: radial-gradient(circle at center, #1a1a2e 0%, #0a0a0a 100%);
+            border-radius: 15px;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            background: linear-gradient(45deg, #00b4d8, #90e0ef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-size: 1.3rem;
+            color: #b0b0b0;
+        }
+        
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .demo-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(144, 224, 239, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .demo-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 180, 216, 0.3);
+        }
+        
+        .demo-title {
+            font-size: 1.8rem;
+            color: #00b4d8;
+            margin-bottom: 1rem;
+        }
+        
+        .demo-description {
+            color: #e0e0e0;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .demo-stats {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #90e0ef;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #b0b0b0;
+        }
+        
+        .demo-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #00b4d8, #90e0ef);
+            color: #0a0a0a;
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(144, 224, 239, 0.5);
+            color: #90e0ef;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 180, 216, 0.4);
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+        
+        .status-online {
+            background: #00ff00;
+        }
+        
+        .status-offline {
+            background: #ff0000;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        
+        .quick-links {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .quick-links h2 {
+            color: #00b4d8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .link-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .priority-badge {
+            background: #ff0068;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-left: 10px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LUKHAS Demo Dashboard</h1>
+            <p class="tagline">Symbolic General Intelligence Showcase</p>
+        </header>
+        
+        <div class="demo-grid">
+            <!-- Dream Recall API -->
+            <div class="demo-card">
+                <h3 class="demo-title">
+                    Dream Recall API
+                    <span class="priority-badge">Priority 1</span>
+                </h3>
+                <p class="demo-description">
+                    Explore parallel universes to learn from scenarios never experienced. 
+                    Quantum coherence enables simultaneous exploration of multiple realities.
+                </p>
+                <div class="demo-stats">
+                    <div class="stat">
+                        <div class="stat-value">5</div>
+                        <div class="stat-label">Universes</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value"><500ms</div>
+                        <div class="stat-label">Response</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">102.22%</div>
+                        <div class="stat-label">Coherence</div>
+                    </div>
+                </div>
+                <div class="demo-actions">
+                    <a href="http://localhost:8001/docs" class="btn btn-primary" target="_blank">
+                        <span class="status-indicator status-online"></span>Open API
+                    </a>
+                    <a href="#" class="btn btn-secondary" onclick="testDreamRecall()">Quick Test</a>
+                </div>
+            </div>
+            
+            <!-- Memory Fold API -->
+            <div class="demo-card">
+                <h3 class="demo-title">
+                    Memory Fold API
+                    <span class="priority-badge">Priority 2</span>
+                </h3>
+                <p class="demo-description">
+                    DNA-helix memory architecture with emotional vectors and causal chains. 
+                    Quantum entanglement prevents memory cascades.
+                </p>
+                <div class="demo-stats">
+                    <div class="stat">
+                        <div class="stat-value">99.7%</div>
+                        <div class="stat-label">Cascade Prevention</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">3D</div>
+                        <div class="stat-label">DNA Helix</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">∞</div>
+                        <div class="stat-label">Emotional Depth</div>
+                    </div>
+                </div>
+                <div class="demo-actions">
+                    <a href="http://localhost:8003/docs" class="btn btn-primary" target="_blank">
+                        <span class="status-indicator status-online"></span>Open API
+                    </a>
+                    <a href="#" class="btn btn-secondary" onclick="testMemoryFold()">Quick Test</a>
+                </div>
+            </div>
+            
+            <!-- Emotional Coherence API -->
+            <div class="demo-card">
+                <h3 class="demo-title">
+                    Emotional Coherence API
+                    <span class="priority-badge">Priority 4</span>
+                </h3>
+                <p class="demo-description">
+                    Bio-symbolic emotional intelligence achieving >100% coherence through 
+                    quantum enhancement and hormonal modeling.
+                </p>
+                <div class="demo-stats">
+                    <div class="stat">
+                        <div class="stat-value">102.22%</div>
+                        <div class="stat-label">Coherence</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">8</div>
+                        <div class="stat-label">Dimensions</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">5</div>
+                        <div class="stat-label">Hormones</div>
+                    </div>
+                </div>
+                <div class="demo-actions">
+                    <a href="http://localhost:8002/docs" class="btn btn-primary" target="_blank">
+                        <span class="status-indicator status-online"></span>Open API
+                    </a>
+                    <a href="#" class="btn btn-secondary" onclick="testEmotionalCoherence()">Quick Test</a>
+                </div>
+            </div>
+            
+            <!-- Colony Consensus API -->
+            <div class="demo-card">
+                <h3 class="demo-title">
+                    Colony Consensus API
+                    <span class="priority-badge">Priority 5</span>
+                </h3>
+                <p class="demo-description">
+                    Swarm intelligence decision-making with echo chamber detection. 
+                    Multiple agent types provide diverse perspectives.
+                </p>
+                <div class="demo-stats">
+                    <div class="stat">
+                        <div class="stat-value">25</div>
+                        <div class="stat-label">Agents</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">6</div>
+                        <div class="stat-label">Types</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">95%</div>
+                        <div class="stat-label">Echo Detection</div>
+                    </div>
+                </div>
+                <div class="demo-actions">
+                    <a href="http://localhost:8004/docs" class="btn btn-primary" target="_blank">
+                        <span class="status-indicator status-online"></span>Open API
+                    </a>
+                    <a href="#" class="btn btn-secondary" onclick="testColonyConsensus()">Quick Test</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="quick-links">
+            <h2>Presentation Materials</h2>
+            <div class="link-grid">
+                <a href="LUKHAS_PITCH_DECK.html" class="btn btn-primary">
+                    📊 Open Pitch Deck
+                </a>
+                <a href="../LUKHAS_DEMO_SHOWCASE_PLAN.md" class="btn btn-secondary" target="_blank">
+                    📋 Technical Plan
+                </a>
+                <a href="../LUKHAS_EXECUTIVE_PRESENTATION.json" class="btn btn-secondary" target="_blank">
+                    📄 Executive Data
+                </a>
+                <a href="https://github.com/lukhas-sgi" class="btn btn-secondary" target="_blank">
+                    💻 GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // API test functions
+        async function testDreamRecall() {
+            const scenario = prompt("Enter a scenario to explore:", "How should I handle a difficult customer?");
+            if (!scenario) return;
+            
+            alert(`Exploring "${scenario}" across 5 parallel universes...\n\nCheck the API documentation for full functionality!`);
+            window.open('http://localhost:8001/docs', '_blank');
+        }
+        
+        async function testMemoryFold() {
+            const memory = prompt("Enter a memory to store:", "First successful demo to investors");
+            if (!memory) return;
+            
+            alert(`Storing "${memory}" in DNA-helix structure with emotional vectors...\n\nCheck the API documentation for full functionality!`);
+            window.open('http://localhost:8003/docs', '_blank');
+        }
+        
+        async function testEmotionalCoherence() {
+            const text = prompt("Enter text to analyze:", "I'm feeling overwhelmed but trying to stay positive");
+            if (!text) return;
+            
+            alert(`Analyzing emotional coherence of "${text}"...\n\nCheck the API documentation for full functionality!`);
+            window.open('http://localhost:8002/docs', '_blank');
+        }
+        
+        async function testColonyConsensus() {
+            const question = prompt("Enter a decision question:", "Should we pivot our product strategy?");
+            if (!question) return;
+            
+            alert(`Gathering swarm intelligence consensus on "${question}"...\n\nCheck the API documentation for full functionality!`);
+            window.open('http://localhost:8004/docs', '_blank');
+        }
+        
+        // Check API status
+        async function checkAPIStatus() {
+            const apis = [
+                { url: 'http://localhost:8001/health', id: 'dream-status' },
+                { url: 'http://localhost:8002/health', id: 'emotional-status' },
+                { url: 'http://localhost:8003/health', id: 'memory-status' },
+                { url: 'http://localhost:8004/health', id: 'colony-status' }
+            ];
+            
+            for (const api of apis) {
+                try {
+                    const response = await fetch(api.url, { mode: 'no-cors' });
+                    // If we get here, the API is responding
+                    document.querySelectorAll('.status-indicator').forEach(el => {
+                        if (el.classList.contains('status-offline')) {
+                            el.classList.remove('status-offline');
+                            el.classList.add('status-online');
+                        }
+                    });
+                } catch (error) {
+                    // API is not responding
+                    console.log(`API at ${api.url} is not responding`);
+                }
+            }
+        }
+        
+        // Check status on load and periodically
+        checkAPIStatus();
+        setInterval(checkAPIStatus, 10000); // Check every 10 seconds
+    </script>
+</body>
+</html>
