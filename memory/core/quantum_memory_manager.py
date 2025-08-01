@@ -58,7 +58,7 @@ MODULE_NAME = "memory_manager"
 # REDIRECT: Use production memory fold system instead of basic stub
 try:
     # Import from production memory fold system
-    from features.memory.memory_fold import (MemoryFoldConfig,
+    from memory.memory_fold import (MemoryFoldConfig,
                                              MemoryFoldSystem)
 
     # Alias for compatibility

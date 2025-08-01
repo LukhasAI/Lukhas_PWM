@@ -93,7 +93,7 @@ MODULE_NAME = "enhanced_memory_manager"
 # REDIRECT: Use production memory fold system instead of basic stub
 try:
     # Import from production memory fold system
-    from features.memory.memory_fold import MemoryFoldConfig, MemoryFoldSystem
+    from memory.memory_fold import MemoryFoldConfig, MemoryFoldSystem
 
     # Alias for compatibility
     EnhancedMemoryFold = MemoryFoldSystem

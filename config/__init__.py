@@ -1,77 +1,56 @@
-"""
-══════════════════════════════════════════════════════════════════════════════════
-║ 🧠 LUKHAS AI - CONFIGURATION
-║ Configuration package for LUKHAS.
-║ Copyright (c) 2025 LUKHAS AI. All rights reserved.
-╠══════════════════════════════════════════════════════════════════════════════════
-║ Module: __init__.py
-║ Path: lukhas/config/__init__.py
-║ Version: 1.0.0 | Created: 2025-07-25 | Modified: 2025-07-25
-║ Authors: LUKHAS AI Core Team | Jules
-╠══════════════════════════════════════════════════════════════════════════════════
-║ DESCRIPTION
-╠══════════════════════════════════════════════════════════════════════════════════
-║ This module initializes the configuration for LUKHAS, with a fallback system.
-╚══════════════════════════════════════════════════════════════════════════════════
-"""
-try:
-    from .settings import settings, Settings
-    from .validators import validate_config, validate_optional_config
+# ═══════════════════════════════════════════════════════════════════════════
+# FILENAME: __init__.py
+# MODULE: core.config
+# DESCRIPTION: Initializes the core.config package, which is responsible for
+#              managing configurations, settings, and parameters for the LUKHAS AGI system.
+#              Modules within should handle loading, validation, and providing access to config data.
+#              ΛSEED tags will be important for files defining default or seed configurations.
+# DEPENDENCIES: structlog
+# LICENSE: PROPRIETARY - LUKHAS AI SYSTEMS - UNAUTHORIZED ACCESS PROHIBITED
+# ═══════════════════════════════════════════════════════════════════════════
 
-    # Test that the settings can be accessed
-    _ = settings.DATABASE_URL
-    fallback_mode = False
+import structlog
 
-except Exception as e:
-    # Fallback to minimal configuration system
-    from .fallback_settings import (
-        get_fallback_settings,
-        validate_fallback_config,
-        FallbackSettings
-    )
+# Initialize logger for ΛTRACE using structlog
+logger = structlog.get_logger("ΛTRACE.core.config")
+logger.info("ΛTRACE: Initializing core.config package.")
 
-    settings = get_fallback_settings()
-    Settings = FallbackSettings
-    validate_config = lambda s: None  # No strict validation in fallback mode
-    validate_optional_config = validate_fallback_config
-    fallback_mode = True
+# Define what is explicitly exported by this package
+__all__ = [
+    # e.g., "load_settings", "get_config_param", "SystemSettings"
+]
 
-    import logging
-    logging.getLogger(__name__).error(f"Config system failed, using fallback: {e}")
+# ΛNOTE: This __init__.py initializes the configuration package.
+# Key responsibilities of modules within this package include:
+# - Loading configurations from files (e.g., JSON, YAML, .env) or environment variables.
+# - Validating configuration structures and values.
+# - Providing a centralized access point for other core modules to retrieve settings.
+# - Handling default values and environment-specific overrides.
+# - Potentially using ΛSEED tags for files that define foundational or default configurations.
 
-__all__ = ["settings", "Settings", "validate_config", "validate_optional_config", "fallback_mode"]
-"""
-═══════════════════════════════════════════════════════════════════════════════
-║ 📋 FOOTER - LUKHAS AI
-╠══════════════════════════════════════════════════════════════════════════════
-║ VALIDATION:
-║   - Tests: N/A
-║   - Coverage: N/A
-║   - Linting: N/A
-║
-║ MONITORING:
-║   - Metrics: N/A
-║   - Logs: ERROR log on fallback activation
-║   - Alerts: N/A
-║
-║ COMPLIANCE:
-║   - Standards: N/A
-║   - Ethics: N/A
-║   - Safety: N/A
-║
-║ REFERENCES:
-║   - Docs: docs/config/init.md
-║   - Issues: github.com/lukhas-ai/lukhas/issues?label=config
-║   - Wiki: N/A
-║
-║ COPYRIGHT & LICENSE:
-║   Copyright (c) 2025 LUKHAS AI. All rights reserved.
-║   Licensed under the LUKHAS AI Proprietary License.
-║   Unauthorized use, reproduction, or distribution is prohibited.
-║
-║ DISCLAIMER:
-║   This module is part of the LUKHAS AGI system. Use only as intended
-║   within the system architecture. Modifications may affect system
-║   stability and require approval from the LUKHAS Architecture Board.
-╚═══════════════════════════════════════════════════════════════════════════
-"""
+logger.info("ΛTRACE: core.config package initialized.", exports=__all__)
+
+# ═══════════════════════════════════════════════════════════════════════════
+# FILENAME: __init__.py
+# VERSION: 1.0.0
+# TIER SYSTEM: Tier 0-5 (Core configuration access, crucial for all tiers)
+# ΛTRACE INTEGRATION: ENABLED
+# CAPABILITIES: Package initialization for LUKHAS AGI configuration management.
+# FUNCTIONS: None directly defined or exposed.
+# CLASSES: None directly defined here; intended to export from sub-modules.
+# DECORATORS: None.
+# DEPENDENCIES: structlog.
+# INTERFACES: Public API defined by __all__ (currently empty).
+# ERROR HANDLING: Logger initialization. Sub-modules should handle config loading errors.
+# LOGGING: ΛTRACE_ENABLED via structlog.
+# AUTHENTICATION: Not applicable at package initialization.
+# HOW TO USE:
+#   from core.config import settings_loader
+#   main_db_uri = settings_loader.get_setting("DATABASE_URI") # Example
+# INTEGRATION NOTES: This package is fundamental for the operation of all other core modules.
+#                    Ensure robust parsing and validation of any configuration files.
+# MAINTENANCE: Update __all__ as configuration loading/access components are developed.
+#              Keep sensitive configuration data out of version control (use .env or similar).
+# CONTACT: LUKHAS DEVELOPMENT TEAM
+# LICENSE: PROPRIETARY - LUKHAS AI SYSTEMS - UNAUTHORIZED ACCESS PROHIBITED
+# ═══════════════════════════════════════════════════════════════════════════

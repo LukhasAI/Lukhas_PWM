@@ -13,7 +13,7 @@ from typing import Any, Dict, List, Optional, Set, Tuple, Union
 import numpy as np
 import structlog
 
-from features.memory.memory_fold import MemoryFoldConfig, MemoryFoldSystem
+from memory.memory_fold import MemoryFoldConfig, MemoryFoldSystem
 from memory.systems.memory_visualizer import (
     EnhancedMemoryVisualizer,
     VisualizationConfig,

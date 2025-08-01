@@ -1,25 +1,20 @@
 """
+LUKHAS Unified API Module
+=========================
 
-# Import the integration hub to connect all systems
-from orchestration.integration_hub import get_integration_hub
+Provides both core internal APIs and commercial external APIs.
 
-# Initialize the hub to ensure all systems are connected
-integration_hub = get_integration_hub()
+Structure:
+- core/: Internal LUKHAS APIs
+- commercial/: External commercial APIs
+- gateway/: API gateway and routing
 
-LUKHAS AI API Module
-====================
-
-FastAPI endpoints for accessing LUKHAS AI functionality.
-
-This module provides RESTful API access to:
-- Memory System (creation, recall, enhanced recall)
-- Dream Processing (logging, consolidation, pattern analysis)
-- Emotional Analysis (landscape mapping, clustering, neighborhoods)
-- Consciousness Synthesis (state integration, synthesis generation)
-
-All endpoints require proper authentication and respect tier-based access controls.
+Access is controlled by the tier system.
 """
 
-from . import memory, dream, emotion, consciousness, glyph_exchange
+# Import main API components
+from .core.api_hub import APIHub
+from .core.controllers import BaseController
+from .core.services import BaseService
 
-__all__ = ["memory", "dream", "emotion", "consciousness", "glyph_exchange"]
+__all__ = ["APIHub", "BaseController", "BaseService"]

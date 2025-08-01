@@ -31,7 +31,7 @@ from memory.core import create_hybrid_memory_fold
 from memory.systems.attention_memory_layer import create_attention_orchestrator
 
 # Existing systems to integrate with
-from features.integration.connectivity_engine import ConnectivityEngine
+from core.integration.connectivity_engine import ConnectivityEngine
 from core.integration_hub import UnifiedIntegration
 from memory.unified_memory_manager import EnhancedMemoryManager
 
