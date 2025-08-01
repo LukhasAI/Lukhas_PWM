@@ -87,8 +87,51 @@ python test_comprehensive_governance.py
 ├── 💭 emotion/         # Emotional processing systems
 ├── 🛡️ security/       # Security and compliance frameworks
 ├── 🔴 red_team/        # Security testing and validation
-└── 🧪 testing/         # Guardian Reflector testing suite
+├── 🧪 tests/           # Integration tests between modules
+└── 📚 docs/            # System-wide documentation
 ```
+
+## 📖 Documentation Structure
+
+LUKHAS follows a modular documentation approach:
+
+### Root-Level Documentation (`/docs/`)
+- **System Overview**: How modules work together
+- **Integration Guides**: Cross-module communication
+- **Architecture Diagrams**: System-wide design
+- **API Documentation**: External interfaces
+- **Benefits & Features**: System capabilities
+
+### Module-Level Documentation (`/<module>/docs/`)
+Each module contains its own documentation:
+- **Module README**: Purpose and functionality
+- **API Reference**: Module-specific APIs
+- **Implementation Details**: Internal workings
+- **Examples**: Module usage patterns
+- **Configuration**: Module settings
+
+## 🧪 Testing Structure
+
+LUKHAS follows a modular testing approach:
+
+### Root-Level Tests (`/tests/`)
+- **Integration Tests**: How modules interact
+- **System Tests**: End-to-end workflows
+- **Performance Tests**: System-wide benchmarks
+- **Security Tests**: Cross-module security validation
+
+### Module-Level Tests (`/<module>/tests/`)
+Each module contains its own tests:
+- **Unit Tests**: Individual component testing
+- **Module Integration**: Internal module integration
+- **Functional Tests**: Module functionality
+- **Regression Tests**: Module-specific regression
+
+### Testing Best Practices
+- Root `/tests/` only contains inter-module tests
+- Each module manages its own unit and internal tests
+- Use pytest for consistent testing framework
+- Aim for >80% coverage per module
 
 ## 📊 Current Operational Status
 

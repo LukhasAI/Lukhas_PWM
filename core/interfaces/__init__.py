@@ -1,34 +1,79 @@
-# core/interfaces/__init__.py
-# ΛAGENT: Jules-[01]
-# ΛPURPOSE: Initializes the interfaces module, providing a unified access point.
-# ΛTAGS: AIO_NODE, ΛENTRY_POINT, ΛMODULE_INIT
-# ΛVERSION: 0.1.0
-# ΛAUTHOR: AI-generated (Jules-[01]), Human-Reviewed (GRDM)
-# ΛCREATED_DATE: 2023-11-15
-# ΛMODIFIED_DATE: 2024-07-30
-
 """
-# ΛDOC: Unified interface_systems module
-This `__init__.py` file serves as the entry point for the `core.interfaces` package.
-It is intended to expose key interface functionalities and sub-modules to the rest of the Lukhas system.
-ΛCOMMENT: Currently, this file is minimal. Future development may involve selectively importing
-and exposing specific classes or functions from submodules for easier access.
-Considered for exposing: app, cli, custom_llm, dashboard, etc.
+LUKHAS AGI Interface Systems
+===========================
+
+This package contains all interface definitions, protocols, and registry
+systems for the LUKHAS AGI ecosystem.
+
+Components:
+- gRPC API definitions (lukhas_pb2, lukhas_pb2_grpc)
+- Awareness protocol interfaces
+- Intelligence engine registry
+- Additional protocol interfaces
 """
 
-# AIMPORTS_START
-# AIMPORTS_END
+# Import protocol interfaces
+from .protocols import (
+    AwarenessAssessor,
+    AwarenessInput,
+    AwarenessOutput,
+    AwarenessProtocolInterface,
+    AwarenessType,
+    DefaultAwarenessProtocol,
+    ProtocolStatus,
+    SessionContext,
+    TierLevel,
+    create_awareness_protocol,
+    get_default_protocol,
+)
 
-# ΛFUNCTIONS_START
-# ΛFUNCTIONS_END
+# Import registry systems
+from .registries import (
+    EngineCapability,
+    EngineInfo,
+    EngineStatus,
+    EngineType,
+    HealthChecker,
+    IntelligenceEngineRegistry,
+    QueryFilter,
+    RegistryConfig,
+    RegistryEvent,
+    create_capability,
+    create_engine_info,
+    get_global_registry,
+)
 
-# ΛCLASSES_START
-# ΛCLASSES_END
+# Interface Nodes
+from .nodes import IntentNode, VoiceNode, NodeManager
 
-# ΛMAIN_LOGIC_START
-# ΛMAIN_LOGIC_END
-
-# ΛFOOTER_START
-# ΛTRACE: Jules-[01] | core/interfaces/__init__.py | Batch 5 | 2024-07-30
-# ΛTAGS: ΛSTANDARD_INIT, AIO_NODE, ΛCAUTION (Minimal implementation)
-# ΛFOOTER_END
+__all__ = [
+    # Awareness Protocol
+    "AwarenessType",
+    "TierLevel",
+    "ProtocolStatus",
+    "AwarenessInput",
+    "AwarenessOutput",
+    "SessionContext",
+    "AwarenessAssessor",
+    "AwarenessProtocolInterface",
+    "DefaultAwarenessProtocol",
+    "create_awareness_protocol",
+    "get_default_protocol",
+    # Intelligence Engine Registry
+    "EngineType",
+    "EngineStatus",
+    "RegistryEvent",
+    "EngineCapability",
+    "EngineInfo",
+    "RegistryConfig",
+    "QueryFilter",
+    "HealthChecker",
+    "IntelligenceEngineRegistry",
+    "get_global_registry",
+    "create_engine_info",
+    "create_capability",
+    # Interface Nodes
+    "IntentNode",
+    "VoiceNode",
+    "NodeManager",
+]

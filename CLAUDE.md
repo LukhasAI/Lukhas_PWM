@@ -86,7 +86,7 @@ mypy lukhas/
 
 ### System Organization
 
-The codebase follows a modular architecture with 53 root systems organized into functional domains:
+The codebase follows a modular architecture with 41 root systems organized into functional domains (reduced from 53 through consolidation):
 
 **Core Infrastructure:**
 - `core/` - GLYPH engine, symbolic processing, system foundations (396 files)
@@ -106,7 +106,8 @@ The codebase follows a modular architecture with 53 root systems organized into 
 - `creativity/` - Dream engine with 40+ modules (89 files)
 
 **Integration:**
-- `api/` - FastAPI endpoints (12 files, 33.3% functional)
+- `api/` - FastAPI endpoints (core and commercial APIs)
+- `architectures/` - DAST, ABAS, NIAS unified architecture systems
 - `bridge/` - External API connections (98 files)
 - `ethics/` - Multi-tiered policy engines (17 files)
 
